@@ -1,0 +1,877 @@
+{
+  "location": {
+    "district": "Kamrup (Guwahati)",
+    "distance_km": 0.0,
+    "zone_id": "LBVZ",
+    "zone_name": "Lower Brahmaputra Valley Zone",
+    "zone_name_as": "\u09a8\u09be\u09ae\u09a8\u09bf \u09ac\u09cd\u09f0\u09b9\u09cd\u09ae\u09aa\u09c1\u09a4\u09cd\u09f0 \u0989\u09aa\u09a4\u09cd\u09af\u0995\u09be \u0985\u099e\u09cd\u099a\u09b2",
+    "zone_name_hi": "\u0928\u093f\u091a\u0932\u093e \u092c\u094d\u0930\u0939\u094d\u092e\u092a\u0941\u0924\u094d\u0930 \u0918\u093e\u091f\u0940 \u0915\u094d\u0937\u0947\u0924\u094d\u0930",
+    "zone_details": {
+      "id": "LBVZ",
+      "name": "Lower Brahmaputra Valley Zone",
+      "name_as": "\u09a8\u09be\u09ae\u09a8\u09bf \u09ac\u09cd\u09f0\u09b9\u09cd\u09ae\u09aa\u09c1\u09a4\u09cd\u09f0 \u0989\u09aa\u09a4\u09cd\u09af\u0995\u09be \u0985\u099e\u09cd\u099a\u09b2",
+      "name_hi": "\u0928\u093f\u091a\u0932\u093e \u092c\u094d\u0930\u0939\u094d\u092e\u092a\u0941\u0924\u094d\u0930 \u0918\u093e\u091f\u0940 \u0915\u094d\u0937\u0947\u0924\u094d\u0930",
+      "districts": [
+        "Kamrup Metropolitan",
+        "Kamrup",
+        "Nalbari",
+        "Barpeta",
+        "Bajali",
+        "Bongaigaon",
+        "Dhubri",
+        "South Salmara-Mankachar",
+        "Goalpara",
+        "Chirang",
+        "Kokrajhar"
+      ],
+      "annual_rainfall_range_mm": [
+        1600,
+        2800
+      ],
+      "soil_character": "Active river alluvium, char lands, moderately acidic to neutral silt loam",
+      "default_soil": {
+        "ph": 5.6,
+        "clay_pct": 22.0,
+        "sand_pct": 45.0,
+        "organic_carbon_g_per_kg": 9.2
+      },
+      "key_features": "Extensive rice (Ahu, Sali, Boro), jute, mustard, winter vegetables, banana."
+    }
+  },
+  "area": {
+    "sq_meters": 69236.5,
+    "hectares": 6.924,
+    "bighas": 51.73,
+    "acres": 17.11
+  },
+  "soil": {
+    "ph": 5.6,
+    "clay_pct": 22.0,
+    "sand_pct": 45.0,
+    "organic_carbon_g_per_kg": 9.2,
+    "organic_carbon_pct": 0.92,
+    "texture": "Sandy Clay Loam",
+    "liming": {
+      "status": "Slightly Acidic (Optimal for most crops)",
+      "needs_lime": false,
+      "lime_kg_per_bigha": 0,
+      "lime_ton_per_ha": 0,
+      "advice": "Soil pH is in the optimal range (5.5 - 6.5) for paddy, mustard, and vegetables in Assam. No liming needed."
+    },
+    "organic_carbon": {
+      "status": "High (> 0.75%)",
+      "pct": 0.92,
+      "advice": "Good organic carbon content. Soil has high moisture and nutrient retention capacity."
+    },
+    "data_source": "Assam Agro-climatic Zone Baseline (LBVZ)"
+  },
+  "weather": {
+    "annual_rain_mm": 2416.0,
+    "monsoon_rain_mm": 1649.0,
+    "rabi_rain_mm": 125.0,
+    "pre_monsoon_rain_mm": 642.0,
+    "mean_temp_c": 24.1,
+    "summer_max_c": 35.2,
+    "winter_min_c": 9.7,
+    "source": "Open-Meteo Reanalysis Archive"
+  },
+  "ndvi_series": [
+    {
+      "date": "2026-08-08",
+      "ndvi": 0.28,
+      "interpretation": {
+        "status": "Fallow / Early Germination / Stressed",
+        "meaning": "Low vegetation canopy. Crop has just emerged, harvested stubble, or severe crop stress.",
+        "color": "#f59e0b"
+      }
+    },
+    {
+      "date": "2026-09-07",
+      "ndvi": 0.42,
+      "interpretation": {
+        "status": "Vegetative Growth / Moderate Canopy",
+        "meaning": "Active tillering or vegetative canopy expansion.",
+        "color": "#84cc16"
+      }
+    },
+    {
+      "date": "2026-09-27",
+      "ndvi": 0.58,
+      "interpretation": {
+        "status": "Healthy Dense Crop Canopy",
+        "meaning": "Good vigorous biomass. Typical of peak tillering or heading rice/healthy tea.",
+        "color": "#22c55e"
+      }
+    },
+    {
+      "date": "2026-10-15",
+      "ndvi": 0.62,
+      "interpretation": {
+        "status": "Healthy Dense Crop Canopy",
+        "meaning": "Good vigorous biomass. Typical of peak tillering or heading rice/healthy tea.",
+        "color": "#22c55e"
+      }
+    }
+  ],
+  "crop_rankings": [
+    {
+      "id": "assam_lemon",
+      "name_en": "Assam Lemon / Kaji Nemu (GI Tagged)",
+      "name_as": "\u0995\u09be\u099c\u09c0 \u09a8\u09c7\u09ae\u09c1 (\u09ad\u09cc\u0997\u09cb\u09b2\u09bf\u0995 \u09b8\u09cd\u09ac\u09c0\u0995\u09c3\u09a4\u09bf\u09aa\u09cd\u09f0\u09be\u09aa\u09cd\u09a4 \u09a8\u09c7\u09ae\u09c1)",
+      "name_hi": "\u0915\u093e\u091c\u0940 \u0928\u0947\u092e\u0941 / \u0905\u0938\u092e \u0928\u0940\u0902\u092c\u0942",
+      "category": "Horticulture & Citrus",
+      "score": 100,
+      "verdict": "Highly Recommended",
+      "verdict_as": "\u0985\u09a4\u09bf \u0989\u09ce\u0995\u09c3\u09b7\u09cd\u099f",
+      "verdict_hi": "\u0905\u0924\u094d\u092f\u0927\u093f\u0915 \u0909\u092a\u092f\u0941\u0915\u094d\u0924",
+      "badge_color": "#22c55e",
+      "season_en": "Perennial (Bearing year-round, peak: May-Jul & Sep-Nov)",
+      "season_as": "\u09ac\u09be\u09f0\u09ae\u09b9\u09c0\u09af\u09bc\u09be (\u09b8\u09f0\u09cd\u09ac\u09be\u09a7\u09bf\u0995 \u0989\u09ce\u09aa\u09be\u09a6\u09a8: \u099c\u09c7\u09a0-\u0986\u09b9\u09be\u09f0 \u0986\u09f0\u09c1 \u0986\u09b9\u09bf\u09a8-\u0995\u09be\u09a4\u09bf)",
+      "season_hi": "\u0938\u0926\u093e\u092c\u0939\u093e\u0930 (\u092e\u0908-\u091c\u0941\u0932\u093e\u0908 \u090f\u0935\u0902 \u0938\u093f\u0924\u0902\u092c\u0930-\u0928\u0935\u0902\u092c\u0930)",
+      "flood_tolerance": "none",
+      "recommended_varieties": [
+        "Kaji Nemu (Clonal selections from AAU)",
+        "Gol Nemu (Round Lemon)",
+        "Assam Local"
+      ],
+      "strengths": [
+        "Soil pH 5.6 is optimal (5.5-6.5)",
+        "Soil texture (clay 22.0%) matches root requirements",
+        "Annual rainfall 2416 mm is well-suited"
+      ],
+      "issues": [],
+      "fertilizer": {
+        "crop_id": "assam_lemon",
+        "crop_name": "Assam Lemon / Kaji Nemu (GI Tagged)",
+        "crop_name_as": "\u0995\u09be\u099c\u09c0 \u09a8\u09c7\u09ae\u09c1 (\u09ad\u09cc\u0997\u09cb\u09b2\u09bf\u0995 \u09b8\u09cd\u09ac\u09c0\u0995\u09c3\u09a4\u09bf\u09aa\u09cd\u09f0\u09be\u09aa\u09cd\u09a4 \u09a8\u09c7\u09ae\u09c1)",
+        "crop_name_hi": "\u0915\u093e\u091c\u0940 \u0928\u0947\u092e\u0941 / \u0905\u0938\u092e \u0928\u0940\u0902\u092c\u0942",
+        "area_bighas": 51.73,
+        "area_hectares": 6.924,
+        "per_bigha": {
+          "urea_kg": 15.8,
+          "ssp_kg": 33.5,
+          "mop_kg": 13.4,
+          "fym_ton": 1.5
+        },
+        "total_for_field": {
+          "urea_kg": 814.7,
+          "urea_bags_50kg": 17,
+          "ssp_kg": 1733.0,
+          "ssp_bags_50kg": 35,
+          "mop_kg": 693.2,
+          "mop_bags_50kg": 14,
+          "fym_ton": 77.59,
+          "agri_lime_kg": 0
+        },
+        "application_schedule": "Per mature tree per year: Apply 15 kg FYM, 300g Urea, 400g SSP, 250g MOP in two equal splits (Feb-Mar and Aug-Sep).",
+        "biofertilizers": "Trichoderma viride in pit; mycorrhiza for feeder roots."
+      },
+      "necessary_steps": {
+        "land_prep": "Select high land free from water stagnation. Dig 60x60x60 cm pits at 3x3 m or 3.5x3.5 m spacing.",
+        "seed_and_sowing": "Use stem cuttings or air-layered plants from certified mother nurseries. Plant in April-May or Aug-Sep.",
+        "water_management": "Provide ring basin irrigation during dry winter (Nov-Feb). Strictly avoid waterlogging at root zone.",
+        "pest_disease": "Citrus Canker is the biggest issue in Assam's wet climate: prune diseased twigs and spray Streptocycline (1g/10L) + Copper Oxychloride. Control Citrus Leaf Miner.",
+        "harvest": "Pick fully mature, dark-green to pale-yellow aromatic fruits with rich juice vesicles."
+      }
+    },
+    {
+      "id": "ginger",
+      "name_en": "Ginger (Zingiber officinale)",
+      "name_as": "\u0986\u09a6\u09be \u0996\u09c7\u09a4\u09bf",
+      "name_hi": "\u0905\u0926\u0930\u0915",
+      "category": "Spices & Cash Crops",
+      "score": 100,
+      "verdict": "Highly Recommended",
+      "verdict_as": "\u0985\u09a4\u09bf \u0989\u09ce\u0995\u09c3\u09b7\u09cd\u099f",
+      "verdict_hi": "\u0905\u0924\u094d\u092f\u0927\u093f\u0915 \u0909\u092a\u092f\u0941\u0915\u094d\u0924",
+      "badge_color": "#22c55e",
+      "season_en": "Kharif: Mar-Apr planting, Dec-Feb harvest",
+      "season_as": "\u099a\u2019\u09a4-\u09ac\u2019\u09b9\u09be\u0997\u09a4 \u09f0\u09cb\u09aa\u09a3, \u09aa\u09c1\u09b9-\u09ae\u09be\u0998\u09a4 \u099a\u09aa\u09cb\u09f1\u09be",
+      "season_hi": "\u092e\u093e\u0930\u094d\u091a-\u0905\u092a\u094d\u0930\u0948\u0932 \u0930\u094b\u092a\u093e\u0908, \u0926\u093f\u0938\u0902\u092c\u0930-\u092b\u0930\u0935\u0930\u0940 \u0915\u091f\u093e\u0908",
+      "flood_tolerance": "none",
+      "recommended_varieties": [
+        "Nadia",
+        "Rio de Janeiro",
+        "Maran",
+        "Jorhat Local",
+        "Karbi Organic Ginger (GI Tagged)"
+      ],
+      "strengths": [
+        "Soil pH 5.6 is optimal (5.2-6.5)",
+        "Soil texture (clay 22.0%) matches root requirements",
+        "Annual rainfall 2416 mm is well-suited"
+      ],
+      "issues": [],
+      "fertilizer": {
+        "crop_id": "ginger",
+        "crop_name": "Ginger (Zingiber officinale)",
+        "crop_name_as": "\u0986\u09a6\u09be \u0996\u09c7\u09a4\u09bf",
+        "crop_name_hi": "\u0905\u0926\u0930\u0915",
+        "area_bighas": 51.73,
+        "area_hectares": 6.924,
+        "per_bigha": {
+          "urea_kg": 15.8,
+          "ssp_kg": 41.8,
+          "mop_kg": 13.4,
+          "fym_ton": 2.5
+        },
+        "total_for_field": {
+          "urea_kg": 814.7,
+          "urea_bags_50kg": 17,
+          "ssp_kg": 2162.3,
+          "ssp_bags_50kg": 44,
+          "mop_kg": 693.2,
+          "mop_bags_50kg": 14,
+          "fym_ton": 129.32,
+          "agri_lime_kg": 0
+        },
+        "application_schedule": "Basal: full FYM, full SSP, 50% MOP. Top dress Urea in 2 splits (45 and 90 DAP) with earthing up.",
+        "biofertilizers": "Trichoderma viride enriched FYM (20g/kg FYM) is essential to stop rhizome rot."
+      },
+      "necessary_steps": {
+        "land_prep": "Well-drained rich sandy loam. Make raised beds 15 cm high, 1 m wide, with 30-40 cm wide drainage channels between beds.",
+        "seed_and_sowing": "Treat healthy seed rhizomes (25-30g, 2-3 live buds) in Mancozeb (3g/L) for 30 minutes. Plant at 25x20 cm spacing, 4-5 cm deep.",
+        "water_management": "Mulch immediately after planting with green leaves (10-12 t/ha) to conserve moisture and suppress weeds.",
+        "pest_disease": "Rhizome Rot (Pythium) and Shoot Borer are major threats. Drench beds with Copper Oxychloride or Trichoderma if rot starts.",
+        "harvest": "Harvest after 8-9 months when leaves turn completely yellow and dry. Cure rhizomes in shade."
+      }
+    },
+    {
+      "id": "turmeric",
+      "name_en": "Turmeric (Curcuma longa)",
+      "name_as": "\u09b9\u09be\u09b2\u09a7\u09bf \u0996\u09c7\u09a4\u09bf",
+      "name_hi": "\u0939\u0932\u094d\u0926\u0940",
+      "category": "Spices & Cash Crops",
+      "score": 100,
+      "verdict": "Highly Recommended",
+      "verdict_as": "\u0985\u09a4\u09bf \u0989\u09ce\u0995\u09c3\u09b7\u09cd\u099f",
+      "verdict_hi": "\u0905\u0924\u094d\u092f\u0927\u093f\u0915 \u0909\u092a\u092f\u0941\u0915\u094d\u0924",
+      "badge_color": "#22c55e",
+      "season_en": "Kharif: Apr-May planting, Jan-Mar harvest",
+      "season_as": "\u09ac\u2019\u09b9\u09be\u0997-\u099c\u09c7\u09a0\u09a4 \u09f0\u09cb\u09aa\u09a3, \u09ae\u09be\u0998-\u09ab\u09be\u0997\u09c1\u09a8\u09a4 \u099a\u09aa\u09cb\u09f1\u09be",
+      "season_hi": "\u0905\u092a\u094d\u0930\u0948\u0932-\u092e\u0908 \u0930\u094b\u092a\u093e\u0908, \u091c\u0928\u0935\u0930\u0940-\u092e\u093e\u0930\u094d\u091a \u0915\u091f\u093e\u0908",
+      "flood_tolerance": "none",
+      "recommended_varieties": [
+        "Megha Turmeric-1",
+        "Duggirala",
+        "Tall",
+        "Shillong Local",
+        "Prathibha"
+      ],
+      "strengths": [
+        "Soil pH 5.6 is optimal (5.2-6.8)",
+        "Soil texture (clay 22.0%) matches root requirements",
+        "Annual rainfall 2416 mm is well-suited"
+      ],
+      "issues": [],
+      "fertilizer": {
+        "crop_id": "turmeric",
+        "crop_name": "Turmeric (Curcuma longa)",
+        "crop_name_as": "\u09b9\u09be\u09b2\u09a7\u09bf \u0996\u09c7\u09a4\u09bf",
+        "crop_name_hi": "\u0939\u0932\u094d\u0926\u0940",
+        "area_bighas": 51.73,
+        "area_hectares": 6.924,
+        "per_bigha": {
+          "urea_kg": 15.8,
+          "ssp_kg": 41.8,
+          "mop_kg": 13.4,
+          "fym_ton": 2.0
+        },
+        "total_for_field": {
+          "urea_kg": 814.7,
+          "urea_bags_50kg": 17,
+          "ssp_kg": 2162.3,
+          "ssp_bags_50kg": 44,
+          "mop_kg": 693.2,
+          "mop_bags_50kg": 14,
+          "fym_ton": 103.46,
+          "agri_lime_kg": 0
+        },
+        "application_schedule": "Apply full FYM and SSP at planting. Urea and MOP applied in two equal splits at 45 and 90 DAP along with earthing up.",
+        "biofertilizers": "Trichoderma enriched compost; Azotobacter."
+      },
+      "necessary_steps": {
+        "land_prep": "Deep ploughing (20-25 cm) to produce loose, friable bed. Make raised beds 15 cm high and 1 m wide.",
+        "seed_and_sowing": "Plant whole mother rhizomes or primary fingers (20-25g) at 30x20 cm spacing, 4 cm depth. Cover with fine soil.",
+        "water_management": "Apply heavy green leaf mulch (12 t/ha) at planting and again at 45 days. Ensure zero water stagnation.",
+        "pest_disease": "Leaf blotch (Taphrina) and Rhizome scale. Spray Mancozeb if leaf spots appear.",
+        "harvest": "Harvest at 9 months when foliage dries completely. Boil rhizomes in water for 45-60 mins and sun dry for 10-15 days."
+      }
+    },
+    {
+      "id": "bhut_jolokia",
+      "name_en": "Bhut Jolokia / King Chilli (GI Tagged)",
+      "name_as": "\u09ad\u09cb\u099f \u099c\u09b2\u0995\u09c0\u09af\u09bc\u09be (\u09ac\u09bf\u09b6\u09cd\u09ac\u09ac\u09bf\u0996\u09cd\u09af\u09be\u09a4 \u099f\u09c7\u0999\u09be-\u099c\u09cd\u09ac\u09b2\u09be \u099c\u09b2\u0995\u09c0\u09af\u09bc\u09be)",
+      "name_hi": "\u092d\u0942\u0924 \u091c\u094b\u0932\u094b\u0915\u093f\u092f\u093e / \u0915\u093f\u0902\u0917 \u092e\u093f\u0930\u094d\u091a",
+      "category": "Spices & High Value",
+      "score": 99,
+      "verdict": "Highly Recommended",
+      "verdict_as": "\u0985\u09a4\u09bf \u0989\u09ce\u0995\u09c3\u09b7\u09cd\u099f",
+      "verdict_hi": "\u0905\u0924\u094d\u092f\u0927\u093f\u0915 \u0909\u092a\u092f\u0941\u0915\u094d\u0924",
+      "badge_color": "#22c55e",
+      "season_en": "Kharif to Rabi: Oct-Nov or Feb-Mar planting",
+      "season_as": "\u0995\u09be\u09a4\u09bf-\u0986\u0998\u09cb\u09a3 \u09ac\u09be \u09ab\u09be\u0997\u09c1\u09a8-\u099a\u2019\u09a4\u09a4 \u09f0\u09cb\u09aa\u09a3",
+      "season_hi": "\u0905\u0915\u094d\u091f\u0942\u092c\u0930-\u0928\u0935\u0902\u092c\u0930 \u092f\u093e \u092b\u0930\u0935\u0930\u0940-\u092e\u093e\u0930\u094d\u091a \u0930\u094b\u092a\u093e\u0908",
+      "flood_tolerance": "none",
+      "recommended_varieties": [
+        "AAU Selections",
+        "Local ecotypes (Golaghat, Jorhat, Tezpur, Nagaland border)"
+      ],
+      "strengths": [
+        "Soil pH 5.6 is optimal (5.5-6.8)",
+        "Soil texture (clay 22.0%) matches root requirements",
+        "Annual rainfall 2416 mm is well-suited"
+      ],
+      "issues": [],
+      "fertilizer": {
+        "crop_id": "bhut_jolokia",
+        "crop_name": "Bhut Jolokia / King Chilli (GI Tagged)",
+        "crop_name_as": "\u09ad\u09cb\u099f \u099c\u09b2\u0995\u09c0\u09af\u09bc\u09be (\u09ac\u09bf\u09b6\u09cd\u09ac\u09ac\u09bf\u0996\u09cd\u09af\u09be\u09a4 \u099f\u09c7\u0999\u09be-\u099c\u09cd\u09ac\u09b2\u09be \u099c\u09b2\u0995\u09c0\u09af\u09bc\u09be)",
+        "crop_name_hi": "\u092d\u0942\u0924 \u091c\u094b\u0932\u094b\u0915\u093f\u092f\u093e / \u0915\u093f\u0902\u0917 \u092e\u093f\u0930\u094d\u091a",
+        "area_bighas": 51.73,
+        "area_hectares": 6.924,
+        "per_bigha": {
+          "urea_kg": 13.1,
+          "ssp_kg": 33.5,
+          "mop_kg": 8.9,
+          "fym_ton": 2.0
+        },
+        "total_for_field": {
+          "urea_kg": 675.1,
+          "urea_bags_50kg": 14,
+          "ssp_kg": 1733.0,
+          "ssp_bags_50kg": 35,
+          "mop_kg": 460.4,
+          "mop_bags_50kg": 10,
+          "fym_ton": 103.46,
+          "agri_lime_kg": 0
+        },
+        "application_schedule": "Apply full FYM, SSP, and MOP as basal. Apply Urea in 3 equal splits: 30, 60, and 90 days after transplanting.",
+        "biofertilizers": "Trichoderma harzianum soil treatment; Azospirillum."
+      },
+      "necessary_steps": {
+        "land_prep": "High land with excellent natural drainage. Raised beds (15 cm high) are necessary to combat Assam monsoon downpours.",
+        "seed_and_sowing": "Raise seedlings in raised nursery beds or seedling trays. Transplant 30-40 day seedlings at 75x75 cm spacing. Provide light shade if possible.",
+        "water_management": "Very sensitive to root rot and collar rot from stagnant water. Use furrow irrigation or drip.",
+        "pest_disease": "Prone to Anthracnose (fruit rot), Bacterial Wilt, and Aphid-transmitted leaf curl virus. Apply Bordeaux mixture or COC prophylactically.",
+        "harvest": "Harvest ripe red pods with pedicel intact. Wear rubber gloves when handling!"
+      }
+    },
+    {
+      "id": "sali_rice",
+      "name_en": "Sali Rice (Winter Rice)",
+      "name_as": "\u09b6\u09be\u09b2\u09bf \u09a7\u09be\u09a8 (\u09b6\u09c0\u09a4\u0995\u09be\u09b2\u09c0\u09a8 \u09a7\u09be\u09a8)",
+      "name_hi": "\u0936\u093e\u0932\u0940 \u0927\u093e\u0928 (\u0936\u0940\u0924\u0915\u093e\u0932\u0940\u0928 \u0927\u093e\u0928)",
+      "category": "Cereals",
+      "score": 95,
+      "verdict": "Highly Recommended",
+      "verdict_as": "\u0985\u09a4\u09bf \u0989\u09ce\u0995\u09c3\u09b7\u09cd\u099f",
+      "verdict_hi": "\u0905\u0924\u094d\u092f\u0927\u093f\u0915 \u0909\u092a\u092f\u0941\u0915\u094d\u0924",
+      "badge_color": "#22c55e",
+      "season_en": "Kharif: Jun-Jul sowing, Nov-Dec harvest",
+      "season_as": "\u0996\u09be\u09f0\u09bf\u09ab: \u099c\u09c7\u09a0-\u0986\u09b9\u09be\u09f0\u09a4 \u09f0\u09cb\u09aa\u09a3, \u0986\u0998\u09cb\u09a3-\u09aa\u09c1\u09b9\u09a4 \u099a\u09aa\u09cb\u09f1\u09be",
+      "season_hi": "\u0916\u0930\u0940\u092b: \u091c\u0942\u0928-\u091c\u0941\u0932\u093e\u0908 \u0930\u094b\u092a\u093e\u0908, \u0928\u0935\u0902\u092c\u0930-\u0926\u093f\u0938\u0902\u092c\u0930 \u0915\u091f\u093e\u0908",
+      "flood_tolerance": "high",
+      "recommended_varieties": [
+        "Ranjit",
+        "Bahadur",
+        "Pankaj",
+        "Mahsuri",
+        "Submergence tolerant (Flood prone): Ranjit Sub-1, Bahadur Sub-1, Swarna Sub-1",
+        "Deepwater/Pluvial: Jalashree, Jalkunwari"
+      ],
+      "strengths": [
+        "Soil pH 5.6 is optimal (5.0-6.5)",
+        "Annual rainfall 2416 mm is well-suited"
+      ],
+      "issues": [
+        "Clay content 22.0% is too light/sandy (ideal 25-60%)"
+      ],
+      "fertilizer": {
+        "crop_id": "sali_rice",
+        "crop_name": "Sali Rice (Winter Rice)",
+        "crop_name_as": "\u09b6\u09be\u09b2\u09bf \u09a7\u09be\u09a8 (\u09b6\u09c0\u09a4\u0995\u09be\u09b2\u09c0\u09a8 \u09a7\u09be\u09a8)",
+        "crop_name_hi": "\u0936\u093e\u0932\u0940 \u0927\u093e\u0928 (\u0936\u0940\u0924\u0915\u093e\u0932\u0940\u0928 \u0927\u093e\u0928)",
+        "area_bighas": 51.73,
+        "area_hectares": 6.924,
+        "per_bigha": {
+          "urea_kg": 15.8,
+          "ssp_kg": 16.7,
+          "mop_kg": 8.9,
+          "fym_ton": 1.0
+        },
+        "total_for_field": {
+          "urea_kg": 814.7,
+          "urea_bags_50kg": 17,
+          "ssp_kg": 863.9,
+          "ssp_bags_50kg": 18,
+          "mop_kg": 460.4,
+          "mop_bags_50kg": 10,
+          "fym_ton": 51.73,
+          "agri_lime_kg": 0
+        },
+        "application_schedule": "Apply all SSP, all MOP, and 50% Urea at final puddling (basal). Apply 25% Urea at tillering (20-25 days after transplanting) and 25% Urea at panicle initiation (40-45 DAT).",
+        "biofertilizers": "Azospirillum or PSB slurry dip for seedlings before transplanting."
+      },
+      "necessary_steps": {
+        "land_prep": "Plough 4-5 times followed by thorough puddling and leveling. Maintain 2-3 cm standing water during puddling to seal pores and reduce percolation.",
+        "seed_and_sowing": "Treat seeds with Carbendazim 2g/kg seed. Raise wet-bed nursery in June. Transplant 25-30 day old seedlings at 20x15 cm spacing with 2-3 seedlings per hill.",
+        "water_management": "Maintain 2-5 cm shallow standing water till grain hardening. Drain completely 7-10 days before harvest.",
+        "pest_disease": "Watch for Rice Hispa (apply Chlorpyriphos 20 EC if >1 adult/hill), Stem Borer, and Bacterial Leaf Blight. Keep bunds weed-free.",
+        "harvest": "Harvest when 80-85% grains turn golden yellow. Sun-dry paddy to 12-14% moisture before storage in bamboo dhol or airtight bins."
+      }
+    },
+    {
+      "id": "assam_tea",
+      "name_en": "Assam Tea (Camellia sinensis)",
+      "name_as": "\u0985\u09b8\u09ae \u099a\u09be\u09b9 (\u099a\u09be\u09b9 \u0996\u09c7\u09a4\u09bf)",
+      "name_hi": "\u0905\u0938\u092e \u091a\u093e\u092f",
+      "category": "Cash Crops & Plantation",
+      "score": 94,
+      "verdict": "Highly Recommended",
+      "verdict_as": "\u0985\u09a4\u09bf \u0989\u09ce\u0995\u09c3\u09b7\u09cd\u099f",
+      "verdict_hi": "\u0905\u0924\u094d\u092f\u0927\u093f\u0915 \u0909\u092a\u092f\u0941\u0915\u094d\u0924",
+      "badge_color": "#22c55e",
+      "season_en": "Perennial (Main flushing: Mar-Nov)",
+      "season_as": "\u09ac\u09be\u09f0\u09ae\u09b9\u09c0\u09af\u09bc\u09be (\u09ae\u09c1\u0996\u09cd\u09af \u09aa\u09be\u09a4 \u099a\u09af\u09bc\u09a8: \u099a\u2019\u09a4\u09f0 \u09aa\u09f0\u09be \u0986\u0998\u09cb\u09a3)",
+      "season_hi": "\u0938\u0926\u093e\u092c\u0939\u093e\u0930 (\u092a\u0924\u094d\u0924\u0940 \u091a\u0941\u0928\u093e\u0908: \u092e\u093e\u0930\u094d\u091a \u0938\u0947 \u0928\u0935\u0902\u092c\u0930)",
+      "flood_tolerance": "none",
+      "recommended_varieties": [
+        "Tocklai Clones: TV-1, TV-9, TV-18, TV-20, TV-22, TV-23, TV-25, TV-26",
+        "Biclonal Seed Stocks: TS-462, TS-463"
+      ],
+      "strengths": [
+        "Soil texture (clay 22.0%) matches root requirements",
+        "Annual rainfall 2416 mm is well-suited"
+      ],
+      "issues": [
+        "Soil pH 5.6 is too alkaline (ideal 4.5-5.5)"
+      ],
+      "fertilizer": {
+        "crop_id": "assam_tea",
+        "crop_name": "Assam Tea (Camellia sinensis)",
+        "crop_name_as": "\u0985\u09b8\u09ae \u099a\u09be\u09b9 (\u099a\u09be\u09b9 \u0996\u09c7\u09a4\u09bf)",
+        "crop_name_hi": "\u0905\u0938\u092e \u091a\u093e\u092f",
+        "area_bighas": 51.73,
+        "area_hectares": 6.924,
+        "per_bigha": {
+          "urea_kg": 23.6,
+          "ssp_kg": 37.6,
+          "mop_kg": 20.1,
+          "fym_ton": 2.0
+        },
+        "total_for_field": {
+          "urea_kg": 1219.8,
+          "urea_bags_50kg": 25,
+          "ssp_kg": 1945.0,
+          "ssp_bags_50kg": 39,
+          "mop_kg": 1039.8,
+          "mop_bags_50kg": 21,
+          "fym_ton": 103.46,
+          "agri_lime_kg": 0
+        },
+        "application_schedule": "Apply NPK mixture in 2-3 split applications: first in March-April after first showers, second in May-June, third in August-September.",
+        "biofertilizers": "Mycorrhiza (VAM) and Trichoderma bio-formulations during planting and mulch."
+      },
+      "necessary_steps": {
+        "land_prep": "Upland topography with gentle slope (1-2%). Deep soil digging (45-60 cm). Heavy drainage trenches (90 cm deep x 60 cm wide) every 10-15 rows are MANDATORY to prevent root rot.",
+        "seed_and_sowing": "Plant 1-year-old bicolonal or clonal plants in pit size 45x45x45 cm with compost and SSP. Plant shade trees (Albizia odoratissima) at 12x12 m spacing.",
+        "water_management": "Never allow standing water\u2014waterlogging for >48 hours severely damages tea feeder roots. Mulch in winter.",
+        "pest_disease": "Control Tea Mosquito Bug (Helopeltis) and Red Spider Mite using AAU/TRA recommended IPM. Monitor during flush cycles.",
+        "harvest": "Pluck 'two leaves and a bud' every 7-8 days during active flushing for premium CTC/Orthodox quality."
+      }
+    },
+    {
+      "id": "jute",
+      "name_en": "Jute (Tossa / White Jute)",
+      "name_as": "\u09ae\u09f0\u09be\u09aa\u09be\u099f \u0996\u09c7\u09a4\u09bf",
+      "name_hi": "\u091c\u0942\u091f / \u092a\u091f\u0938\u0928",
+      "category": "Fibre Crops",
+      "score": 93,
+      "verdict": "Highly Recommended",
+      "verdict_as": "\u0985\u09a4\u09bf \u0989\u09ce\u0995\u09c3\u09b7\u09cd\u099f",
+      "verdict_hi": "\u0905\u0924\u094d\u092f\u0927\u093f\u0915 \u0909\u092a\u092f\u0941\u0915\u094d\u0924",
+      "badge_color": "#22c55e",
+      "season_en": "Pre-Kharif to Kharif: Mar-May sowing, Jul-Sep harvest",
+      "season_as": "\u09aa\u09cd\u09f0\u09be\u0995-\u0996\u09be\u09f0\u09bf\u09ab: \u099a\u2019\u09a4-\u09ac\u2019\u09b9\u09be\u0997\u09a4 \u09b8\u09bf\u0981\u099a\u09be, \u09b6\u09be\u0993\u09a3-\u09ad\u09be\u09a6\u09a4 \u099a\u09aa\u09cb\u09f1\u09be",
+      "season_hi": "\u092a\u094d\u0930\u0940-\u0916\u0930\u0940\u092b: \u092e\u093e\u0930\u094d\u091a-\u092e\u0908 \u092c\u0941\u0935\u093e\u0908, \u091c\u0941\u0932\u093e\u0908-\u0938\u093f\u0924\u0902\u092c\u0930 \u0915\u091f\u093e\u0908",
+      "flood_tolerance": "high",
+      "recommended_varieties": [
+        "Capsularis (White Jute): JRC-212, JRC-321, JRC-7447",
+        "Olitorius (Tossa Jute): JRO-524 (Navin), JRO-7835, JRO-632, Tarun"
+      ],
+      "strengths": [
+        "Soil texture (clay 22.0%) matches root requirements",
+        "Annual rainfall 2416 mm is well-suited"
+      ],
+      "issues": [
+        "Soil pH 5.6 is too acidic (ideal 5.8-7.5)"
+      ],
+      "fertilizer": {
+        "crop_id": "jute",
+        "crop_name": "Jute (Tossa / White Jute)",
+        "crop_name_as": "\u09ae\u09f0\u09be\u09aa\u09be\u099f \u0996\u09c7\u09a4\u09bf",
+        "crop_name_hi": "\u091c\u0942\u091f / \u092a\u091f\u0938\u0928",
+        "area_bighas": 51.73,
+        "area_hectares": 6.924,
+        "per_bigha": {
+          "urea_kg": 10.4,
+          "ssp_kg": 16.7,
+          "mop_kg": 4.5,
+          "fym_ton": 0.7
+        },
+        "total_for_field": {
+          "urea_kg": 540.1,
+          "urea_bags_50kg": 11,
+          "ssp_kg": 863.9,
+          "ssp_bags_50kg": 18,
+          "mop_kg": 232.8,
+          "mop_bags_50kg": 5,
+          "fym_ton": 36.21,
+          "agri_lime_kg": 0
+        },
+        "application_schedule": "Apply full SSP and MOP at final land preparation. Apply Urea in two splits: 50% at 3 weeks and 50% at 6 weeks after sowing.",
+        "biofertilizers": "Azospirillum and PSB seed inoculation."
+      },
+      "necessary_steps": {
+        "land_prep": "Plough 4-5 times in March-April to obtain fine tilth. Ensure good drainage for Capsularis and well-drained loam for Olitorius.",
+        "seed_and_sowing": "Line sowing at 25-30 cm row spacing. Seed rate: 6-7 kg/ha for capsularis, 4-5 kg/ha for olitorius.",
+        "water_management": "Tolerates water stagnation after 2 months of growth; excellent crop for low-lying flood-prone belts.",
+        "pest_disease": "Watch out for Jute Semilooper, Hairy Caterpillar, and stem rot.",
+        "harvest": "Harvest at 50% flowering stage (100-120 days) for best fiber tensile strength. Ret in clean, slow-moving water with Ribbon retting or microbial consortium."
+      }
+    },
+    {
+      "id": "mustard_toria",
+      "name_en": "Mustard / Toria (Yellow Sarson)",
+      "name_as": "\u09b8\u09f0\u09bf\u09af\u09bc\u09b9 / \u09a4\u09cb\u09f0\u09bf\u09af\u09bc\u09be (\u09a4\u09c7\u09b2\u09ac\u09c0\u099c)",
+      "name_hi": "\u0938\u0930\u0938\u094b\u0902 / \u0924\u094b\u0930\u093f\u092f\u093e",
+      "category": "Oilseeds",
+      "score": 74,
+      "verdict": "Suitable with Care",
+      "verdict_as": "\u09af\u09a4\u09cd\u09a8\u09b8\u09b9\u0995\u09be\u09f0\u09c7 \u0989\u09aa\u09af\u09cb\u0997\u09c0",
+      "verdict_hi": "\u0926\u0947\u0916\u092d\u093e\u0932 \u0915\u0947 \u0938\u093e\u0925 \u0909\u092a\u092f\u0941\u0915\u094d\u0924",
+      "badge_color": "#eab308",
+      "season_en": "Rabi: Mid Oct - Nov sowing, Feb - Mar harvest",
+      "season_as": "\u09f0\u09ac\u09bf: \u0995\u09be\u09a4\u09bf-\u0986\u0998\u09cb\u09a3\u09a4 \u09b8\u09bf\u0981\u099a\u09be, \u09ae\u09be\u0998-\u09ab\u09be\u0997\u09c1\u09a8\u09a4 \u099a\u09aa\u09cb\u09f1\u09be",
+      "season_hi": "\u0930\u092c\u0940: \u0905\u0915\u094d\u091f\u0942\u092c\u0930-\u0928\u0935\u0902\u092c\u0930 \u092c\u0941\u0935\u093e\u0908, \u092b\u0930\u0935\u0930\u0940-\u092e\u093e\u0930\u094d\u091a \u0915\u091f\u093e\u0908",
+      "flood_tolerance": "none",
+      "recommended_varieties": [
+        "TS-36",
+        "TS-38",
+        "TS-46",
+        "TS-67",
+        "M-27",
+        "PM-26",
+        "NRCHB-101"
+      ],
+      "strengths": [
+        "Soil pH 5.6 is optimal (5.5-7.2)",
+        "Soil texture (clay 22.0%) matches root requirements"
+      ],
+      "issues": [
+        "Annual rainfall 2416 mm is higher than needed (ideal 400-1800 mm)"
+      ],
+      "fertilizer": {
+        "crop_id": "mustard_toria",
+        "crop_name": "Mustard / Toria (Yellow Sarson)",
+        "crop_name_as": "\u09b8\u09f0\u09bf\u09af\u09bc\u09b9 / \u09a4\u09cb\u09f0\u09bf\u09af\u09bc\u09be (\u09a4\u09c7\u09b2\u09ac\u09c0\u099c)",
+        "crop_name_hi": "\u0938\u0930\u0938\u094b\u0902 / \u0924\u094b\u0930\u093f\u092f\u093e",
+        "area_bighas": 51.73,
+        "area_hectares": 6.924,
+        "per_bigha": {
+          "urea_kg": 15.8,
+          "ssp_kg": 25.1,
+          "mop_kg": 6.7,
+          "fym_ton": 0.7
+        },
+        "total_for_field": {
+          "urea_kg": 814.7,
+          "urea_bags_50kg": 17,
+          "ssp_kg": 1298.4,
+          "ssp_bags_50kg": 26,
+          "mop_kg": 346.6,
+          "mop_bags_50kg": 7,
+          "fym_ton": 36.21,
+          "agri_lime_kg": 0
+        },
+        "application_schedule": "Apply 100% SSP, 100% MOP, and 50% Urea at final land preparation. Top dress remaining 50% Urea 25-30 days after sowing before first irrigation.",
+        "biofertilizers": "Azotobacter and PSB seed coating."
+      },
+      "necessary_steps": {
+        "land_prep": "Plough 4-6 times immediately after Sali rice harvest to catch residual moisture. Cultivate to fine, firm, moisture-retentive seedbed.",
+        "seed_and_sowing": "Sow in lines at 30 cm spacing, 2-3 cm depth. Seed rate: 10-12 kg/ha (1.5 kg/bigha). Thinning at 10-15 DAS to keep 10 cm plant-to-plant.",
+        "water_management": "Provide 1-2 irrigations: first at flowering stage (30 DAS) and second at pod formation (55 DAS) if winter rains fail.",
+        "pest_disease": "Watch out for Mustard Aphids (\u09ae\u09cb\u09f1\u09be \u09aa\u09cb\u0995). If aphid colony appears on top 10 cm twigs, spray Dimethoate 30 EC or neem oil 1500 ppm.",
+        "harvest": "Harvest in morning hours when siliquae turn golden-yellow to avoid shattering. Dry seeds in sun for 4-5 days."
+      }
+    },
+    {
+      "id": "ahu_rice",
+      "name_en": "Ahu Rice (Autumn Rice)",
+      "name_as": "\u0986\u09b9\u09c1 \u09a7\u09be\u09a8 (\u09b6\u09f0\u09ce\u0995\u09be\u09b2\u09c0\u09a8 \u09a7\u09be\u09a8)",
+      "name_hi": "\u0906\u0939\u0942 \u0927\u093e\u0928 (\u0936\u0930\u0926\u0915\u093e\u0932\u0940\u0928 \u0927\u093e\u0928)",
+      "category": "Cereals",
+      "score": 60,
+      "verdict": "Suitable with Care",
+      "verdict_as": "\u09af\u09a4\u09cd\u09a8\u09b8\u09b9\u0995\u09be\u09f0\u09c7 \u0989\u09aa\u09af\u09cb\u0997\u09c0",
+      "verdict_hi": "\u0926\u0947\u0916\u092d\u093e\u0932 \u0915\u0947 \u0938\u093e\u0925 \u0909\u092a\u092f\u0941\u0915\u094d\u0924",
+      "badge_color": "#eab308",
+      "season_en": "Pre-Kharif: Mar-Apr sowing, Jun-Jul harvest",
+      "season_as": "\u09aa\u09cd\u09f0\u09be\u0995-\u0996\u09be\u09f0\u09bf\u09ab: \u09ab\u09be\u0997\u09c1\u09a8-\u099a\u2019\u09a4\u09a4 \u09b8\u09bf\u0981\u099a\u09be, \u0986\u09b9\u09be\u09f0-\u09b6\u09be\u0993\u09a3\u09a4 \u099a\u09aa\u09cb\u09f1\u09be",
+      "season_hi": "\u092a\u094d\u0930\u0940-\u0916\u0930\u0940\u092b: \u092e\u093e\u0930\u094d\u091a-\u0905\u092a\u094d\u0930\u0948\u0932 \u092c\u0941\u0935\u093e\u0908, \u091c\u0942\u0928-\u091c\u0941\u0932\u093e\u0908 \u0915\u091f\u093e\u0908",
+      "flood_tolerance": "medium",
+      "recommended_varieties": [
+        "Direct-seeded upland: Govind, Vandana, Luit, Disang, Kapilee",
+        "Transplanted Ahu: Lachit, Chilarai"
+      ],
+      "strengths": [
+        "Soil pH 5.6 is optimal (5.2-6.8)",
+        "Soil texture (clay 22.0%) matches root requirements"
+      ],
+      "issues": [
+        "Annual rainfall 2416 mm is higher than needed (ideal 900-1800 mm)"
+      ],
+      "fertilizer": {
+        "crop_id": "ahu_rice",
+        "crop_name": "Ahu Rice (Autumn Rice)",
+        "crop_name_as": "\u0986\u09b9\u09c1 \u09a7\u09be\u09a8 (\u09b6\u09f0\u09ce\u0995\u09be\u09b2\u09c0\u09a8 \u09a7\u09be\u09a8)",
+        "crop_name_hi": "\u0906\u0939\u0942 \u0927\u093e\u0928 (\u0936\u0930\u0926\u0915\u093e\u0932\u0940\u0928 \u0927\u093e\u0928)",
+        "area_bighas": 51.73,
+        "area_hectares": 6.924,
+        "per_bigha": {
+          "urea_kg": 10.4,
+          "ssp_kg": 16.7,
+          "mop_kg": 4.5,
+          "fym_ton": 0.8
+        },
+        "total_for_field": {
+          "urea_kg": 540.1,
+          "urea_bags_50kg": 11,
+          "ssp_kg": 863.9,
+          "ssp_bags_50kg": 18,
+          "mop_kg": 232.8,
+          "mop_bags_50kg": 5,
+          "fym_ton": 41.38,
+          "agri_lime_kg": 0
+        },
+        "application_schedule": "Apply full SSP, full MOP, and 50% Urea at final land prep. Top dress 25% Urea after first weeding (20 days) and 25% at panicle emergence.",
+        "biofertilizers": "Azotobacter and PSB seed treatment (20g each per kg seed)."
+      },
+      "necessary_steps": {
+        "land_prep": "Plough 3-4 times immediately after pre-monsoon showers in March to bring soil to fine tilth. Level to prevent water stagnation.",
+        "seed_and_sowing": "Line sow seeds at 20 cm row-to-row spacing (75-80 kg/ha) or broadcast (85-100 kg/ha). Seed depth 2-3 cm.",
+        "water_management": "Critical stages needing moisture: tillering and flowering. Provide life-saving drainage if heavy pre-monsoon rains flood the field.",
+        "pest_disease": "Control weeds aggressively at 15-20 and 35-40 days. Scout for blast and brown plant hopper.",
+        "harvest": "Harvest early before peak monsoon floods submerge the crop in late June/July."
+      }
+    },
+    {
+      "id": "potato",
+      "name_en": "Potato (Solanum tuberosum)",
+      "name_as": "\u0986\u09b2\u09c1 \u0996\u09c7\u09a4\u09bf",
+      "name_hi": "\u0906\u0932\u0942",
+      "category": "Vegetables & Tubers",
+      "score": 60,
+      "verdict": "Suitable with Care",
+      "verdict_as": "\u09af\u09a4\u09cd\u09a8\u09b8\u09b9\u0995\u09be\u09f0\u09c7 \u0989\u09aa\u09af\u09cb\u0997\u09c0",
+      "verdict_hi": "\u0926\u0947\u0916\u092d\u093e\u0932 \u0915\u0947 \u0938\u093e\u0925 \u0909\u092a\u092f\u0941\u0915\u094d\u0924",
+      "badge_color": "#eab308",
+      "season_en": "Rabi: Oct-Nov planting, Jan-Mar harvest",
+      "season_as": "\u09f0\u09ac\u09bf: \u0995\u09be\u09a4\u09bf-\u0986\u0998\u09cb\u09a3\u09a4 \u09f0\u09cb\u09aa\u09a3, \u09ae\u09be\u0998-\u09ab\u09be\u0997\u09c1\u09a8\u09a4 \u099a\u09aa\u09cb\u09f1\u09be",
+      "season_hi": "\u0930\u092c\u0940: \u0905\u0915\u094d\u091f\u0942\u092c\u0930-\u0928\u0935\u0902\u092c\u0930 \u0930\u094b\u092a\u093e\u0908, \u091c\u0928\u0935\u0930\u0940-\u092e\u093e\u0930\u094d\u091a \u0915\u091f\u093e\u0908",
+      "flood_tolerance": "none",
+      "recommended_varieties": [
+        "Kufri Jyoti",
+        "Kufri Pokhraj",
+        "Kufri Megha",
+        "Kufri Surya",
+        "Kufri Sindhuri"
+      ],
+      "strengths": [
+        "Soil pH 5.6 is optimal (5.0-6.5)",
+        "Soil texture (clay 22.0%) matches root requirements"
+      ],
+      "issues": [
+        "Annual rainfall 2416 mm is higher than needed (ideal 400-1600 mm)"
+      ],
+      "fertilizer": {
+        "crop_id": "potato",
+        "crop_name": "Potato (Solanum tuberosum)",
+        "crop_name_as": "\u0986\u09b2\u09c1 \u0996\u09c7\u09a4\u09bf",
+        "crop_name_hi": "\u0906\u0932\u0942",
+        "area_bighas": 51.73,
+        "area_hectares": 6.924,
+        "per_bigha": {
+          "urea_kg": 15.8,
+          "ssp_kg": 41.8,
+          "mop_kg": 11.2,
+          "fym_ton": 1.5
+        },
+        "total_for_field": {
+          "urea_kg": 814.7,
+          "urea_bags_50kg": 17,
+          "ssp_kg": 2162.3,
+          "ssp_bags_50kg": 44,
+          "mop_kg": 579.4,
+          "mop_bags_50kg": 12,
+          "fym_ton": 77.59,
+          "agri_lime_kg": 0
+        },
+        "application_schedule": "Apply full FYM, full SSP, full MOP, and 50% Urea in furrows at planting. Top dress remaining 50% Urea at earthing up (30 DAP).",
+        "biofertilizers": "Azotobacter and PSB tuber treatment."
+      },
+      "necessary_steps": {
+        "land_prep": "Loose, friable, well-aerated sandy loam soil. Deep ploughing to 25 cm followed by thorough clod crushing.",
+        "seed_and_sowing": "Use sprouted, certified disease-free whole seed tubers (35-45g). Plant on ridges at 50-60 cm row spacing and 15-20 cm tuber spacing.",
+        "water_management": "Critical stages for irrigation: stolon formation, tuber initiation, and tuber sizing. Never submerge the ridge.",
+        "pest_disease": "Late blight is the #1 killer in Assam's winter fog. Spray Mancozeb 75 WP prophylactically at canopy closure.",
+        "harvest": "Cut haulms (foliage) 10-12 days before digging to cure tuber skin. Dig carefully without cutting tubers."
+      }
+    },
+    {
+      "id": "boro_rice",
+      "name_en": "Boro Rice (Summer Rice)",
+      "name_as": "\u09ac\u09f0\u09cb \u09a7\u09be\u09a8 (\u0997\u09cd\u09f0\u09c0\u09b7\u09cd\u09ae\u0995\u09be\u09b2\u09c0\u09a8 \u09a7\u09be\u09a8)",
+      "name_hi": "\u092c\u094b\u0930\u094b \u0927\u093e\u0928 (\u0917\u094d\u0930\u0940\u0937\u094d\u092e\u0915\u093e\u0932\u0940\u0928 \u0927\u093e\u0928)",
+      "category": "Cereals",
+      "score": 40,
+      "verdict": "Challenging / Low Suitability",
+      "verdict_as": "\u09b8\u09c0\u09ae\u09bf\u09a4 \u0989\u09aa\u09af\u09cb\u0997\u09c0",
+      "verdict_hi": "\u0915\u092e \u0909\u092a\u092f\u0941\u0915\u094d\u0924",
+      "badge_color": "#ef4444",
+      "season_en": "Rabi-Summer: Nov-Dec sowing, Apr-May harvest",
+      "season_as": "\u09f0\u09ac\u09bf-\u0997\u09cd\u09f0\u09c0\u09b7\u09cd\u09ae: \u0986\u0998\u09cb\u09a3-\u09aa\u09c1\u09b9\u09a4 \u09f0\u09cb\u09aa\u09a3, \u09ac\u2019\u09b9\u09be\u0997-\u099c\u09c7\u09a0\u09a4 \u099a\u09aa\u09cb\u09f1\u09be",
+      "season_hi": "\u0930\u092c\u0940-\u0917\u094d\u0930\u0940\u0937\u094d\u092e: \u0928\u0935\u0902\u092c\u0930-\u0926\u093f\u0938\u0902\u092c\u0930 \u0930\u094b\u092a\u093e\u0908, \u0905\u092a\u094d\u0930\u0948\u0932-\u092e\u0908 \u0915\u091f\u093e\u0908",
+      "flood_tolerance": "high",
+      "recommended_varieties": [
+        "Joymati",
+        "Kanaklata",
+        "Boro-1",
+        "Boro-2",
+        "IR-36",
+        "Mahsuri"
+      ],
+      "strengths": [
+        "Soil pH 5.6 is optimal (5.2-7.0)"
+      ],
+      "issues": [
+        "Clay content 22.0% is too light/sandy (ideal 25-55%)",
+        "Annual rainfall 2416 mm is higher than needed (ideal 400-1200 mm)"
+      ],
+      "fertilizer": {
+        "crop_id": "boro_rice",
+        "crop_name": "Boro Rice (Summer Rice)",
+        "crop_name_as": "\u09ac\u09f0\u09cb \u09a7\u09be\u09a8 (\u0997\u09cd\u09f0\u09c0\u09b7\u09cd\u09ae\u0995\u09be\u09b2\u09c0\u09a8 \u09a7\u09be\u09a8)",
+        "crop_name_hi": "\u092c\u094b\u0930\u094b \u0927\u093e\u0928 (\u0917\u094d\u0930\u0940\u0937\u094d\u092e\u0915\u093e\u0932\u0940\u0928 \u0927\u093e\u0928)",
+        "area_bighas": 51.73,
+        "area_hectares": 6.924,
+        "per_bigha": {
+          "urea_kg": 21.0,
+          "ssp_kg": 33.5,
+          "mop_kg": 8.9,
+          "fym_ton": 1.2
+        },
+        "total_for_field": {
+          "urea_kg": 1084.8,
+          "urea_bags_50kg": 22,
+          "ssp_kg": 1733.0,
+          "ssp_bags_50kg": 35,
+          "mop_kg": 460.4,
+          "mop_bags_50kg": 10,
+          "fym_ton": 62.08,
+          "agri_lime_kg": 0
+        },
+        "application_schedule": "Apply full SSP, full MOP, and 33% Urea at puddling. 33% Urea at active tillering (30 DAT), 33% at panicle initiation (50 DAT).",
+        "biofertilizers": "Azospirillum and PSB root seedling dip."
+      },
+      "necessary_steps": {
+        "land_prep": "Grow in low-lying waterlogged beel areas, char lands, or irrigated pockets. Thorough puddling in December/January.",
+        "seed_and_sowing": "Protect winter nursery with polythene covering at night to combat severe December cold/fog. Transplant 35-45 day old seedlings.",
+        "water_management": "Requires assured shallow tubewell (STW) or river lift irrigation. Keep saturated soil to 3-5 cm water depth.",
+        "pest_disease": "Watch out for cold injury at nursery, followed by blast and sheath blight during March warming.",
+        "harvest": "Harvest quickly in April before pre-monsoon flash floods arrive in low-lying basins."
+      }
+    },
+    {
+      "id": "black_gram",
+      "name_en": "Black Gram / Matikalai (Urad)",
+      "name_as": "\u09ae\u09be\u099f\u09bf\u0995\u09b2\u09be\u0987 \u0996\u09c7\u09a4\u09bf",
+      "name_hi": "\u0909\u0921\u093c\u0926 / \u0915\u093e\u0932\u0940 \u0926\u093e\u0932",
+      "category": "Pulses",
+      "score": 38,
+      "verdict": "Challenging / Low Suitability",
+      "verdict_as": "\u09b8\u09c0\u09ae\u09bf\u09a4 \u0989\u09aa\u09af\u09cb\u0997\u09c0",
+      "verdict_hi": "\u0915\u092e \u0909\u092a\u092f\u0941\u0915\u094d\u0924",
+      "badge_color": "#ef4444",
+      "season_en": "Late Kharif: Aug-Sep sowing, Nov-Dec harvest",
+      "season_as": "\u09ad\u09be\u09a6-\u0986\u09b9\u09bf\u09a8\u09a4 \u09b8\u09bf\u0981\u099a\u09be, \u0986\u0998\u09cb\u09a3-\u09aa\u09c1\u09b9\u09a4 \u099a\u09aa\u09cb\u09f1\u09be",
+      "season_hi": "\u0905\u0917\u0938\u094d\u0924-\u0938\u093f\u0924\u0902\u092c\u0930 \u092c\u0941\u0935\u093e\u0908, \u0928\u0935\u0902\u092c\u0930-\u0926\u093f\u0938\u0902\u092c\u0930 \u0915\u091f\u093e\u0908",
+      "flood_tolerance": "none",
+      "recommended_varieties": [
+        "T-9",
+        "Pant U-19",
+        "Saon Mah (SB 121)",
+        "KU 301",
+        "PU 31"
+      ],
+      "strengths": [
+        "Soil texture (clay 22.0%) matches root requirements"
+      ],
+      "issues": [
+        "Soil pH 5.6 is too acidic (ideal 6.0-7.5)",
+        "Annual rainfall 2416 mm is higher than needed (ideal 600-1500 mm)"
+      ],
+      "fertilizer": {
+        "crop_id": "black_gram",
+        "crop_name": "Black Gram / Matikalai (Urad)",
+        "crop_name_as": "\u09ae\u09be\u099f\u09bf\u0995\u09b2\u09be\u0987 \u0996\u09c7\u09a4\u09bf",
+        "crop_name_hi": "\u0909\u0921\u093c\u0926 / \u0915\u093e\u0932\u0940 \u0926\u093e\u0932",
+        "area_bighas": 51.73,
+        "area_hectares": 6.924,
+        "per_bigha": {
+          "urea_kg": 4.0,
+          "ssp_kg": 29.3,
+          "mop_kg": 3.3,
+          "fym_ton": 0.5
+        },
+        "total_for_field": {
+          "urea_kg": 204.9,
+          "urea_bags_50kg": 5,
+          "ssp_kg": 1515.7,
+          "ssp_bags_50kg": 31,
+          "mop_kg": 170.7,
+          "mop_bags_50kg": 4,
+          "fym_ton": 25.86,
+          "agri_lime_kg": 0
+        },
+        "application_schedule": "As a nitrogen-fixing legume, apply all fertilizers (starter N, full SSP, and MOP) as basal in furrows before sowing.",
+        "biofertilizers": "Rhizobium leguminosarum and PSB seed inoculation (50g/kg seed)."
+      },
+      "necessary_steps": {
+        "land_prep": "Plough 2-3 times to achieve moderate tilth. Often grown as a relay crop in standing rice or after Ahu rice harvest.",
+        "seed_and_sowing": "Treat seeds with Rhizobium culture. Line sow at 30 cm row spacing with 10 cm plant spacing (20-25 kg/ha).",
+        "water_management": "Generally rainfed; sensitive to waterlogging. Provide drainage furrows every 3-4 meters.",
+        "pest_disease": "Yellow Mosaic Virus transmitted by whitefly is the most serious disease. Spray Imidacloprid if whiteflies appear.",
+        "harvest": "Pick mature black pods in 2-3 pickings or uproot entire plant when 80% pods turn black. Dry and thresh."
+      }
+    }
+  ],
+  "advisories": [
+    {
+      "type": "info",
+      "title": "Moderate Soil Acidity",
+      "text": "Soil pH is 5.6. Very suitable for Assam Sali Rice and Tea. For pulses or winter oilseeds, light liming (100-150 kg/bigha) is advantageous."
+    },
+    {
+      "type": "info",
+      "title": "Monsoon Waterlogging & Flood Vigilance",
+      "text": "Monsoon rainfall averages 1649 mm. For lowland plots, opt for flood-tolerant submergence rice varieties (Ranjit Sub-1, Bahadur Sub-1). For high land, ensure peripheral drainage ditches."
+    },
+    {
+      "type": "success",
+      "title": "Vigorous Vegetative Canopy (NDVI: 0.62 on 2026-10-15)",
+      "text": "Satellite confirms dense, flourishing green canopy. Maintain vigilant scouting for insect pests (stem borer, hispa) and disease symptoms."
+    }
+  ]
+}

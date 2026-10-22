@@ -1,0 +1,476 @@
+{
+  "_metadata": {
+    "title": "Assam Agricultural University (AAU) Aligned Crop Database",
+    "version": "2.0",
+    "land_unit_reference": "1 Hectare = 7.47 Bigha; 1 Bigha = 1337.8 sq meters",
+    "fertilizer_nutrients": {
+      "Urea": "46% N",
+      "SSP": "16% P2O5",
+      "DAP": "18% N, 46% P2O5",
+      "MOP": "60% K2O"
+    }
+  },
+  "crops": [
+    {
+      "id": "sali_rice",
+      "name_en": "Sali Rice (Winter Rice)",
+      "name_as": "শালি ধান (শীতকালীন ধান)",
+      "name_hi": "शाली धान (शीतकालीन धान)",
+      "category": "Cereals",
+      "season_en": "Kharif: Jun-Jul sowing, Nov-Dec harvest",
+      "season_as": "খাৰিফ: জেঠ-আহাৰত ৰোপণ, আঘোণ-পুহত চপোৱা",
+      "season_hi": "खरीफ: जून-जुलाई रोपाई, नवंबर-दिसंबर कटाई",
+      "sowing_months": [6, 7],
+      "harvest_months": [11, 12],
+      "ph": [5.0, 6.5],
+      "rain_mm": [1200, 2600],
+      "temp_c": [20, 32],
+      "clay_pct": [25, 60],
+      "flood_tolerance": "high",
+      "recommended_varieties": [
+        "Ranjit", "Bahadur", "Pankaj", "Mahsuri",
+        "Submergence tolerant (Flood prone): Ranjit Sub-1, Bahadur Sub-1, Swarna Sub-1",
+        "Deepwater/Pluvial: Jalashree, Jalkunwari"
+      ],
+      "fertilizer_aau": {
+        "n_kg_ha": 60,
+        "p_kg_ha": 20,
+        "k_kg_ha": 40,
+        "urea_kg_bigha": 17.5,
+        "ssp_kg_bigha": 16.7,
+        "mop_kg_bigha": 8.9,
+        "fym_ton_bigha": 1.0,
+        "split_schedule": "Apply all SSP, all MOP, and 50% Urea at final puddling (basal). Apply 25% Urea at tillering (20-25 days after transplanting) and 25% Urea at panicle initiation (40-45 DAT).",
+        "biofertilizers": "Azospirillum or PSB slurry dip for seedlings before transplanting."
+      },
+      "necessary_steps": {
+        "land_prep": "Plough 4-5 times followed by thorough puddling and leveling. Maintain 2-3 cm standing water during puddling to seal pores and reduce percolation.",
+        "seed_and_sowing": "Treat seeds with Carbendazim 2g/kg seed. Raise wet-bed nursery in June. Transplant 25-30 day old seedlings at 20x15 cm spacing with 2-3 seedlings per hill.",
+        "water_management": "Maintain 2-5 cm shallow standing water till grain hardening. Drain completely 7-10 days before harvest.",
+        "pest_disease": "Watch for Rice Hispa (apply Chlorpyriphos 20 EC if >1 adult/hill), Stem Borer, and Bacterial Leaf Blight. Keep bunds weed-free.",
+        "harvest": "Harvest when 80-85% grains turn golden yellow. Sun-dry paddy to 12-14% moisture before storage in bamboo dhol or airtight bins."
+      }
+    },
+    {
+      "id": "ahu_rice",
+      "name_en": "Ahu Rice (Autumn Rice)",
+      "name_as": "আহু ধান (শৰৎকালীন ধান)",
+      "name_hi": "आहू धान (शरदकालीन धान)",
+      "category": "Cereals",
+      "season_en": "Pre-Kharif: Mar-Apr sowing, Jun-Jul harvest",
+      "season_as": "প্ৰাক-খাৰিফ: ফাগুন-চ’তত সিঁচা, আহাৰ-শাওণত চপোৱা",
+      "season_hi": "प्री-खरीफ: मार्च-अप्रैल बुवाई, जून-जुलाई कटाई",
+      "sowing_months": [3, 4],
+      "harvest_months": [6, 7],
+      "ph": [5.2, 6.8],
+      "rain_mm": [900, 1800],
+      "temp_c": [22, 33],
+      "clay_pct": [15, 45],
+      "flood_tolerance": "medium",
+      "recommended_varieties": [
+        "Direct-seeded upland: Govind, Vandana, Luit, Disang, Kapilee",
+        "Transplanted Ahu: Lachit, Chilarai"
+      ],
+      "fertilizer_aau": {
+        "n_kg_ha": 40,
+        "p_kg_ha": 20,
+        "k_kg_ha": 20,
+        "urea_kg_bigha": 11.6,
+        "ssp_kg_bigha": 16.7,
+        "mop_kg_bigha": 4.5,
+        "fym_ton_bigha": 0.8,
+        "split_schedule": "Apply full SSP, full MOP, and 50% Urea at final land prep. Top dress 25% Urea after first weeding (20 days) and 25% at panicle emergence.",
+        "biofertilizers": "Azotobacter and PSB seed treatment (20g each per kg seed)."
+      },
+      "necessary_steps": {
+        "land_prep": "Plough 3-4 times immediately after pre-monsoon showers in March to bring soil to fine tilth. Level to prevent water stagnation.",
+        "seed_and_sowing": "Line sow seeds at 20 cm row-to-row spacing (75-80 kg/ha) or broadcast (85-100 kg/ha). Seed depth 2-3 cm.",
+        "water_management": "Critical stages needing moisture: tillering and flowering. Provide life-saving drainage if heavy pre-monsoon rains flood the field.",
+        "pest_disease": "Control weeds aggressively at 15-20 and 35-40 days. Scout for blast and brown plant hopper.",
+        "harvest": "Harvest early before peak monsoon floods submerge the crop in late June/July."
+      }
+    },
+    {
+      "id": "boro_rice",
+      "name_en": "Boro Rice (Summer Rice)",
+      "name_as": "বৰো ধান (গ্ৰীষ্মকালীন ধান)",
+      "name_hi": "बोरो धान (ग्रीष्मकालीन धान)",
+      "category": "Cereals",
+      "season_en": "Rabi-Summer: Nov-Dec sowing, Apr-May harvest",
+      "season_as": "ৰবি-গ্ৰীষ্ম: আঘোণ-পুহত ৰোপণ, ব’হাগ-জেঠত চপোৱা",
+      "season_hi": "रबी-ग्रीष्म: नवंबर-दिसंबर रोपाई, अप्रैल-मई कटाई",
+      "sowing_months": [11, 12],
+      "harvest_months": [4, 5],
+      "ph": [5.2, 7.0],
+      "rain_mm": [400, 1200],
+      "temp_c": [16, 30],
+      "clay_pct": [25, 55],
+      "flood_tolerance": "high",
+      "recommended_varieties": [
+        "Joymati", "Kanaklata", "Boro-1", "Boro-2", "IR-36", "Mahsuri"
+      ],
+      "fertilizer_aau": {
+        "n_kg_ha": 80,
+        "p_kg_ha": 40,
+        "k_kg_ha": 40,
+        "urea_kg_bigha": 23.3,
+        "ssp_kg_bigha": 33.5,
+        "mop_kg_bigha": 8.9,
+        "fym_ton_bigha": 1.2,
+        "split_schedule": "Apply full SSP, full MOP, and 33% Urea at puddling. 33% Urea at active tillering (30 DAT), 33% at panicle initiation (50 DAT).",
+        "biofertilizers": "Azospirillum and PSB root seedling dip."
+      },
+      "necessary_steps": {
+        "land_prep": "Grow in low-lying waterlogged beel areas, char lands, or irrigated pockets. Thorough puddling in December/January.",
+        "seed_and_sowing": "Protect winter nursery with polythene covering at night to combat severe December cold/fog. Transplant 35-45 day old seedlings.",
+        "water_management": "Requires assured shallow tubewell (STW) or river lift irrigation. Keep saturated soil to 3-5 cm water depth.",
+        "pest_disease": "Watch out for cold injury at nursery, followed by blast and sheath blight during March warming.",
+        "harvest": "Harvest quickly in April before pre-monsoon flash floods arrive in low-lying basins."
+      }
+    },
+    {
+      "id": "assam_tea",
+      "name_en": "Assam Tea (Camellia sinensis)",
+      "name_as": "অসম চাহ (চাহ খেতি)",
+      "name_hi": "असम चाय",
+      "category": "Cash Crops & Plantation",
+      "season_en": "Perennial (Main flushing: Mar-Nov)",
+      "season_as": "বাৰমহীয়া (মুখ্য পাত চয়ন: চ’তৰ পৰা আঘোণ)",
+      "season_hi": "सदाबहार (पत्ती चुनाई: मार्च से नवंबर)",
+      "sowing_months": [10, 11, 12, 1],
+      "harvest_months": [3, 4, 5, 6, 7, 8, 9, 10, 11],
+      "ph": [4.5, 5.5],
+      "rain_mm": [1800, 3500],
+      "temp_c": [18, 32],
+      "clay_pct": [12, 32],
+      "flood_tolerance": "none",
+      "recommended_varieties": [
+        "Tocklai Clones: TV-1, TV-9, TV-18, TV-20, TV-22, TV-23, TV-25, TV-26",
+        "Biclonal Seed Stocks: TS-462, TS-463"
+      ],
+      "fertilizer_aau": {
+        "n_kg_ha": 90,
+        "p_kg_ha": 45,
+        "k_kg_ha": 90,
+        "urea_kg_bigha": 26.2,
+        "ssp_kg_bigha": 37.6,
+        "mop_kg_bigha": 20.1,
+        "fym_ton_bigha": 2.0,
+        "split_schedule": "Apply NPK mixture in 2-3 split applications: first in March-April after first showers, second in May-June, third in August-September.",
+        "biofertilizers": "Mycorrhiza (VAM) and Trichoderma bio-formulations during planting and mulch."
+      },
+      "necessary_steps": {
+        "land_prep": "Upland topography with gentle slope (1-2%). Deep soil digging (45-60 cm). Heavy drainage trenches (90 cm deep x 60 cm wide) every 10-15 rows are MANDATORY to prevent root rot.",
+        "seed_and_sowing": "Plant 1-year-old bicolonal or clonal plants in pit size 45x45x45 cm with compost and SSP. Plant shade trees (Albizia odoratissima) at 12x12 m spacing.",
+        "water_management": "Never allow standing water—waterlogging for >48 hours severely damages tea feeder roots. Mulch in winter.",
+        "pest_disease": "Control Tea Mosquito Bug (Helopeltis) and Red Spider Mite using AAU/TRA recommended IPM. Monitor during flush cycles.",
+        "harvest": "Pluck 'two leaves and a bud' every 7-8 days during active flushing for premium CTC/Orthodox quality."
+      }
+    },
+    {
+      "id": "mustard_toria",
+      "name_en": "Mustard / Toria (Yellow Sarson)",
+      "name_as": "সৰিয়হ / তোৰিয়া (তেলবীজ)",
+      "name_hi": "सरसों / तोरिया",
+      "category": "Oilseeds",
+      "season_en": "Rabi: Mid Oct - Nov sowing, Feb - Mar harvest",
+      "season_as": "ৰবি: কাতি-আঘোণত সিঁচা, মাঘ-ফাগুনত চপোৱা",
+      "season_hi": "रबी: अक्टूबर-नवंबर बुवाई, फरवरी-मार्च कटाई",
+      "sowing_months": [10, 11],
+      "harvest_months": [2, 3],
+      "ph": [5.5, 7.2],
+      "rain_mm": [400, 1800],
+      "temp_c": [12, 26],
+      "clay_pct": [10, 35],
+      "flood_tolerance": "none",
+      "recommended_varieties": [
+        "TS-36", "TS-38", "TS-46", "TS-67", "M-27", "PM-26", "NRCHB-101"
+      ],
+      "fertilizer_aau": {
+        "n_kg_ha": 60,
+        "p_kg_ha": 30,
+        "k_kg_ha": 30,
+        "urea_kg_bigha": 17.5,
+        "ssp_kg_bigha": 25.1,
+        "mop_kg_bigha": 6.7,
+        "fym_ton_bigha": 0.7,
+        "split_schedule": "Apply 100% SSP, 100% MOP, and 50% Urea at final land preparation. Top dress remaining 50% Urea 25-30 days after sowing before first irrigation.",
+        "biofertilizers": "Azotobacter and PSB seed coating."
+      },
+      "necessary_steps": {
+        "land_prep": "Plough 4-6 times immediately after Sali rice harvest to catch residual moisture. Cultivate to fine, firm, moisture-retentive seedbed.",
+        "seed_and_sowing": "Sow in lines at 30 cm spacing, 2-3 cm depth. Seed rate: 10-12 kg/ha (1.5 kg/bigha). Thinning at 10-15 DAS to keep 10 cm plant-to-plant.",
+        "water_management": "Provide 1-2 irrigations: first at flowering stage (30 DAS) and second at pod formation (55 DAS) if winter rains fail.",
+        "pest_disease": "Watch out for Mustard Aphids (মোৱা পোক). If aphid colony appears on top 10 cm twigs, spray Dimethoate 30 EC or neem oil 1500 ppm.",
+        "harvest": "Harvest in morning hours when siliquae turn golden-yellow to avoid shattering. Dry seeds in sun for 4-5 days."
+      }
+    },
+    {
+      "id": "potato",
+      "name_en": "Potato (Solanum tuberosum)",
+      "name_as": "আলু খেতি",
+      "name_hi": "आलू",
+      "category": "Vegetables & Tubers",
+      "season_en": "Rabi: Oct-Nov planting, Jan-Mar harvest",
+      "season_as": "ৰবি: কাতি-আঘোণত ৰোপণ, মাঘ-ফাগুনত চপোৱা",
+      "season_hi": "रबी: अक्टूबर-नवंबर रोपाई, जनवरी-मार्च कटाई",
+      "sowing_months": [10, 11],
+      "harvest_months": [1, 2, 3],
+      "ph": [5.0, 6.5],
+      "rain_mm": [400, 1600],
+      "temp_c": [14, 25],
+      "clay_pct": [8, 28],
+      "flood_tolerance": "none",
+      "recommended_varieties": [
+        "Kufri Jyoti", "Kufri Pokhraj", "Kufri Megha", "Kufri Surya", "Kufri Sindhuri"
+      ],
+      "fertilizer_aau": {
+        "n_kg_ha": 60,
+        "p_kg_ha": 50,
+        "k_kg_ha": 50,
+        "urea_kg_bigha": 17.5,
+        "ssp_kg_bigha": 41.8,
+        "mop_kg_bigha": 11.2,
+        "fym_ton_bigha": 1.5,
+        "split_schedule": "Apply full FYM, full SSP, full MOP, and 50% Urea in furrows at planting. Top dress remaining 50% Urea at earthing up (30 DAP).",
+        "biofertilizers": "Azotobacter and PSB tuber treatment."
+      },
+      "necessary_steps": {
+        "land_prep": "Loose, friable, well-aerated sandy loam soil. Deep ploughing to 25 cm followed by thorough clod crushing.",
+        "seed_and_sowing": "Use sprouted, certified disease-free whole seed tubers (35-45g). Plant on ridges at 50-60 cm row spacing and 15-20 cm tuber spacing.",
+        "water_management": "Critical stages for irrigation: stolon formation, tuber initiation, and tuber sizing. Never submerge the ridge.",
+        "pest_disease": "Late blight is the #1 killer in Assam's winter fog. Spray Mancozeb 75 WP prophylactically at canopy closure.",
+        "harvest": "Cut haulms (foliage) 10-12 days before digging to cure tuber skin. Dig carefully without cutting tubers."
+      }
+    },
+    {
+      "id": "jute",
+      "name_en": "Jute (Tossa / White Jute)",
+      "name_as": "মৰাপাট খেতি",
+      "name_hi": "जूट / पटसन",
+      "category": "Fibre Crops",
+      "season_en": "Pre-Kharif to Kharif: Mar-May sowing, Jul-Sep harvest",
+      "season_as": "প্ৰাক-খাৰিফ: চ’ত-ব’হাগত সিঁচা, শাওণ-ভাদত চপোৱা",
+      "season_hi": "प्री-खरीफ: मार्च-मई बुवाई, जुलाई-सितंबर कटाई",
+      "sowing_months": [3, 4, 5],
+      "harvest_months": [7, 8, 9],
+      "ph": [5.8, 7.5],
+      "rain_mm": [1200, 2400],
+      "temp_c": [24, 36],
+      "clay_pct": [15, 38],
+      "flood_tolerance": "high",
+      "recommended_varieties": [
+        "Capsularis (White Jute): JRC-212, JRC-321, JRC-7447",
+        "Olitorius (Tossa Jute): JRO-524 (Navin), JRO-7835, JRO-632, Tarun"
+      ],
+      "fertilizer_aau": {
+        "n_kg_ha": 40,
+        "p_kg_ha": 20,
+        "k_kg_ha": 20,
+        "urea_kg_bigha": 11.6,
+        "ssp_kg_bigha": 16.7,
+        "mop_kg_bigha": 4.5,
+        "fym_ton_bigha": 0.7,
+        "split_schedule": "Apply full SSP and MOP at final land preparation. Apply Urea in two splits: 50% at 3 weeks and 50% at 6 weeks after sowing.",
+        "biofertilizers": "Azospirillum and PSB seed inoculation."
+      },
+      "necessary_steps": {
+        "land_prep": "Plough 4-5 times in March-April to obtain fine tilth. Ensure good drainage for Capsularis and well-drained loam for Olitorius.",
+        "seed_and_sowing": "Line sowing at 25-30 cm row spacing. Seed rate: 6-7 kg/ha for capsularis, 4-5 kg/ha for olitorius.",
+        "water_management": "Tolerates water stagnation after 2 months of growth; excellent crop for low-lying flood-prone belts.",
+        "pest_disease": "Watch out for Jute Semilooper, Hairy Caterpillar, and stem rot.",
+        "harvest": "Harvest at 50% flowering stage (100-120 days) for best fiber tensile strength. Ret in clean, slow-moving water with Ribbon retting or microbial consortium."
+      }
+    },
+    {
+      "id": "assam_lemon",
+      "name_en": "Assam Lemon / Kaji Nemu (GI Tagged)",
+      "name_as": "কাজী নেমু (ভৌগোলিক স্বীকৃতিপ্ৰাপ্ত নেমু)",
+      "name_hi": "काजी नेमु / असम नींबू",
+      "category": "Horticulture & Citrus",
+      "season_en": "Perennial (Bearing year-round, peak: May-Jul & Sep-Nov)",
+      "season_as": "বাৰমহীয়া (সৰ্বাধিক উৎপাদন: জেঠ-আহাৰ আৰু আহিন-কাতি)",
+      "season_hi": "सदाबहार (मई-जुलाई एवं सितंबर-नवंबर)",
+      "sowing_months": [4, 5, 8, 9],
+      "harvest_months": [5, 6, 7, 8, 9, 10, 11, 12],
+      "ph": [5.5, 6.5],
+      "rain_mm": [1500, 3000],
+      "temp_c": [18, 32],
+      "clay_pct": [12, 30],
+      "flood_tolerance": "none",
+      "recommended_varieties": [
+        "Kaji Nemu (Clonal selections from AAU)", "Gol Nemu (Round Lemon)", "Assam Local"
+      ],
+      "fertilizer_aau": {
+        "n_kg_ha": 60,
+        "p_kg_ha": 40,
+        "k_kg_ha": 60,
+        "urea_kg_bigha": 17.5,
+        "ssp_kg_bigha": 33.5,
+        "mop_kg_bigha": 13.4,
+        "fym_ton_bigha": 1.5,
+        "split_schedule": "Per mature tree per year: Apply 15 kg FYM, 300g Urea, 400g SSP, 250g MOP in two equal splits (Feb-Mar and Aug-Sep).",
+        "biofertilizers": "Trichoderma viride in pit; mycorrhiza for feeder roots."
+      },
+      "necessary_steps": {
+        "land_prep": "Select high land free from water stagnation. Dig 60x60x60 cm pits at 3x3 m or 3.5x3.5 m spacing.",
+        "seed_and_sowing": "Use stem cuttings or air-layered plants from certified mother nurseries. Plant in April-May or Aug-Sep.",
+        "water_management": "Provide ring basin irrigation during dry winter (Nov-Feb). Strictly avoid waterlogging at root zone.",
+        "pest_disease": "Citrus Canker is the biggest issue in Assam's wet climate: prune diseased twigs and spray Streptocycline (1g/10L) + Copper Oxychloride. Control Citrus Leaf Miner.",
+        "harvest": "Pick fully mature, dark-green to pale-yellow aromatic fruits with rich juice vesicles."
+      }
+    },
+    {
+      "id": "bhut_jolokia",
+      "name_en": "Bhut Jolokia / King Chilli (GI Tagged)",
+      "name_as": "ভোট জলকীয়া (বিশ্ববিখ্যাত টেঙা-জ্বলা জলকীয়া)",
+      "name_hi": "भूत जोलोकिया / किंग मिर्च",
+      "category": "Spices & High Value",
+      "season_en": "Kharif to Rabi: Oct-Nov or Feb-Mar planting",
+      "season_as": "কাতি-আঘোণ বা ফাগুন-চ’তত ৰোপণ",
+      "season_hi": "अक्टूबर-नवंबर या फरवरी-मार्च रोपाई",
+      "sowing_months": [10, 11, 2, 3],
+      "harvest_months": [4, 5, 6, 7, 8, 9],
+      "ph": [5.5, 6.8],
+      "rain_mm": [1200, 2400],
+      "temp_c": [20, 32],
+      "clay_pct": [10, 28],
+      "flood_tolerance": "none",
+      "recommended_varieties": [
+        "AAU Selections", "Local ecotypes (Golaghat, Jorhat, Tezpur, Nagaland border)"
+      ],
+      "fertilizer_aau": {
+        "n_kg_ha": 50,
+        "p_kg_ha": 40,
+        "k_kg_ha": 40,
+        "urea_kg_bigha": 14.5,
+        "ssp_kg_bigha": 33.5,
+        "mop_kg_bigha": 8.9,
+        "fym_ton_bigha": 2.0,
+        "split_schedule": "Apply full FYM, SSP, and MOP as basal. Apply Urea in 3 equal splits: 30, 60, and 90 days after transplanting.",
+        "biofertilizers": "Trichoderma harzianum soil treatment; Azospirillum."
+      },
+      "necessary_steps": {
+        "land_prep": "High land with excellent natural drainage. Raised beds (15 cm high) are necessary to combat Assam monsoon downpours.",
+        "seed_and_sowing": "Raise seedlings in raised nursery beds or seedling trays. Transplant 30-40 day seedlings at 75x75 cm spacing. Provide light shade if possible.",
+        "water_management": "Very sensitive to root rot and collar rot from stagnant water. Use furrow irrigation or drip.",
+        "pest_disease": "Prone to Anthracnose (fruit rot), Bacterial Wilt, and Aphid-transmitted leaf curl virus. Apply Bordeaux mixture or COC prophylactically.",
+        "harvest": "Harvest ripe red pods with pedicel intact. Wear rubber gloves when handling!"
+      }
+    },
+    {
+      "id": "ginger",
+      "name_en": "Ginger (Zingiber officinale)",
+      "name_as": "আদা খেতি",
+      "name_hi": "अदरक",
+      "category": "Spices & Cash Crops",
+      "season_en": "Kharif: Mar-Apr planting, Dec-Feb harvest",
+      "season_as": "চ’ত-ব’হাগত ৰোপণ, পুহ-মাঘত চপোৱা",
+      "season_hi": "मार्च-अप्रैल रोपाई, दिसंबर-फरवरी कटाई",
+      "sowing_months": [3, 4],
+      "harvest_months": [12, 1, 2],
+      "ph": [5.2, 6.5],
+      "rain_mm": [1500, 3000],
+      "temp_c": [19, 30],
+      "clay_pct": [10, 25],
+      "flood_tolerance": "none",
+      "recommended_varieties": [
+        "Nadia", "Rio de Janeiro", "Maran", "Jorhat Local", "Karbi Organic Ginger (GI Tagged)"
+      ],
+      "fertilizer_aau": {
+        "n_kg_ha": 60,
+        "p_kg_ha": 50,
+        "k_kg_ha": 60,
+        "urea_kg_bigha": 17.5,
+        "ssp_kg_bigha": 41.8,
+        "mop_kg_bigha": 13.4,
+        "fym_ton_bigha": 2.5,
+        "split_schedule": "Basal: full FYM, full SSP, 50% MOP. Top dress Urea in 2 splits (45 and 90 DAP) with earthing up.",
+        "biofertilizers": "Trichoderma viride enriched FYM (20g/kg FYM) is essential to stop rhizome rot."
+      },
+      "necessary_steps": {
+        "land_prep": "Well-drained rich sandy loam. Make raised beds 15 cm high, 1 m wide, with 30-40 cm wide drainage channels between beds.",
+        "seed_and_sowing": "Treat healthy seed rhizomes (25-30g, 2-3 live buds) in Mancozeb (3g/L) for 30 minutes. Plant at 25x20 cm spacing, 4-5 cm deep.",
+        "water_management": "Mulch immediately after planting with green leaves (10-12 t/ha) to conserve moisture and suppress weeds.",
+        "pest_disease": "Rhizome Rot (Pythium) and Shoot Borer are major threats. Drench beds with Copper Oxychloride or Trichoderma if rot starts.",
+        "harvest": "Harvest after 8-9 months when leaves turn completely yellow and dry. Cure rhizomes in shade."
+      }
+    },
+    {
+      "id": "turmeric",
+      "name_en": "Turmeric (Curcuma longa)",
+      "name_as": "হালধি খেতি",
+      "name_hi": "हल्दी",
+      "category": "Spices & Cash Crops",
+      "season_en": "Kharif: Apr-May planting, Jan-Mar harvest",
+      "season_as": "ব’হাগ-জেঠত ৰোপণ, মাঘ-ফাগুনত চপোৱা",
+      "season_hi": "अप्रैल-मई रोपाई, जनवरी-मार्च कटाई",
+      "sowing_months": [4, 5],
+      "harvest_months": [1, 2, 3],
+      "ph": [5.2, 6.8],
+      "rain_mm": [1400, 2800],
+      "temp_c": [20, 32],
+      "clay_pct": [10, 30],
+      "flood_tolerance": "none",
+      "recommended_varieties": [
+        "Megha Turmeric-1", "Duggirala", "Tall", "Shillong Local", "Prathibha"
+      ],
+      "fertilizer_aau": {
+        "n_kg_ha": 60,
+        "p_kg_ha": 50,
+        "k_kg_ha": 60,
+        "urea_kg_bigha": 17.5,
+        "ssp_kg_bigha": 41.8,
+        "mop_kg_bigha": 13.4,
+        "fym_ton_bigha": 2.0,
+        "split_schedule": "Apply full FYM and SSP at planting. Urea and MOP applied in two equal splits at 45 and 90 DAP along with earthing up.",
+        "biofertilizers": "Trichoderma enriched compost; Azotobacter."
+      },
+      "necessary_steps": {
+        "land_prep": "Deep ploughing (20-25 cm) to produce loose, friable bed. Make raised beds 15 cm high and 1 m wide.",
+        "seed_and_sowing": "Plant whole mother rhizomes or primary fingers (20-25g) at 30x20 cm spacing, 4 cm depth. Cover with fine soil.",
+        "water_management": "Apply heavy green leaf mulch (12 t/ha) at planting and again at 45 days. Ensure zero water stagnation.",
+        "pest_disease": "Leaf blotch (Taphrina) and Rhizome scale. Spray Mancozeb if leaf spots appear.",
+        "harvest": "Harvest at 9 months when foliage dries completely. Boil rhizomes in water for 45-60 mins and sun dry for 10-15 days."
+      }
+    },
+    {
+      "id": "black_gram",
+      "name_en": "Black Gram / Matikalai (Urad)",
+      "name_as": "মাটিকলাই খেতি",
+      "name_hi": "उड़द / काली दाल",
+      "category": "Pulses",
+      "season_en": "Late Kharif: Aug-Sep sowing, Nov-Dec harvest",
+      "season_as": "ভাদ-আহিনত সিঁচা, আঘোণ-পুহত চপোৱা",
+      "season_hi": "अगस्त-सितंबर बुवाई, नवंबर-दिसंबर कटाई",
+      "sowing_months": [8, 9],
+      "harvest_months": [11, 12],
+      "ph": [6.0, 7.5],
+      "rain_mm": [600, 1500],
+      "temp_c": [22, 32],
+      "clay_pct": [12, 35],
+      "flood_tolerance": "none",
+      "recommended_varieties": [
+        "T-9", "Pant U-19", "Saon Mah (SB 121)", "KU 301", "PU 31"
+      ],
+      "fertilizer_aau": {
+        "n_kg_ha": 15,
+        "p_kg_ha": 35,
+        "k_kg_ha": 15,
+        "urea_kg_bigha": 4.4,
+        "ssp_kg_bigha": 29.3,
+        "mop_kg_bigha": 3.3,
+        "fym_ton_bigha": 0.5,
+        "split_schedule": "As a nitrogen-fixing legume, apply all fertilizers (starter N, full SSP, and MOP) as basal in furrows before sowing.",
+        "biofertilizers": "Rhizobium leguminosarum and PSB seed inoculation (50g/kg seed)."
+      },
+      "necessary_steps": {
+        "land_prep": "Plough 2-3 times to achieve moderate tilth. Often grown as a relay crop in standing rice or after Ahu rice harvest.",
+        "seed_and_sowing": "Treat seeds with Rhizobium culture. Line sow at 30 cm row spacing with 10 cm plant spacing (20-25 kg/ha).",
+        "water_management": "Generally rainfed; sensitive to waterlogging. Provide drainage furrows every 3-4 meters.",
+        "pest_disease": "Yellow Mosaic Virus transmitted by whitefly is the most serious disease. Spray Imidacloprid if whiteflies appear.",
+        "harvest": "Pick mature black pods in 2-3 pickings or uproot entire plant when 80% pods turn black. Dry and thresh."
+      }
+    }
+  ]
+}

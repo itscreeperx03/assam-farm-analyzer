@@ -1,0 +1,11 @@
+pystac-client
+planetary-computer
+odc-stac
+rioxarray
+xarray
+numpy
+shapely
+requests
+dask
+fastapi
+uvicorn

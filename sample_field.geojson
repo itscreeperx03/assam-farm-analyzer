@@ -1,0 +1,14 @@
+{
+  "type": "Feature",
+  "properties": {"name": "Sample test field near Guwahati (replace with a real field)"},
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [[
+      [91.7400, 26.1500],
+      [91.7425, 26.1500],
+      [91.7425, 26.1525],
+      [91.7400, 26.1525],
+      [91.7400, 26.1500]
+    ]]
+  }
+}

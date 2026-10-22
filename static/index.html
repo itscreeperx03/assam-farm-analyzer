@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assam Farm Analyzer | অসম কৃষি সমীক্ষা</title>
+  
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <!-- Leaflet Draw CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="app-header">
+    <div class="logo-container">
+      <div class="logo-icon">🌾</div>
+      <div>
+        <div class="brand-title" data-i18n="app_title">Assam Farm Analyzer</div>
+        <div class="brand-sub" data-i18n="app_subtitle">Scientific Soil, Weather, Satellite & AAU Crop Advisory</div>
+      </div>
+    </div>
+    <div class="header-actions">
+      <select id="langSelect" class="lang-select">
+        <option value="en">English</option>
+        <option value="as">অসমীয়া (Assamese)</option>
+        <option value="hi">हिन्दी (Hindi)</option>
+      </select>
+      <button id="btnPrint" class="btn-print" onclick="window.print()">
+        🖨️ <span data-i18n="print_report">Print Field Report</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="app-container">
+
+    <!-- Left Sidebar: Controls & Map -->
+    <aside class="sidebar">
+      <div class="card">
+        <h2 class="card-title">📍 <span data-i18n="field_selection">Farm Location & Field</span></h2>
+        
+        <div class="form-group">
+          <label for="districtSelect" data-i18n="select_district">Select Assam District</label>
+          <select id="districtSelect" class="form-control">
+            <option value="">-- Choose District / Presets --</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="inputLat">Latitude</label>
+            <input type="number" id="inputLat" class="form-control" step="0.0001" value="26.1512" />
+          </div>
+          <div class="form-group">
+            <label for="inputLon">Longitude</label>
+            <input type="number" id="inputLon" class="form-control" step="0.0001" value="91.7412" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="inputBighas" data-i18n="farm_size">Farm Land Size (Bighas)</label>
+          <input type="number" id="inputBighas" class="form-control" step="0.1" value="3.0" min="0.1" />
+          <small id="areaConversionText" style="color:#64748b; font-size:0.75rem;">≈ 0.402 Hectares | 15 Katha</small>
+        </div>
+
+        <!-- Interactive Map -->
+        <div id="map"></div>
+
+        <div class="map-tools">
+          <button id="btnLoadSample" class="btn-secondary" type="button" data-i18n="load_sample">
+            📁 Load Sample Field
+          </button>
+          <button id="btnResetMap" class="btn-secondary" type="button" data-i18n="reset_map">
+            🔄 Reset Pin
+          </button>
+        </div>
+
+        <!-- Soil Health Card Accordion -->
+        <div class="shc-accordion">
+          <div class="shc-header" id="shcToggle">
+            <span>🧪 <span data-i18n="shc_title">Soil Health Card (SHC) / Lab Test</span></span>
+            <span id="shcIcon">▼</span>
+          </div>
+          <div class="shc-body" id="shcBody">
+            <p style="font-size:0.75rem; color:#64748b; margin-bottom:0.6rem;" data-i18n="shc_subtitle">
+              Optional: Enter your exact Soil Health Card values. If blank, SoilGrids & AAU baselines are used.
+            </p>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="shcPh" data-i18n="ph_label">Soil pH</label>
+                <input type="number" id="shcPh" class="form-control" placeholder="e.g. 5.4" step="0.1" />
+              </div>
+              <div class="form-group">
+                <label for="shcOc" data-i18n="oc_label">Organic Carbon (%)</label>
+                <input type="number" id="shcOc" class="form-control" placeholder="e.g. 0.75" step="0.05" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="shcClay" data-i18n="clay_label">Clay Content (%)</label>
+                <input type="number" id="shcClay" class="form-control" placeholder="e.g. 28" step="1" />
+              </div>
+              <div class="form-group">
+                <label for="shcSand" data-i18n="sand_label">Sand Content (%)</label>
+                <input type="number" id="shcSand" class="form-control" placeholder="e.g. 35" step="1" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 1rem;">
+          <button id="btnAnalyze" class="btn-primary" type="button">
+            <span id="btnSpinner" style="display:none;">⏳</span>
+            <span id="btnAnalyzeText" data-i18n="btn_analyze">Analyze Farm & Crops</span>
+          </button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Right Main Panel: Results Dashboard -->
+    <section class="main-panel">
+
+      <!-- Top Summary Banner -->
+      <div class="farm-banner" id="farmBanner">
+        <div>
+          <div class="banner-title" id="bannerDistrict">Kamrup (Guwahati)</div>
+          <div class="banner-zone" id="bannerZone">Lower Brahmaputra Valley Zone (LBVZ)</div>
+          <div style="font-size:0.8rem; opacity:0.85; margin-top:0.2rem;" id="bannerCoords">26.1512° N, 91.7412° E</div>
+        </div>
+        <div class="banner-stats">
+          <div class="stat-chip">
+            <div class="val" id="statBighas">3.0</div>
+            <div class="lbl">Bighas</div>
+          </div>
+          <div class="stat-chip">
+            <div class="val" id="statHectares">0.40</div>
+            <div class="lbl">Hectares</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 KPI Cards Grid -->
+      <div class="kpi-grid">
+        <!-- Soil KPI -->
+        <div class="kpi-card">
+          <div class="kpi-head">
+            <span data-i18n="soil_health">Soil Health</span>
+            <span>🧪</span>
+          </div>
+          <div>
+            <div class="kpi-val" id="kpiPh">5.4 pH</div>
+            <div class="kpi-badge badge-yellow" id="kpiPhBadge">Moderately Acidic</div>
+          </div>
+          <div style="font-size:0.78rem; color:#64748b; margin-top:0.4rem;" id="kpiSoilTexture">
+            Texture: Loam | OC: 1.1%
+          </div>
+        </div>
+
+        <!-- Rain KPI -->
+        <div class="kpi-card">
+          <div class="kpi-head">
+            <span data-i18n="annual_rain">Annual Rainfall</span>
+            <span>🌧️</span>
+          </div>
+          <div>
+            <div class="kpi-val" id="kpiRain">2,150 mm</div>
+            <div class="kpi-badge badge-blue" id="kpiRainBadge">Monsoon: 1,450 mm</div>
+          </div>
+          <div style="font-size:0.78rem; color:#64748b; margin-top:0.4rem;" id="kpiRainSub">
+            Winter (Rabi): 180 mm
+          </div>
+        </div>
+
+        <!-- Temp KPI -->
+        <div class="kpi-card">
+          <div class="kpi-head">
+            <span data-i18n="mean_temp">Mean Temperature</span>
+            <span>🌡️</span>
+          </div>
+          <div>
+            <div class="kpi-val" id="kpiTemp">24.2 °C</div>
+            <div class="kpi-badge badge-green" id="kpiTempBadge">Subtropical Humid</div>
+          </div>
+          <div style="font-size:0.78rem; color:#64748b; margin-top:0.4rem;" id="kpiTempSub">
+            Summer: 35°C | Winter: 10°C
+          </div>
+        </div>
+
+        <!-- NDVI Satellite KPI -->
+        <div class="kpi-card">
+          <div class="kpi-head">
+            <span data-i18n="satellite_ndvi">Satellite NDVI</span>
+            <span>🛰️</span>
+          </div>
+          <div>
+            <div class="kpi-val" id="kpiNdvi">0.62</div>
+            <div class="kpi-badge badge-green" id="kpiNdviBadge">Healthy Dense Canopy</div>
+          </div>
+          <div style="font-size:0.78rem; color:#64748b; margin-top:0.4rem;" id="kpiNdviDate">
+            Sentinel-2 Optical (Latest)
+          </div>
+        </div>
+      </div>
+
+      <!-- Priority Farm Advisories Banner -->
+      <div class="advisories-box" id="advisoriesBox"></div>
+
+      <!-- Tabs Navigation -->
+      <div class="tabs-nav">
+        <button class="tab-btn active" data-tab="tabCrops" data-i18n="tab_crops">🌾 Crop Suitability</button>
+        <button class="tab-btn" data-tab="tabFertilizer" data-i18n="tab_fertilizer">⚖️ Fertilizer Calculator</button>
+        <button class="tab-btn" data-tab="tabRoadmap" data-i18n="tab_roadmap">📋 Cultivation Steps</button>
+        <button class="tab-btn" data-tab="tabTrends" data-i18n="tab_weather">🛰️ NDVI & 7-Day Weather</button>
+      </div>
+
+      <!-- Tab 1: Crop Suitability -->
+      <div class="tab-content active" id="tabCrops">
+        <div class="crop-filters">
+          <button class="filter-btn active" data-filter="all" data-i18n="filter_all">All Crops</button>
+          <button class="filter-btn" data-filter="Cereals" data-i18n="filter_cereals">Rice & Cereals</button>
+          <button class="filter-btn" data-filter="Cash Crops & Plantation" data-i18n="filter_tea">Tea & Cash</button>
+          <button class="filter-btn" data-filter="Oilseeds" data-i18n="filter_oilseeds">Oilseeds & Pulses</button>
+          <button class="filter-btn" data-filter="Vegetables & Tubers" data-i18n="filter_horticulture">Vegetables & Spices</button>
+        </div>
+        <div class="crops-grid" id="cropsGrid"></div>
+      </div>
+
+      <!-- Tab 2: AAU Fertilizer Calculator -->
+      <div class="tab-content" id="tabFertilizer">
+        <div class="fert-calculator-box">
+          <h3 style="font-size:1.15rem; font-weight:700; margin-bottom:0.75rem;">
+            ⚖️ <span data-i18n="split_schedule_title">AAU Package of Practices Fertilizer Prescription</span>
+          </h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fertCropSelect" data-i18n="select_crop_calc">Select Crop</label>
+              <select id="fertCropSelect" class="form-control"></select>
+            </div>
+            <div class="form-group">
+              <label for="fertAreaBighas" data-i18n="calculated_for">Field Area (Bighas)</label>
+              <input type="number" id="fertAreaBighas" class="form-control" step="0.1" value="3.0" />
+            </div>
+          </div>
+
+          <!-- Calculated Fertilizer Totals -->
+          <div class="fert-results-grid" id="fertResultsGrid">
+            <!-- Urea -->
+            <div class="fert-item">
+              <div class="lbl" data-i18n="urea_label">Urea (46% N)</div>
+              <div class="val" id="calcUreaKg">52.5 kg</div>
+              <div class="bags" id="calcUreaBags">2 bags (50kg)</div>
+            </div>
+            <!-- SSP -->
+            <div class="fert-item">
+              <div class="lbl" data-i18n="ssp_label">SSP (16% P2O5)</div>
+              <div class="val" id="calcSspKg">50.1 kg</div>
+              <div class="bags" id="calcSspBags">2 bags (50kg)</div>
+            </div>
+            <!-- MOP -->
+            <div class="fert-item">
+              <div class="lbl" data-i18n="mop_label">MOP (60% K2O)</div>
+              <div class="val" id="calcMopKg">26.7 kg</div>
+              <div class="bags" id="calcMopBags">1 bag (50kg)</div>
+            </div>
+            <!-- FYM -->
+            <div class="fert-item">
+              <div class="lbl" data-i18n="fym_label">Compost / FYM</div>
+              <div class="val" id="calcFymTon">3.0 tonnes</div>
+              <div class="bags">Basal Manure</div>
+            </div>
+            <!-- Lime -->
+            <div class="fert-item" id="calcLimeBox">
+              <div class="lbl" data-i18n="lime_label">Agricultural Lime</div>
+              <div class="val" id="calcLimeKg">450 kg</div>
+              <div class="bags">For Soil Acidity</div>
+            </div>
+          </div>
+
+          <!-- Split Timing & Biofertilizers -->
+          <div style="margin-top:1.25rem; display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+            <div style="background:#fff; padding:1rem; border-radius:8px; border:1px solid #e2e8f0;">
+              <strong style="color:#1e293b; display:block; margin-bottom:0.4rem;">📅 Split Application Timing:</strong>
+              <p style="font-size:0.875rem; color:#475569;" id="fertSplitText">
+                Apply full SSP, full MOP, and 50% Urea at final puddling (basal). Apply 25% Urea at tillering and 25% Urea at panicle initiation.
+              </p>
+            </div>
+            <div style="background:#fff; padding:1rem; border-radius:8px; border:1px solid #e2e8f0;">
+              <strong style="color:#1e293b; display:block; margin-bottom:0.4rem;">🌱 Biofertilizer Treatment:</strong>
+              <p style="font-size:0.875rem; color:#475569;" id="fertBioText">
+                Azospirillum or PSB slurry dip for seedlings before transplanting (or seed coating).
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 3: Cultivation Roadmap -->
+      <div class="tab-content" id="tabRoadmap">
+        <div class="card">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; flex-wrap:wrap; gap:0.5rem;">
+            <h3 style="font-size:1.15rem; font-weight:700;">
+              📋 <span id="roadmapCropTitle">Sali Rice (Winter Rice)</span> - <span data-i18n="tab_roadmap">Cultivation Roadmap</span>
+            </h3>
+            <select id="roadmapCropSelect" class="form-control" style="width:auto; min-width:240px;"></select>
+          </div>
+
+          <div class="timeline" id="cultivationTimeline"></div>
+        </div>
+      </div>
+
+      <!-- Tab 4: NDVI Satellite & 7-Day Agro-Weather -->
+      <div class="tab-content" id="tabTrends">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.25rem;">
+          <!-- Chart -->
+          <div class="card">
+            <h3 class="card-title">🛰️ <span data-i18n="ndvi_trend">Sentinel-2 NDVI Vegetation Trend</span></h3>
+            <canvas id="ndviChart" height="220"></canvas>
+            <p style="font-size:0.75rem; color:#64748b; margin-top:0.6rem;">
+              Higher NDVI (>0.5) indicates dense green biomass. Drops typically indicate harvest or ploughed fields.
+            </p>
+          </div>
+
+          <!-- 7-Day Weather Forecast -->
+          <div class="card">
+            <h3 class="card-title">🌦️ <span data-i18n="tab_weather">7-Day Farm Weather Forecast</span></h3>
+            <div id="forecastContainer" style="display:flex; flex-direction:column; gap:0.5rem;"></div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- Modal for Full Crop Details -->
+  <div class="modal-overlay" id="cropModal">
+    <div class="modal-dialog">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <!-- Leaflet Draw JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js"></script>
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <!-- Translations -->
+  <script src="js/i18n.js"></script>
+  <!-- App JS -->
+  <script src="js/app.js"></script>
+</body>
+</html>

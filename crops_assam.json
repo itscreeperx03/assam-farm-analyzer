@@ -1,0 +1,68 @@
+{
+  "_note": "STARTER VALUES ONLY. Approximate ranges from general agronomy knowledge. Verify every number with Assam Agricultural University (AAU), your district KVK, or the FAO EcoCrop database before showing advice to farmers. 'ph', 'rain_mm' (annual), 'temp_c' (annual mean), 'clay_pct' are each [min, max] optimum ranges.",
+  "crops": [
+    {
+      "name": "Sali rice (winter rice)",
+      "season": "Jun-Jul sowing, Nov-Dec harvest",
+      "ph": [5.0, 6.5],
+      "rain_mm": [1200, 2500],
+      "temp_c": [20, 30],
+      "clay_pct": [25, 60],
+      "notes": "Needs standing water; heavy clay holds water well."
+    },
+    {
+      "name": "Ahu rice (autumn rice)",
+      "season": "Mar-Apr sowing, Jul-Aug harvest",
+      "ph": [5.0, 6.5],
+      "rain_mm": [1000, 2000],
+      "temp_c": [22, 32],
+      "clay_pct": [15, 45],
+      "notes": "Shorter duration; needs well-distributed spring rain."
+    },
+    {
+      "name": "Tea",
+      "season": "Perennial",
+      "ph": [4.5, 5.8],
+      "rain_mm": [1500, 3000],
+      "temp_c": [18, 30],
+      "clay_pct": [10, 35],
+      "notes": "Needs acidic, well-drained soil. Waterlogging kills roots."
+    },
+    {
+      "name": "Jute",
+      "season": "Mar-May sowing, Jul-Sep harvest",
+      "ph": [6.0, 7.5],
+      "rain_mm": [1000, 2000],
+      "temp_c": [24, 35],
+      "clay_pct": [15, 40],
+      "notes": "Prefers loamy alluvial soil, near-neutral pH."
+    },
+    {
+      "name": "Mustard",
+      "season": "Oct-Nov sowing, Feb-Mar harvest (rabi)",
+      "ph": [6.0, 7.5],
+      "rain_mm": [400, 2500],
+      "temp_c": [15, 28],
+      "clay_pct": [10, 35],
+      "notes": "Dry-season crop; needs good drainage after monsoon."
+    },
+    {
+      "name": "Potato",
+      "season": "Oct-Nov planting, Feb-Mar harvest (rabi)",
+      "ph": [5.0, 6.5],
+      "rain_mm": [500, 2500],
+      "temp_c": [15, 25],
+      "clay_pct": [5, 30],
+      "notes": "Needs loose, well-drained soil; avoid waterlogged fields."
+    },
+    {
+      "name": "Banana",
+      "season": "Perennial",
+      "ph": [5.5, 7.0],
+      "rain_mm": [1200, 3000],
+      "temp_c": [22, 32],
+      "clay_pct": [10, 40],
+      "notes": "Needs fertile, well-drained soil; sensitive to wind and flooding."
+    }
+  ]
+}
