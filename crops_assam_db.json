@@ -20,15 +20,36 @@
       "season_en": "Kharif: Jun-Jul sowing, Nov-Dec harvest",
       "season_as": "খাৰিফ: জেঠ-আহাৰত ৰোপণ, আঘোণ-পুহত চপোৱা",
       "season_hi": "खरीफ: जून-जुलाई रोपाई, नवंबर-दिसंबर कटाई",
-      "sowing_months": [6, 7],
-      "harvest_months": [11, 12],
-      "ph": [5.0, 6.5],
-      "rain_mm": [1200, 2600],
-      "temp_c": [20, 32],
-      "clay_pct": [25, 60],
+      "sowing_months": [
+        6,
+        7
+      ],
+      "harvest_months": [
+        11,
+        12
+      ],
+      "ph": [
+        5.0,
+        6.5
+      ],
+      "rain_mm": [
+        1200,
+        2600
+      ],
+      "temp_c": [
+        20,
+        32
+      ],
+      "clay_pct": [
+        25,
+        60
+      ],
       "flood_tolerance": "high",
       "recommended_varieties": [
-        "Ranjit", "Bahadur", "Pankaj", "Mahsuri",
+        "Ranjit",
+        "Bahadur",
+        "Pankaj",
+        "Mahsuri",
         "Submergence tolerant (Flood prone): Ranjit Sub-1, Bahadur Sub-1, Swarna Sub-1",
         "Deepwater/Pluvial: Jalashree, Jalkunwari"
       ],
@@ -49,6 +70,50 @@
         "water_management": "Maintain 2-5 cm shallow standing water till grain hardening. Drain completely 7-10 days before harvest.",
         "pest_disease": "Watch for Rice Hispa (apply Chlorpyriphos 20 EC if >1 adult/hill), Stem Borer, and Bacterial Leaf Blight. Keep bunds weed-free.",
         "harvest": "Harvest when 80-85% grains turn golden yellow. Sun-dry paddy to 12-14% moisture before storage in bamboo dhol or airtight bins."
+      },
+      "economics_aau": {
+        "yield_bigha_avg": 7.5,
+        "yield_unit": "Quintals",
+        "yield_range": [
+          6.0,
+          9.0
+        ],
+        "price_per_unit_inr": 2300,
+        "price_unit": "₹/Quintal (MSP)",
+        "cost_cultivation_bigha_inr": 7500,
+        "gross_revenue_bigha_inr": 17250,
+        "net_profit_bigha_inr": 9750,
+        "bc_ratio": 2.3
+      },
+      "ipm_aau": {
+        "major_pests": [
+          {
+            "name": "Rice Hispa (Dicladispa armigera)",
+            "symptoms": "Adults scrape upper surface of leaf blade causing characteristic white parallel streaks; grubs mine inside leaves.",
+            "etl": "1 adult or 1 damaged leaf per hill",
+            "biological": "Clip seedling tips before transplanting to destroy hispa eggs. Spray Neem oil (Azadirachtin 1500 ppm) @ 3 ml/L.",
+            "chemical": "Spray Chlorpyriphos 20 EC @ 2.5 ml/L or Quinalphos 25 EC @ 2 ml/L upon reaching ETL."
+          },
+          {
+            "name": "Yellow Stem Borer (Scirpophaga incertulas)",
+            "symptoms": "Dead hearts during vegetative stage; white ears (empty panicles) during reproductive stage.",
+            "etl": "1 egg mass/m² or 5% dead hearts",
+            "biological": "Release Trichogramma japonicum egg parasitoid @ 20,000/bigha 3-4 times at weekly intervals. Install pheromone traps @ 3 traps/bigha.",
+            "chemical": "Cartap hydrochloride 4G @ 3.3 kg/bigha or spray Chlorantraniliprole 18.5 SC @ 0.3 ml/L."
+          }
+        ],
+        "major_diseases": [
+          {
+            "name": "Rice Blast (Pyricularia oryzae)",
+            "symptoms": "Spindle-shaped lesions with brown borders and grey centers on leaves; black necrotic lesions at panicle neck node causing neck blast.",
+            "management": "Treat seeds with Tricyclazole 75 WP @ 2g/kg seed. Spray Tricyclazole 75 WP @ 0.6 g/L or Kasugamycin @ 1.5 ml/L at boot-leaf stage."
+          },
+          {
+            "name": "Bacterial Leaf Blight (Xanthomonas oryzae)",
+            "symptoms": "Wavy, yellowish-white lesions starting from leaf tips and margins; 'Kresek' wilt in young seedlings.",
+            "management": "Avoid excess Urea application; apply split potash. Spray Streptocycline @ 0.15 g/L mixed with Copper Oxychloride @ 2.5 g/L."
+          }
+        ]
       }
     },
     {
@@ -60,12 +125,30 @@
       "season_en": "Pre-Kharif: Mar-Apr sowing, Jun-Jul harvest",
       "season_as": "প্ৰাক-খাৰিফ: ফাগুন-চ’তত সিঁচা, আহাৰ-শাওণত চপোৱা",
       "season_hi": "प्री-खरीफ: मार्च-अप्रैल बुवाई, जून-जुलाई कटाई",
-      "sowing_months": [3, 4],
-      "harvest_months": [6, 7],
-      "ph": [5.2, 6.8],
-      "rain_mm": [900, 1800],
-      "temp_c": [22, 33],
-      "clay_pct": [15, 45],
+      "sowing_months": [
+        3,
+        4
+      ],
+      "harvest_months": [
+        6,
+        7
+      ],
+      "ph": [
+        5.2,
+        6.8
+      ],
+      "rain_mm": [
+        900,
+        1800
+      ],
+      "temp_c": [
+        22,
+        33
+      ],
+      "clay_pct": [
+        15,
+        45
+      ],
       "flood_tolerance": "medium",
       "recommended_varieties": [
         "Direct-seeded upland: Govind, Vandana, Luit, Disang, Kapilee",
@@ -88,6 +171,37 @@
         "water_management": "Critical stages needing moisture: tillering and flowering. Provide life-saving drainage if heavy pre-monsoon rains flood the field.",
         "pest_disease": "Control weeds aggressively at 15-20 and 35-40 days. Scout for blast and brown plant hopper.",
         "harvest": "Harvest early before peak monsoon floods submerge the crop in late June/July."
+      },
+      "economics_aau": {
+        "yield_bigha_avg": 5.5,
+        "yield_unit": "Quintals",
+        "yield_range": [
+          4.5,
+          6.8
+        ],
+        "price_per_unit_inr": 2300,
+        "price_unit": "₹/Quintal (MSP)",
+        "cost_cultivation_bigha_inr": 6200,
+        "gross_revenue_bigha_inr": 12650,
+        "net_profit_bigha_inr": 6450,
+        "bc_ratio": 2.04
+      },
+      "ipm_aau": {
+        "major_pests": [
+          {
+            "name": "Stem Borer & Leaf Roller",
+            "symptoms": "Dead hearts and folded leaves with scraping.",
+            "biological": "Install bird perches @ 5/bigha; pheromone traps @ 2/bigha.",
+            "chemical": "Spray Flubendiamide 39.35 SC @ 0.25 ml/L."
+          }
+        ],
+        "major_diseases": [
+          {
+            "name": "Blast & Brown Spot",
+            "symptoms": "Brown oval spots on leaves during early monsoon showers.",
+            "management": "Seed treatment with Carbendazim 2g/kg. Spray Mancozeb @ 2 g/L."
+          }
+        ]
       }
     },
     {
@@ -99,15 +213,38 @@
       "season_en": "Rabi-Summer: Nov-Dec sowing, Apr-May harvest",
       "season_as": "ৰবি-গ্ৰীষ্ম: আঘোণ-পুহত ৰোপণ, ব’হাগ-জেঠত চপোৱা",
       "season_hi": "रबी-ग्रीष्म: नवंबर-दिसंबर रोपाई, अप्रैल-मई कटाई",
-      "sowing_months": [11, 12],
-      "harvest_months": [4, 5],
-      "ph": [5.2, 7.0],
-      "rain_mm": [400, 1200],
-      "temp_c": [16, 30],
-      "clay_pct": [25, 55],
+      "sowing_months": [
+        11,
+        12
+      ],
+      "harvest_months": [
+        4,
+        5
+      ],
+      "ph": [
+        5.2,
+        7.0
+      ],
+      "rain_mm": [
+        400,
+        1200
+      ],
+      "temp_c": [
+        16,
+        30
+      ],
+      "clay_pct": [
+        25,
+        55
+      ],
       "flood_tolerance": "high",
       "recommended_varieties": [
-        "Joymati", "Kanaklata", "Boro-1", "Boro-2", "IR-36", "Mahsuri"
+        "Joymati",
+        "Kanaklata",
+        "Boro-1",
+        "Boro-2",
+        "IR-36",
+        "Mahsuri"
       ],
       "fertilizer_aau": {
         "n_kg_ha": 80,
@@ -126,6 +263,37 @@
         "water_management": "Requires assured shallow tubewell (STW) or river lift irrigation. Keep saturated soil to 3-5 cm water depth.",
         "pest_disease": "Watch out for cold injury at nursery, followed by blast and sheath blight during March warming.",
         "harvest": "Harvest quickly in April before pre-monsoon flash floods arrive in low-lying basins."
+      },
+      "economics_aau": {
+        "yield_bigha_avg": 9.2,
+        "yield_unit": "Quintals",
+        "yield_range": [
+          8.0,
+          11.5
+        ],
+        "price_per_unit_inr": 2300,
+        "price_unit": "₹/Quintal (MSP)",
+        "cost_cultivation_bigha_inr": 9200,
+        "gross_revenue_bigha_inr": 21160,
+        "net_profit_bigha_inr": 11960,
+        "bc_ratio": 2.3
+      },
+      "ipm_aau": {
+        "major_pests": [
+          {
+            "name": "Brown Planthopper (Nilaparvata lugens)",
+            "symptoms": "'Hopper burn' circular drying patches in dense boro canopy in March-April.",
+            "biological": "Alternate wetting and drying (AWD); avoid excessive dense planting.",
+            "chemical": "Spray Pymetrozine 50 WDG @ 0.6 g/L or Dinotefuran 20 SG @ 0.4 g/L towards base of hills."
+          }
+        ],
+        "major_diseases": [
+          {
+            "name": "Sheath Blight (Rhizoctonia solani)",
+            "symptoms": "Snake-skin like greenish-grey lesions on leaf sheaths just above water line.",
+            "management": "Spray Validamycin 3L @ 2 ml/L or Hexaconazole 5 EC @ 2 ml/L."
+          }
+        ]
       }
     },
     {
@@ -137,12 +305,39 @@
       "season_en": "Perennial (Main flushing: Mar-Nov)",
       "season_as": "বাৰমহীয়া (মুখ্য পাত চয়ন: চ’তৰ পৰা আঘোণ)",
       "season_hi": "सदाबहार (पत्ती चुनाई: मार्च से नवंबर)",
-      "sowing_months": [10, 11, 12, 1],
-      "harvest_months": [3, 4, 5, 6, 7, 8, 9, 10, 11],
-      "ph": [4.5, 5.5],
-      "rain_mm": [1800, 3500],
-      "temp_c": [18, 32],
-      "clay_pct": [12, 32],
+      "sowing_months": [
+        10,
+        11,
+        12,
+        1
+      ],
+      "harvest_months": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "ph": [
+        4.5,
+        5.5
+      ],
+      "rain_mm": [
+        1800,
+        3500
+      ],
+      "temp_c": [
+        18,
+        32
+      ],
+      "clay_pct": [
+        12,
+        32
+      ],
       "flood_tolerance": "none",
       "recommended_varieties": [
         "Tocklai Clones: TV-1, TV-9, TV-18, TV-20, TV-22, TV-23, TV-25, TV-26",
@@ -165,6 +360,43 @@
         "water_management": "Never allow standing water—waterlogging for >48 hours severely damages tea feeder roots. Mulch in winter.",
         "pest_disease": "Control Tea Mosquito Bug (Helopeltis) and Red Spider Mite using AAU/TRA recommended IPM. Monitor during flush cycles.",
         "harvest": "Pluck 'two leaves and a bud' every 7-8 days during active flushing for premium CTC/Orthodox quality."
+      },
+      "economics_aau": {
+        "yield_bigha_avg": 750,
+        "yield_unit": "Kg Green Leaf / Year",
+        "yield_range": [
+          600,
+          950
+        ],
+        "price_per_unit_inr": 32,
+        "price_unit": "₹/Kg Green Leaf",
+        "cost_cultivation_bigha_inr": 12500,
+        "gross_revenue_bigha_inr": 24000,
+        "net_profit_bigha_inr": 11500,
+        "bc_ratio": 1.92
+      },
+      "ipm_aau": {
+        "major_pests": [
+          {
+            "name": "Tea Mosquito Bug (Helopeltis theivora)",
+            "symptoms": "Circular brown necrosis spots on succulent young flushing buds; severe curling and drying of shoots.",
+            "biological": "Keep shade regulated and weed-free. Spray Beauveria bassiana @ 5 g/L during early morning/evening.",
+            "chemical": "Spray Thiamethoxam 25 WG @ 0.25 g/L or Clothianidin 50 WDG @ 0.16 g/L strictly adhering to Tocklai CIBRC guidelines."
+          },
+          {
+            "name": "Red Spider Mite (Oligonychus coffeae)",
+            "symptoms": "Rusty bronze coloration of mature leaves; webs on upper leaf surface during dry warm spells.",
+            "biological": "Wash bushes with high-pressure water jet; spray Wettable Sulphur 80 WP @ 2.5 g/L.",
+            "chemical": "Spray Spiromesifen 22.9 SC @ 1 ml/L or Fenpyroximate 5 EC @ 1 ml/L."
+          }
+        ],
+        "major_diseases": [
+          {
+            "name": "Black Rot (Corticium theae)",
+            "symptoms": "Leaves turn black, rot, and remain suspended by mycelial cords inside bush canopy during rainy months.",
+            "management": "Thin out dense bush center for sunlight penetration. Spray Copper Oxychloride 50 WP @ 2.5 g/L."
+          }
+        ]
       }
     },
     {
@@ -176,15 +408,39 @@
       "season_en": "Rabi: Mid Oct - Nov sowing, Feb - Mar harvest",
       "season_as": "ৰবি: কাতি-আঘোণত সিঁচা, মাঘ-ফাগুনত চপোৱা",
       "season_hi": "रबी: अक्टूबर-नवंबर बुवाई, फरवरी-मार्च कटाई",
-      "sowing_months": [10, 11],
-      "harvest_months": [2, 3],
-      "ph": [5.5, 7.2],
-      "rain_mm": [400, 1800],
-      "temp_c": [12, 26],
-      "clay_pct": [10, 35],
+      "sowing_months": [
+        10,
+        11
+      ],
+      "harvest_months": [
+        2,
+        3
+      ],
+      "ph": [
+        5.5,
+        7.2
+      ],
+      "rain_mm": [
+        400,
+        1800
+      ],
+      "temp_c": [
+        12,
+        26
+      ],
+      "clay_pct": [
+        10,
+        35
+      ],
       "flood_tolerance": "none",
       "recommended_varieties": [
-        "TS-36", "TS-38", "TS-46", "TS-67", "M-27", "PM-26", "NRCHB-101"
+        "TS-36",
+        "TS-38",
+        "TS-46",
+        "TS-67",
+        "M-27",
+        "PM-26",
+        "NRCHB-101"
       ],
       "fertilizer_aau": {
         "n_kg_ha": 60,
@@ -203,6 +459,38 @@
         "water_management": "Provide 1-2 irrigations: first at flowering stage (30 DAS) and second at pod formation (55 DAS) if winter rains fail.",
         "pest_disease": "Watch out for Mustard Aphids (মোৱা পোক). If aphid colony appears on top 10 cm twigs, spray Dimethoate 30 EC or neem oil 1500 ppm.",
         "harvest": "Harvest in morning hours when siliquae turn golden-yellow to avoid shattering. Dry seeds in sun for 4-5 days."
+      },
+      "economics_aau": {
+        "yield_bigha_avg": 2.1,
+        "yield_unit": "Quintals",
+        "yield_range": [
+          1.6,
+          2.7
+        ],
+        "price_per_unit_inr": 5650,
+        "price_unit": "₹/Quintal (MSP)",
+        "cost_cultivation_bigha_inr": 4500,
+        "gross_revenue_bigha_inr": 11865,
+        "net_profit_bigha_inr": 7365,
+        "bc_ratio": 2.64
+      },
+      "ipm_aau": {
+        "major_pests": [
+          {
+            "name": "Mustard Aphid (Lipaphis erysimi)",
+            "symptoms": "Swarms of tiny yellow-green nymphs and adults sucking sap from inflorescence and tender siliqua, causing curling and stunting.",
+            "etl": "20-25% aphid infestation on terminal 10 cm shoot",
+            "biological": "Sow early (by Oct 25 - Nov 5) to escape aphid build-up. Install yellow sticky traps @ 5/bigha.",
+            "chemical": "Spray Dimethoate 30 EC @ 1.5 ml/L or Imidacloprid 17.8 SL @ 0.3 ml/L late in afternoon to protect honeybee pollinators."
+          }
+        ],
+        "major_diseases": [
+          {
+            "name": "Alternaria Blight (Alternaria brassicae)",
+            "symptoms": "Concentric target-board circular black spots on leaves and siliquae.",
+            "management": "Seed treatment with Mancozeb @ 3g/kg. Spray Iprodione 50 WP @ 2 g/L or Mancozeb 75 WP @ 2.5 g/L."
+          }
+        ]
       }
     },
     {
@@ -214,15 +502,38 @@
       "season_en": "Rabi: Oct-Nov planting, Jan-Mar harvest",
       "season_as": "ৰবি: কাতি-আঘোণত ৰোপণ, মাঘ-ফাগুনত চপোৱা",
       "season_hi": "रबी: अक्टूबर-नवंबर रोपाई, जनवरी-मार्च कटाई",
-      "sowing_months": [10, 11],
-      "harvest_months": [1, 2, 3],
-      "ph": [5.0, 6.5],
-      "rain_mm": [400, 1600],
-      "temp_c": [14, 25],
-      "clay_pct": [8, 28],
+      "sowing_months": [
+        10,
+        11
+      ],
+      "harvest_months": [
+        1,
+        2,
+        3
+      ],
+      "ph": [
+        5.0,
+        6.5
+      ],
+      "rain_mm": [
+        400,
+        1600
+      ],
+      "temp_c": [
+        14,
+        25
+      ],
+      "clay_pct": [
+        8,
+        28
+      ],
       "flood_tolerance": "none",
       "recommended_varieties": [
-        "Kufri Jyoti", "Kufri Pokhraj", "Kufri Megha", "Kufri Surya", "Kufri Sindhuri"
+        "Kufri Jyoti",
+        "Kufri Pokhraj",
+        "Kufri Megha",
+        "Kufri Surya",
+        "Kufri Sindhuri"
       ],
       "fertilizer_aau": {
         "n_kg_ha": 60,
@@ -241,6 +552,37 @@
         "water_management": "Critical stages for irrigation: stolon formation, tuber initiation, and tuber sizing. Never submerge the ridge.",
         "pest_disease": "Late blight is the #1 killer in Assam's winter fog. Spray Mancozeb 75 WP prophylactically at canopy closure.",
         "harvest": "Cut haulms (foliage) 10-12 days before digging to cure tuber skin. Dig carefully without cutting tubers."
+      },
+      "economics_aau": {
+        "yield_bigha_avg": 32.0,
+        "yield_unit": "Quintals",
+        "yield_range": [
+          25.0,
+          40.0
+        ],
+        "price_per_unit_inr": 1250,
+        "price_unit": "₹/Quintal",
+        "cost_cultivation_bigha_inr": 18500,
+        "gross_revenue_bigha_inr": 40000,
+        "net_profit_bigha_inr": 21500,
+        "bc_ratio": 2.16
+      },
+      "ipm_aau": {
+        "major_pests": [
+          {
+            "name": "Cutworm (Agrotis ipsilon)",
+            "symptoms": "Larvae cut tender seedlings at ground level during night; hide in soil during day.",
+            "biological": "Flood fields lightly before earthing up; use light traps.",
+            "chemical": "Drench soil around plants with Chlorpyriphos 20 EC @ 3 ml/L."
+          }
+        ],
+        "major_diseases": [
+          {
+            "name": "Late Blight (Phytophthora infestans)",
+            "symptoms": "Water-soaked lesions on leaves turning black rapidly in cloudy, humid, foggy winter mornings; white mold under leaf surface.",
+            "management": "Prophylactic spray of Mancozeb 75 WP @ 2.5 g/L before foggy spells. Upon symptom appearance, spray Cymoxanil + Mancozeb (Curzate) @ 2.5 g/L or Metalaxyl-M + Mancozeb @ 2 g/L."
+          }
+        ]
       }
     },
     {
@@ -252,12 +594,32 @@
       "season_en": "Pre-Kharif to Kharif: Mar-May sowing, Jul-Sep harvest",
       "season_as": "প্ৰাক-খাৰিফ: চ’ত-ব’হাগত সিঁচা, শাওণ-ভাদত চপোৱা",
       "season_hi": "प्री-खरीफ: मार्च-मई बुवाई, जुलाई-सितंबर कटाई",
-      "sowing_months": [3, 4, 5],
-      "harvest_months": [7, 8, 9],
-      "ph": [5.8, 7.5],
-      "rain_mm": [1200, 2400],
-      "temp_c": [24, 36],
-      "clay_pct": [15, 38],
+      "sowing_months": [
+        3,
+        4,
+        5
+      ],
+      "harvest_months": [
+        7,
+        8,
+        9
+      ],
+      "ph": [
+        5.8,
+        7.5
+      ],
+      "rain_mm": [
+        1200,
+        2400
+      ],
+      "temp_c": [
+        24,
+        36
+      ],
+      "clay_pct": [
+        15,
+        38
+      ],
       "flood_tolerance": "high",
       "recommended_varieties": [
         "Capsularis (White Jute): JRC-212, JRC-321, JRC-7447",
@@ -280,6 +642,37 @@
         "water_management": "Tolerates water stagnation after 2 months of growth; excellent crop for low-lying flood-prone belts.",
         "pest_disease": "Watch out for Jute Semilooper, Hairy Caterpillar, and stem rot.",
         "harvest": "Harvest at 50% flowering stage (100-120 days) for best fiber tensile strength. Ret in clean, slow-moving water with Ribbon retting or microbial consortium."
+      },
+      "economics_aau": {
+        "yield_bigha_avg": 4.5,
+        "yield_unit": "Quintals Dry Fiber",
+        "yield_range": [
+          3.8,
+          5.5
+        ],
+        "price_per_unit_inr": 5335,
+        "price_unit": "₹/Quintal (MSP)",
+        "cost_cultivation_bigha_inr": 12000,
+        "gross_revenue_bigha_inr": 24007,
+        "net_profit_bigha_inr": 12007,
+        "bc_ratio": 2.0
+      },
+      "ipm_aau": {
+        "major_pests": [
+          {
+            "name": "Jute Semilooper (Anomis sabulifera)",
+            "symptoms": "Green caterpillars feed voraciously on apical buds and tender leaves, retarding shoot elongation.",
+            "biological": "Spray Bacillus thuringiensis (Bt) @ 2 g/L; erect bamboo perches for insectivorous birds.",
+            "chemical": "Spray Lambda-cyhalothrin 5 EC @ 1 ml/L or Profenofos 50 EC @ 2 ml/L."
+          }
+        ],
+        "major_diseases": [
+          {
+            "name": "Stem Rot (Macrophomina phaseolina)",
+            "symptoms": "Dark brown necrotic lesions on stem leading to shredding and plant lodging.",
+            "management": "Avoid waterlogging; treat seeds with Carbendazim 2g/kg. Spray Copper Oxychloride @ 2.5 g/L."
+          }
+        ]
       }
     },
     {
@@ -291,15 +684,43 @@
       "season_en": "Perennial (Bearing year-round, peak: May-Jul & Sep-Nov)",
       "season_as": "বাৰমহীয়া (সৰ্বাধিক উৎপাদন: জেঠ-আহাৰ আৰু আহিন-কাতি)",
       "season_hi": "सदाबहार (मई-जुलाई एवं सितंबर-नवंबर)",
-      "sowing_months": [4, 5, 8, 9],
-      "harvest_months": [5, 6, 7, 8, 9, 10, 11, 12],
-      "ph": [5.5, 6.5],
-      "rain_mm": [1500, 3000],
-      "temp_c": [18, 32],
-      "clay_pct": [12, 30],
+      "sowing_months": [
+        4,
+        5,
+        8,
+        9
+      ],
+      "harvest_months": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "ph": [
+        5.5,
+        6.5
+      ],
+      "rain_mm": [
+        1500,
+        3000
+      ],
+      "temp_c": [
+        18,
+        32
+      ],
+      "clay_pct": [
+        12,
+        30
+      ],
       "flood_tolerance": "none",
       "recommended_varieties": [
-        "Kaji Nemu (Clonal selections from AAU)", "Gol Nemu (Round Lemon)", "Assam Local"
+        "Kaji Nemu (Clonal selections from AAU)",
+        "Gol Nemu (Round Lemon)",
+        "Assam Local"
       ],
       "fertilizer_aau": {
         "n_kg_ha": 60,
@@ -318,6 +739,37 @@
         "water_management": "Provide ring basin irrigation during dry winter (Nov-Feb). Strictly avoid waterlogging at root zone.",
         "pest_disease": "Citrus Canker is the biggest issue in Assam's wet climate: prune diseased twigs and spray Streptocycline (1g/10L) + Copper Oxychloride. Control Citrus Leaf Miner.",
         "harvest": "Pick fully mature, dark-green to pale-yellow aromatic fruits with rich juice vesicles."
+      },
+      "economics_aau": {
+        "yield_bigha_avg": 2600,
+        "yield_unit": "Fruits / Year",
+        "yield_range": [
+          2000,
+          3500
+        ],
+        "price_per_unit_inr": 3.8,
+        "price_unit": "₹/Fruit",
+        "cost_cultivation_bigha_inr": 4800,
+        "gross_revenue_bigha_inr": 9880,
+        "net_profit_bigha_inr": 5080,
+        "bc_ratio": 2.06
+      },
+      "ipm_aau": {
+        "major_pests": [
+          {
+            "name": "Citrus Leaf Miner (Phyllocnistis citrella)",
+            "symptoms": "Silvery serpentine mines inside young tender flush; leaves become twisted and distorted.",
+            "biological": "Prune infested twigs during winter; spray Neem oil @ 4 ml/L.",
+            "chemical": "Spray Thiamethoxam 25 WG @ 0.3 g/L or Imidacloprid 17.8 SL @ 0.35 ml/L."
+          }
+        ],
+        "major_diseases": [
+          {
+            "name": "Citrus Canker (Xanthomonas axonopodis pv. citri)",
+            "symptoms": "Raised, corky, crater-like lesions with yellow halo on leaves, twigs, and lemon rinds.",
+            "management": "Prune and burn cankered twigs before spring flush. Spray Copper Oxychloride @ 2.5 g/L mixed with Streptocycline @ 0.1 g/L."
+          }
+        ]
       }
     },
     {
@@ -329,15 +781,40 @@
       "season_en": "Kharif to Rabi: Oct-Nov or Feb-Mar planting",
       "season_as": "কাতি-আঘোণ বা ফাগুন-চ’তত ৰোপণ",
       "season_hi": "अक्टूबर-नवंबर या फरवरी-मार्च रोपाई",
-      "sowing_months": [10, 11, 2, 3],
-      "harvest_months": [4, 5, 6, 7, 8, 9],
-      "ph": [5.5, 6.8],
-      "rain_mm": [1200, 2400],
-      "temp_c": [20, 32],
-      "clay_pct": [10, 28],
+      "sowing_months": [
+        10,
+        11,
+        2,
+        3
+      ],
+      "harvest_months": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "ph": [
+        5.5,
+        6.8
+      ],
+      "rain_mm": [
+        1200,
+        2400
+      ],
+      "temp_c": [
+        20,
+        32
+      ],
+      "clay_pct": [
+        10,
+        28
+      ],
       "flood_tolerance": "none",
       "recommended_varieties": [
-        "AAU Selections", "Local ecotypes (Golaghat, Jorhat, Tezpur, Nagaland border)"
+        "AAU Selections",
+        "Local ecotypes (Golaghat, Jorhat, Tezpur, Nagaland border)"
       ],
       "fertilizer_aau": {
         "n_kg_ha": 50,
@@ -356,6 +833,37 @@
         "water_management": "Very sensitive to root rot and collar rot from stagnant water. Use furrow irrigation or drip.",
         "pest_disease": "Prone to Anthracnose (fruit rot), Bacterial Wilt, and Aphid-transmitted leaf curl virus. Apply Bordeaux mixture or COC prophylactically.",
         "harvest": "Harvest ripe red pods with pedicel intact. Wear rubber gloves when handling!"
+      },
+      "economics_aau": {
+        "yield_bigha_avg": 420,
+        "yield_unit": "Kg Fresh Pods",
+        "yield_range": [
+          300,
+          600
+        ],
+        "price_per_unit_inr": 160,
+        "price_unit": "₹/Kg Fresh (Dry: ₹1,000/kg)",
+        "cost_cultivation_bigha_inr": 18500,
+        "gross_revenue_bigha_inr": 67200,
+        "net_profit_bigha_inr": 48700,
+        "bc_ratio": 3.63
+      },
+      "ipm_aau": {
+        "major_pests": [
+          {
+            "name": "Thrips & Whiteflies (Vector for Leaf Curl Virus)",
+            "symptoms": "Upward curling and crinkling of leaves, severe stunting; flower and fruit drop.",
+            "biological": "Yellow sticky traps @ 8/bigha; spray Neem seed kernel extract (NSKE 5%) @ 50 ml/L.",
+            "chemical": "Spray Diafenthiuron 50 WP @ 1.2 g/L or Fipronil 5 SC @ 1.5 ml/L."
+          }
+        ],
+        "major_diseases": [
+          {
+            "name": "Anthracnose / Dieback & Fruit Rot (Colletotrichum capsici)",
+            "symptoms": "Drying of twigs from top downwards; circular sunken brown lesions on ripe chilli pods.",
+            "management": "Seed treatment with Trichoderma viride @ 5g/kg. Spray Azoxystrobin 23 SC @ 1 ml/L or Difenoconazole 25 EC @ 0.8 ml/L."
+          }
+        ]
       }
     },
     {
@@ -367,15 +875,38 @@
       "season_en": "Kharif: Mar-Apr planting, Dec-Feb harvest",
       "season_as": "চ’ত-ব’হাগত ৰোপণ, পুহ-মাঘত চপোৱা",
       "season_hi": "मार्च-अप्रैल रोपाई, दिसंबर-फरवरी कटाई",
-      "sowing_months": [3, 4],
-      "harvest_months": [12, 1, 2],
-      "ph": [5.2, 6.5],
-      "rain_mm": [1500, 3000],
-      "temp_c": [19, 30],
-      "clay_pct": [10, 25],
+      "sowing_months": [
+        3,
+        4
+      ],
+      "harvest_months": [
+        12,
+        1,
+        2
+      ],
+      "ph": [
+        5.2,
+        6.5
+      ],
+      "rain_mm": [
+        1500,
+        3000
+      ],
+      "temp_c": [
+        19,
+        30
+      ],
+      "clay_pct": [
+        10,
+        25
+      ],
       "flood_tolerance": "none",
       "recommended_varieties": [
-        "Nadia", "Rio de Janeiro", "Maran", "Jorhat Local", "Karbi Organic Ginger (GI Tagged)"
+        "Nadia",
+        "Rio de Janeiro",
+        "Maran",
+        "Jorhat Local",
+        "Karbi Organic Ginger (GI Tagged)"
       ],
       "fertilizer_aau": {
         "n_kg_ha": 60,
@@ -394,6 +925,37 @@
         "water_management": "Mulch immediately after planting with green leaves (10-12 t/ha) to conserve moisture and suppress weeds.",
         "pest_disease": "Rhizome Rot (Pythium) and Shoot Borer are major threats. Drench beds with Copper Oxychloride or Trichoderma if rot starts.",
         "harvest": "Harvest after 8-9 months when leaves turn completely yellow and dry. Cure rhizomes in shade."
+      },
+      "economics_aau": {
+        "yield_bigha_avg": 22.0,
+        "yield_unit": "Quintals Fresh Rhizomes",
+        "yield_range": [
+          18.0,
+          28.0
+        ],
+        "price_per_unit_inr": 4200,
+        "price_unit": "₹/Quintal",
+        "cost_cultivation_bigha_inr": 28000,
+        "gross_revenue_bigha_inr": 92400,
+        "net_profit_bigha_inr": 64400,
+        "bc_ratio": 3.3
+      },
+      "ipm_aau": {
+        "major_pests": [
+          {
+            "name": "Shoot Borer (Conogethes punctiferalis)",
+            "symptoms": "Larvae bore into pseudostems; central shoot withers into 'dead heart'.",
+            "biological": "Cut and destroy dead shoots; spray Bacillus thuringiensis @ 2 g/L.",
+            "chemical": "Spray Spinosad 45 SC @ 0.3 ml/L or Chlorantraniliprole @ 0.3 ml/L."
+          }
+        ],
+        "major_diseases": [
+          {
+            "name": "Rhizome Rot / Soft Rot (Pythium aphanidermatum)",
+            "symptoms": "Water-soaked rot at base of pseudostem; foul decaying odor; whole clump turns yellow and pulls out easily.",
+            "management": "Strict raised-bed drainage! Treat seed rhizomes with Metalaxyl + Mancozeb (Ridomil Gold) @ 2.5 g/L for 30 minutes before planting. Drench soil around affected clumps."
+          }
+        ]
       }
     },
     {
@@ -405,15 +967,38 @@
       "season_en": "Kharif: Apr-May planting, Jan-Mar harvest",
       "season_as": "ব’হাগ-জেঠত ৰোপণ, মাঘ-ফাগুনত চপোৱা",
       "season_hi": "अप्रैल-मई रोपाई, जनवरी-मार्च कटाई",
-      "sowing_months": [4, 5],
-      "harvest_months": [1, 2, 3],
-      "ph": [5.2, 6.8],
-      "rain_mm": [1400, 2800],
-      "temp_c": [20, 32],
-      "clay_pct": [10, 30],
+      "sowing_months": [
+        4,
+        5
+      ],
+      "harvest_months": [
+        1,
+        2,
+        3
+      ],
+      "ph": [
+        5.2,
+        6.8
+      ],
+      "rain_mm": [
+        1400,
+        2800
+      ],
+      "temp_c": [
+        20,
+        32
+      ],
+      "clay_pct": [
+        10,
+        30
+      ],
       "flood_tolerance": "none",
       "recommended_varieties": [
-        "Megha Turmeric-1", "Duggirala", "Tall", "Shillong Local", "Prathibha"
+        "Megha Turmeric-1",
+        "Duggirala",
+        "Tall",
+        "Shillong Local",
+        "Prathibha"
       ],
       "fertilizer_aau": {
         "n_kg_ha": 60,
@@ -432,6 +1017,37 @@
         "water_management": "Apply heavy green leaf mulch (12 t/ha) at planting and again at 45 days. Ensure zero water stagnation.",
         "pest_disease": "Leaf blotch (Taphrina) and Rhizome scale. Spray Mancozeb if leaf spots appear.",
         "harvest": "Harvest at 9 months when foliage dries completely. Boil rhizomes in water for 45-60 mins and sun dry for 10-15 days."
+      },
+      "economics_aau": {
+        "yield_bigha_avg": 26.0,
+        "yield_unit": "Quintals Fresh Rhizomes",
+        "yield_range": [
+          20.0,
+          32.0
+        ],
+        "price_per_unit_inr": 3600,
+        "price_unit": "₹/Quintal",
+        "cost_cultivation_bigha_inr": 25000,
+        "gross_revenue_bigha_inr": 93600,
+        "net_profit_bigha_inr": 68600,
+        "bc_ratio": 3.74
+      },
+      "ipm_aau": {
+        "major_pests": [
+          {
+            "name": "Shoot Borer & Leaf Roller",
+            "symptoms": "Holes in pseudostem with frass; folded leaves.",
+            "biological": "Install light traps; spray Neem oil @ 3 ml/L.",
+            "chemical": "Spray Flubendiamide 39.35 SC @ 0.25 ml/L."
+          }
+        ],
+        "major_diseases": [
+          {
+            "name": "Leaf Spot (Colletotrichum capsici) & Taphrina Blotch",
+            "symptoms": "Brown elliptic spots on upper surface of leaves that coalesce rapidly.",
+            "management": "Spray Mancozeb 75 WP @ 2.5 g/L or Propiconazole 25 EC @ 1 ml/L."
+          }
+        ]
       }
     },
     {
@@ -443,15 +1059,37 @@
       "season_en": "Late Kharif: Aug-Sep sowing, Nov-Dec harvest",
       "season_as": "ভাদ-আহিনত সিঁচা, আঘোণ-পুহত চপোৱা",
       "season_hi": "अगस्त-सितंबर बुवाई, नवंबर-दिसंबर कटाई",
-      "sowing_months": [8, 9],
-      "harvest_months": [11, 12],
-      "ph": [6.0, 7.5],
-      "rain_mm": [600, 1500],
-      "temp_c": [22, 32],
-      "clay_pct": [12, 35],
+      "sowing_months": [
+        8,
+        9
+      ],
+      "harvest_months": [
+        11,
+        12
+      ],
+      "ph": [
+        6.0,
+        7.5
+      ],
+      "rain_mm": [
+        600,
+        1500
+      ],
+      "temp_c": [
+        22,
+        32
+      ],
+      "clay_pct": [
+        12,
+        35
+      ],
       "flood_tolerance": "none",
       "recommended_varieties": [
-        "T-9", "Pant U-19", "Saon Mah (SB 121)", "KU 301", "PU 31"
+        "T-9",
+        "Pant U-19",
+        "Saon Mah (SB 121)",
+        "KU 301",
+        "PU 31"
       ],
       "fertilizer_aau": {
         "n_kg_ha": 15,
@@ -470,6 +1108,792 @@
         "water_management": "Generally rainfed; sensitive to waterlogging. Provide drainage furrows every 3-4 meters.",
         "pest_disease": "Yellow Mosaic Virus transmitted by whitefly is the most serious disease. Spray Imidacloprid if whiteflies appear.",
         "harvest": "Pick mature black pods in 2-3 pickings or uproot entire plant when 80% pods turn black. Dry and thresh."
+      },
+      "economics_aau": {
+        "yield_bigha_avg": 1.6,
+        "yield_unit": "Quintals",
+        "yield_range": [
+          1.2,
+          2.1
+        ],
+        "price_per_unit_inr": 7400,
+        "price_unit": "₹/Quintal (MSP)",
+        "cost_cultivation_bigha_inr": 3400,
+        "gross_revenue_bigha_inr": 11840,
+        "net_profit_bigha_inr": 8440,
+        "bc_ratio": 3.48
+      },
+      "ipm_aau": {
+        "major_pests": [
+          {
+            "name": "Pod Borer Complex (Maruca vitrata)",
+            "symptoms": "Larvae web together flowers and pods; bore holes into developing pods.",
+            "biological": "Spray NSKE 5% at flowering; install pheromone traps @ 3/bigha.",
+            "chemical": "Spray Chlorantraniliprole 18.5 SC @ 0.3 ml/L or Emamectin Benzoate 5 SG @ 0.4 g/L."
+          }
+        ],
+        "major_diseases": [
+          {
+            "name": "Yellow Mosaic Virus (MYMV)",
+            "symptoms": "Bright yellow patches interspersed with green on leaf lamina; vector is Whitefly (Bemisia tabaci).",
+            "management": "Grow tolerant varieties (Pratap, Pant U-19). Spray Acetamiprid 20 SP @ 0.25 g/L to control whiteflies."
+          }
+        ]
+      }
+    },
+    {
+      "id": "joha_rice",
+      "name_en": "Assam Joha Rice (Aromatic Scented Rice - GI Tagged)",
+      "name_as": "জোহা ধান (সুগন্ধি ধান - জি আই স্বীকৃত)",
+      "name_hi": "जोहा धान (सुगंधित चावल - जीआई टैग)",
+      "category": "Cereals",
+      "season_en": "Kharif: Jun-Jul sowing, Nov-Dec harvest",
+      "season_as": "খাৰিফ: জেঠ-আহাৰত ৰোপণ, আঘোণ-পুহত চপোৱা",
+      "season_hi": "खरीफ: जून-जुलाई रोपाई, नवंबर-दिसंबर कटाई",
+      "sowing_months": [
+        6,
+        7
+      ],
+      "harvest_months": [
+        11,
+        12
+      ],
+      "ph": [
+        5.2,
+        6.5
+      ],
+      "rain_mm": [
+        1400,
+        2500
+      ],
+      "temp_c": [
+        20,
+        32
+      ],
+      "clay_pct": [
+        24,
+        55
+      ],
+      "flood_tolerance": "medium",
+      "recommended_varieties": [
+        "Kola Joha",
+        "Bhog Joha",
+        "Kunkuni Joha",
+        "Maniki Madhuri Joha (AAU Selection)"
+      ],
+      "fertilizer_aau": {
+        "n_kg_ha": 30,
+        "p_kg_ha": 20,
+        "k_kg_ha": 20,
+        "urea_kg_bigha": 8.8,
+        "ssp_kg_bigha": 16.7,
+        "mop_kg_bigha": 4.5,
+        "fym_ton_bigha": 1.5,
+        "split_schedule": "Apply all SSP, MOP and 50% Urea at puddling. Low chemical nitrogen is mandatory to preserve authentic aroma and avoid lodging.",
+        "biofertilizers": "Azospirillum & PSB seedling root dip."
+      },
+      "necessary_steps": {
+        "land_prep": "Puddle 3-4 times thoroughly. Joha requires good organic base; incorporate green manure (Dhaincha) or FYM.",
+        "seed_and_sowing": "Transplant 25-30 day seedlings at 20x15 cm spacing (2-3 seedlings/hill).",
+        "water_management": "Maintain shallow 2-3 cm water. Avoid deep flooding.",
+        "pest_disease": "Scout for Yellow Stem Borer and Neck Blast. Spray Tricyclazole 75 WP @ 0.6 g/L at early heading if neck blast appears.",
+        "harvest": "Harvest as soon as 80% grains are yellow. Over-drying or delaying harvest reduces aroma."
+      },
+      "economics_aau": {
+        "yield_bigha_avg": 4.5,
+        "yield_unit": "Quintals Premium Paddy",
+        "yield_range": [
+          3.8,
+          5.5
+        ],
+        "price_per_unit_inr": 6500,
+        "price_unit": "₹/Quintal (Niche Scented Market)",
+        "cost_cultivation_bigha_inr": 7200,
+        "gross_revenue_bigha_inr": 29250,
+        "net_profit_bigha_inr": 22050,
+        "bc_ratio": 4.06
+      },
+      "ipm_aau": {
+        "major_pests": [
+          {
+            "name": "Stem Borer & Leaf Folder",
+            "symptoms": "Dead hearts; longitudinal folding of leaves.",
+            "biological": "Pheromone traps @ 2/bigha; release Trichogramma japonicum.",
+            "chemical": "Spray Chlorantraniliprole 18.5 SC @ 0.3 ml/L."
+          }
+        ],
+        "major_diseases": [
+          {
+            "name": "Neck Blast",
+            "symptoms": "Lesions at panicle node leading to unfilled chaffy grains.",
+            "management": "Spray Tricyclazole 75 WP @ 0.6 g/L."
+          }
+        ]
+      }
+    },
+    {
+      "id": "banana",
+      "name_en": "Banana (Malbhog, Jahaji & Chenichampa)",
+      "name_as": "কল (মালভোগ, জাহাজী, চেনীচম্পা)",
+      "name_hi": "केला (मालभोग, जहाजी, चीनीचम्पा)",
+      "category": "Fruits & Plantation",
+      "season_en": "Perennial (Planting: Mar-May or Sep-Oct)",
+      "season_as": "বাৰমহীয়া (ৰোপণ: চ’ত-ব’হাগ অথবা আহিন-কাতি)",
+      "season_hi": "बारहमासी (रोपाई: मार्च-मई या सितंबर-अक्टूबर)",
+      "sowing_months": [
+        3,
+        4,
+        5,
+        9,
+        10
+      ],
+      "harvest_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "ph": [
+        5.5,
+        7.0
+      ],
+      "rain_mm": [
+        1400,
+        2800
+      ],
+      "temp_c": [
+        18,
+        35
+      ],
+      "clay_pct": [
+        18,
+        40
+      ],
+      "flood_tolerance": "low",
+      "recommended_varieties": [
+        "Malbhog (Finest dessert)",
+        "Jahaji (Cavendish)",
+        "Chenichampa",
+        "Bhimkol (Nutritive baby food)"
+      ],
+      "fertilizer_aau": {
+        "n_kg_ha": 110,
+        "p_kg_ha": 40,
+        "k_kg_ha": 200,
+        "urea_kg_bigha": 32.0,
+        "ssp_kg_bigha": 33.5,
+        "mop_kg_bigha": 44.5,
+        "fym_ton_bigha": 2.5,
+        "split_schedule": "Per pit (plant): FYM 10kg + Neem cake 500g at planting. Split Urea and MOP into 4 applications: 3rd, 5th, 7th and 9th month after planting.",
+        "biofertilizers": "AM fungi (VAM) 50g and Azospirillum 50g per pit."
+      },
+      "necessary_steps": {
+        "land_prep": "Dig pits of 50x50x50 cm at 2x2 m spacing (approx 330 plants/bigha). Fill with topsoil + FYM.",
+        "seed_and_sowing": "Use sword suckers (weight 1.5 - 2.0 kg) or tissue-cultured plantlets. Pare sucker corms and dip in Carbendazim 2g/L.",
+        "water_management": "Provide irrigation during dry winter months (every 10-14 days). Provide drainage trenches to prevent waterlogging.",
+        "pest_disease": "Desucker regularly leaving only 1 follower. Propping with bamboo stakes during bunch emergence.",
+        "harvest": "Harvest bunch when fingers are plump and angles become round (approx 90-110 days after flowering)."
+      },
+      "economics_aau": {
+        "yield_bigha_avg": 300,
+        "yield_unit": "Bunches / Bigha",
+        "yield_range": [
+          250,
+          360
+        ],
+        "price_per_unit_inr": 220,
+        "price_unit": "₹/Bunch (Malbhog/Jahaji)",
+        "cost_cultivation_bigha_inr": 22000,
+        "gross_revenue_bigha_inr": 66000,
+        "net_profit_bigha_inr": 44000,
+        "bc_ratio": 3.0
+      },
+      "ipm_aau": {
+        "major_pests": [
+          {
+            "name": "Banana Rhizome Weevil (Cosmopolites sordidus)",
+            "symptoms": "Grubs tunnel inside corm; plant turns pale, yellow, and topples over in wind.",
+            "biological": "Use disc-on-stump pheromone traps; clean planting suckers thoroughly.",
+            "chemical": "Apply Chlorpyriphos 20 EC @ 2.5 ml/L drenching around base."
+          }
+        ],
+        "major_diseases": [
+          {
+            "name": "Panama Wilt (Fusarium oxysporum f. sp. cubense)",
+            "symptoms": "Yellowing of lower leaf margins spreading upward; petiole buckling; vascular discoloration in pseudostem.",
+            "management": "Grow resistant varieties (Cavendish/Jahaji); avoid water stagnation; apply Trichoderma viride enriched FYM @ 2 kg/pit."
+          }
+        ]
+      }
+    },
+    {
+      "id": "arecanut",
+      "name_en": "Arecanut / Betel Nut (Tamul)",
+      "name_as": "তামোল (বাৰীৰ অৰ্থকৰী খেতি)",
+      "name_hi": "सुपारी (ताम्बूल)",
+      "category": "Cash Crops & Plantation",
+      "season_en": "Perennial (Planting: May-Aug, Harvest: Oct-Mar)",
+      "season_as": "বাৰমহীয়া (ৰোপণ: জেঠ-ভাদ, চপোৱা: কাতি-ফাগুন)",
+      "season_hi": "बारहमासी (रोपाई: मई-अगस्त, कटाई: अक्टूबर-मार्च)",
+      "sowing_months": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "harvest_months": [
+        10,
+        11,
+        12,
+        1,
+        2,
+        3
+      ],
+      "ph": [
+        5.0,
+        6.5
+      ],
+      "rain_mm": [
+        1800,
+        3500
+      ],
+      "temp_c": [
+        15,
+        36
+      ],
+      "clay_pct": [
+        20,
+        45
+      ],
+      "flood_tolerance": "low",
+      "recommended_varieties": [
+        "Kahikuchi",
+        "Mohitnagar",
+        "Mangala",
+        "Sumangala",
+        "Local Assam Tall"
+      ],
+      "fertilizer_aau": {
+        "n_kg_ha": 100,
+        "p_kg_ha": 40,
+        "k_kg_ha": 140,
+        "urea_kg_bigha": 29.0,
+        "ssp_kg_bigha": 33.5,
+        "mop_kg_bigha": 31.0,
+        "fym_ton_bigha": 2.0,
+        "split_schedule": "Per bearing palm: 100g N, 40g P2O5, 140g K2O + 12kg FYM annually. Apply in 2 splits: 1/3rd in April-May (pre-monsoon) and 2/3rd in Sept-Oct (post-monsoon).",
+        "biofertilizers": "Azospirillum and Phosphobacteria 25g each per palm."
+      },
+      "necessary_steps": {
+        "land_prep": "Plant in homestead bari or orchard at 2.7 x 2.7 m spacing (approx 180 palms/bigha). Dig pits of 60x60x60 cm.",
+        "seed_and_sowing": "Select 1-2 year old vigorous seedlings with 4-5 healthy leaves from mother palms with heavy bunches.",
+        "water_management": "Provide organic mulch (paddy straw, arecanut leaves) in basin to conserve moisture in dry winter.",
+        "pest_disease": "Intercrop with Black Pepper, Banana, and Ginger for maximum multi-tier farm income.",
+        "harvest": "Harvest mature green nuts for fermentation (Bura Tamul) or ripe orange nuts for drying (Supari)."
+      },
+      "economics_aau": {
+        "yield_bigha_avg": 250,
+        "yield_unit": "Kg Cured Supari / Bigha / Year",
+        "yield_range": [
+          200,
+          320
+        ],
+        "price_per_unit_inr": 340,
+        "price_unit": "₹/Kg Supari",
+        "cost_cultivation_bigha_inr": 15000,
+        "gross_revenue_bigha_inr": 85000,
+        "net_profit_bigha_inr": 70000,
+        "bc_ratio": 5.67
+      },
+      "ipm_aau": {
+        "major_pests": [
+          {
+            "name": "Spindle Bug (Carvalhoia arecae)",
+            "symptoms": "Nymphs and adults suck sap from tender unopened spindle leaves; necrotic streaks appear.",
+            "biological": "Place phorate or neem seed cake in crown crevices.",
+            "chemical": "Spray Dimethoate 30 EC @ 1.5 ml/L into spindle base."
+          }
+        ],
+        "major_diseases": [
+          {
+            "name": "Koleroga / Mahali (Fruit Rot - Phytophthora arecae)",
+            "symptoms": "Water-soaked lesions on nuts causing extensive premature nut fall during heavy July-August rains.",
+            "management": "Prophylactic spray of 1% Bordeaux mixture or Copper Oxychloride @ 3 g/L before onset of monsoon; repeat 40 days later."
+          }
+        ]
+      }
+    },
+    {
+      "id": "black_pepper",
+      "name_en": "Black Pepper (Jaluk - Intercropped on Arecanut)",
+      "name_as": "জালুক (তামোল বাৰীৰ সংযোগী খেতি)",
+      "name_hi": "काली मिर्च (सुपारी के साथ अंतःफसल)",
+      "category": "Cash Crops & Plantation",
+      "season_en": "Perennial (Planting: May-Jul, Harvest: Dec-Feb)",
+      "season_as": "বাৰমহীয়া (ৰোপণ: জেঠ-আহাৰ, চপোৱা: পুহ-মাঘ)",
+      "season_hi": "बारहमासी (रोपाई: मई-जुलाई, कटाई: दिसंबर-फरवरी)",
+      "sowing_months": [
+        5,
+        6,
+        7
+      ],
+      "harvest_months": [
+        12,
+        1,
+        2
+      ],
+      "ph": [
+        5.0,
+        6.2
+      ],
+      "rain_mm": [
+        2000,
+        3500
+      ],
+      "temp_c": [
+        18,
+        34
+      ],
+      "clay_pct": [
+        20,
+        40
+      ],
+      "flood_tolerance": "low",
+      "recommended_varieties": [
+        "Panniyur-1",
+        "Panniyur-2",
+        "Panniyur-5",
+        "Karimunda",
+        "Subhakara"
+      ],
+      "fertilizer_aau": {
+        "n_kg_ha": 50,
+        "p_kg_ha": 20,
+        "k_kg_ha": 70,
+        "urea_kg_bigha": 14.5,
+        "ssp_kg_bigha": 16.7,
+        "mop_kg_bigha": 15.5,
+        "fym_ton_bigha": 1.0,
+        "split_schedule": "Per standard vine: 100g N, 40g P2O5, 140g K2O annually in two splits (May-June and August-September). Apply 10 kg FYM per vine.",
+        "biofertilizers": "Trichoderma viride in FYM basin."
+      },
+      "necessary_steps": {
+        "land_prep": "Plant rooted cuttings at north or north-east side of arecanut tree trunk at 30 cm distance.",
+        "seed_and_sowing": "Tie vine gently with banana pseudostem fiber as it grows up the tree trunk.",
+        "water_management": "Ensure adequate shade and organic mulching at the root zone.",
+        "pest_disease": "Prune side runners; prevent water logging around the base.",
+        "harvest": "Harvest spikes when 1 or 2 berries on the spike turn bright orange-red. Sun dry berries on mats for 7-10 days."
+      },
+      "economics_aau": {
+        "yield_bigha_avg": 85,
+        "yield_unit": "Kg Dry Black Pepper",
+        "yield_range": [
+          65,
+          110
+        ],
+        "price_per_unit_inr": 550,
+        "price_unit": "₹/Kg Dry Pepper",
+        "cost_cultivation_bigha_inr": 11000,
+        "gross_revenue_bigha_inr": 46750,
+        "net_profit_bigha_inr": 35750,
+        "bc_ratio": 4.25
+      },
+      "ipm_aau": {
+        "major_pests": [
+          {
+            "name": "Pollu Beetle (Longitarsus nigripennis)",
+            "symptoms": "Grubs bore into tender pepper berries and feed on internal seeds, leaving empty hollow shells.",
+            "biological": "Regulate overhead shade; spray Quassia extract.",
+            "chemical": "Spray Quinalphos 25 EC @ 2 ml/L in July and October."
+          }
+        ],
+        "major_diseases": [
+          {
+            "name": "Quick Wilt / Foot Rot (Phytophthora capsici)",
+            "symptoms": "Sudden wilting of whole vine within 2-3 weeks; black rot at collar region with water-soaked lesions.",
+            "management": "Drench basin with 0.2% Copper Oxychloride or Metalaxyl-Mancozeb @ 2 g/L before and after monsoon; incorporate Trichoderma."
+          }
+        ]
+      }
+    },
+    {
+      "id": "sesamum",
+      "name_en": "Sesamum / Til (Kharif & Rabi)",
+      "name_as": "তিল (খাৰিফ আৰু ৰবি)",
+      "name_hi": "तिल (खरीफ और रबी)",
+      "category": "Oilseeds",
+      "season_en": "Kharif: Jul-Aug sowing; Rabi: Feb-Mar sowing",
+      "season_as": "খাৰিফ: শাওণ-ভাদ; ৰবি: ফাগুন-চ’ত",
+      "season_hi": "खरीफ: जुलाई-अगस्त; रबी: फरवरी-मार्च",
+      "sowing_months": [
+        2,
+        3,
+        7,
+        8
+      ],
+      "harvest_months": [
+        5,
+        6,
+        10,
+        11
+      ],
+      "ph": [
+        5.5,
+        7.2
+      ],
+      "rain_mm": [
+        600,
+        1500
+      ],
+      "temp_c": [
+        22,
+        35
+      ],
+      "clay_pct": [
+        15,
+        35
+      ],
+      "flood_tolerance": "low",
+      "recommended_varieties": [
+        "AST-1",
+        "Madhavi",
+        "Gauri",
+        "Vinayak",
+        "ST-1683"
+      ],
+      "fertilizer_aau": {
+        "n_kg_ha": 30,
+        "p_kg_ha": 20,
+        "k_kg_ha": 20,
+        "urea_kg_bigha": 8.8,
+        "ssp_kg_bigha": 16.7,
+        "mop_kg_bigha": 4.5,
+        "fym_ton_bigha": 0.8,
+        "split_schedule": "Apply 50% N and all P and K as basal dose. Top dress remaining 50% N at 30 days after sowing.",
+        "biofertilizers": "Seed treatment with Azotobacter."
+      },
+      "necessary_steps": {
+        "land_prep": "Plough 3 times to get fine tilth; level field properly to ensure no waterlogging.",
+        "seed_and_sowing": "Seed rate 600-700 g/bigha. Mix seed with dry sand (1:4) for uniform broadcasting or line sow at 30x10 cm.",
+        "water_management": "Highly sensitive to waterlogging. Provide drainage furrows every 3 meters.",
+        "pest_disease": "Thinning at 15-20 days after emergence is critical for good pod branching.",
+        "harvest": "Harvest when bottom capsules turn yellowish-green and leaves begin to drop."
+      },
+      "economics_aau": {
+        "yield_bigha_avg": 1.2,
+        "yield_unit": "Quintals",
+        "yield_range": [
+          0.9,
+          1.5
+        ],
+        "price_per_unit_inr": 9200,
+        "price_unit": "₹/Quintal (MSP)",
+        "cost_cultivation_bigha_inr": 3100,
+        "gross_revenue_bigha_inr": 11040,
+        "net_profit_bigha_inr": 7940,
+        "bc_ratio": 3.56
+      },
+      "ipm_aau": {
+        "major_pests": [
+          {
+            "name": "Til Hawk Moth & Leaf Roller",
+            "symptoms": "Larvae web top leaves together and defoliate plant.",
+            "biological": "Handpick large caterpillars; spray Neem oil @ 3 ml/L.",
+            "chemical": "Spray Chlorpyriphos 20 EC @ 2 ml/L."
+          }
+        ],
+        "major_diseases": [
+          {
+            "name": "Phyllody (Mycoplasma transmitted by Jassids)",
+            "symptoms": "Floral parts turn into green leafy structures; complete sterility.",
+            "management": "Rogue out infected plants immediately; spray Imidacloprid @ 0.3 ml/L to control vector."
+          }
+        ]
+      }
+    },
+    {
+      "id": "lentil",
+      "name_en": "Lentil / Masur (Lens culinaris)",
+      "name_as": "মচুৰ মাহ (শীতকালীন দাইল)",
+      "name_hi": "मसूर (शीतकालीन दाल)",
+      "category": "Oilseeds",
+      "season_en": "Rabi: Oct-Nov sowing, Feb-Mar harvest",
+      "season_as": "ৰবি: কাতি-আঘোণত সিঁচা, ফাগুন-চ’তত চপোৱা",
+      "season_hi": "रबी: अक्टूबर-नवंबर बुवाई, फरवरी-मार्च कटाई",
+      "sowing_months": [
+        10,
+        11
+      ],
+      "harvest_months": [
+        2,
+        3
+      ],
+      "ph": [
+        5.8,
+        7.5
+      ],
+      "rain_mm": [
+        400,
+        1000
+      ],
+      "temp_c": [
+        12,
+        26
+      ],
+      "clay_pct": [
+        20,
+        45
+      ],
+      "flood_tolerance": "low",
+      "recommended_varieties": [
+        "L-9-12",
+        "PL-4",
+        "PL-6",
+        "KLS-218",
+        "Asha (WBL-58)"
+      ],
+      "fertilizer_aau": {
+        "n_kg_ha": 15,
+        "p_kg_ha": 35,
+        "k_kg_ha": 15,
+        "urea_kg_bigha": 4.4,
+        "ssp_kg_bigha": 29.2,
+        "mop_kg_bigha": 3.3,
+        "fym_ton_bigha": 0.5,
+        "split_schedule": "Entire fertilizer applied as basal dose at final land preparation.",
+        "biofertilizers": "Rhizobium leguminosarum and PSB seed inoculation (50g/bigha seed)."
+      },
+      "necessary_steps": {
+        "land_prep": "Plough 2-3 times after Sali paddy harvest to conserve residual moisture.",
+        "seed_and_sowing": "Can be broadcast as relay crop (Utera/Pyra) in standing Sali rice 10-15 days before harvest.",
+        "water_management": "Usually grown on residual soil moisture; one light irrigation at pod filling stage if winter is completely dry.",
+        "pest_disease": "Keep early weeds checked by one hand weeding at 25-30 days.",
+        "harvest": "Harvest when pods turn golden brown and rattle when shaken."
+      },
+      "economics_aau": {
+        "yield_bigha_avg": 1.6,
+        "yield_unit": "Quintals",
+        "yield_range": [
+          1.2,
+          2.0
+        ],
+        "price_per_unit_inr": 6700,
+        "price_unit": "₹/Quintal (MSP)",
+        "cost_cultivation_bigha_inr": 3600,
+        "gross_revenue_bigha_inr": 10720,
+        "net_profit_bigha_inr": 7120,
+        "bc_ratio": 2.98
+      },
+      "ipm_aau": {
+        "major_pests": [
+          {
+            "name": "Aphids & Pod Borer",
+            "symptoms": "Sap sucking on flowers and pods causing poor seed set.",
+            "biological": "Yellow sticky traps; spray NSKE 5%.",
+            "chemical": "Spray Dimethoate 30 EC @ 1.5 ml/L."
+          }
+        ],
+        "major_diseases": [
+          {
+            "name": "Lentil Wilt (Fusarium oxysporum f. sp. lentis)",
+            "symptoms": "Drooping and yellowing of foliage; vascular discoloration in root.",
+            "management": "Seed treatment with Trichoderma viride @ 4g/kg seed; crop rotation."
+          }
+        ]
+      }
+    },
+    {
+      "id": "cabbage_cauliflower",
+      "name_en": "Cabbage & Cauliflower (Winter Cole Crops)",
+      "name_as": "বন্ধাকবি আৰু ফুলকবি (শীতকালীন পাচলি)",
+      "name_hi": "पत्तागोभी और फूलगोभी (सर्दियों की सब्जी)",
+      "category": "Vegetables & Tubers",
+      "season_en": "Rabi: Sep-Nov nursery, Dec-Mar harvest",
+      "season_as": "ৰবি: আহিন-কাতি ৰোপণ, পুহ-ফাগুন চপোৱা",
+      "season_hi": "रबी: सितंबर-नवंबर रोपाई, दिसंबर-मार्च कटाई",
+      "sowing_months": [
+        9,
+        10,
+        11
+      ],
+      "harvest_months": [
+        12,
+        1,
+        2,
+        3
+      ],
+      "ph": [
+        5.8,
+        6.8
+      ],
+      "rain_mm": [
+        500,
+        1200
+      ],
+      "temp_c": [
+        12,
+        25
+      ],
+      "clay_pct": [
+        20,
+        38
+      ],
+      "flood_tolerance": "low",
+      "recommended_varieties": [
+        "Cabbage: Golden Acre, Pride of India, Pusa Mukta",
+        "Cauliflower: Pusa Deepali (early), Improved Japanese, Snowball-16 (late)"
+      ],
+      "fertilizer_aau": {
+        "n_kg_ha": 120,
+        "p_kg_ha": 60,
+        "k_kg_ha": 60,
+        "urea_kg_bigha": 35.0,
+        "ssp_kg_bigha": 50.0,
+        "mop_kg_bigha": 13.3,
+        "fym_ton_bigha": 2.0,
+        "split_schedule": "Apply 50% Urea and all SSP & MOP as basal. Top dress 25% Urea at 30 days and 25% at 45 days after transplanting.",
+        "biofertilizers": "Azospirillum and PSB root dip."
+      },
+      "necessary_steps": {
+        "land_prep": "Plough 4-5 times to fine tilth. Incorporate 2 tonnes FYM per bigha. Apply 2 kg Borax/bigha to prevent cauliflower browning.",
+        "seed_and_sowing": "Transplant 25-day seedlings at 60x45 cm spacing on ridges.",
+        "water_management": "Irrigate at 8-10 day intervals. Avoid flood stagnation.",
+        "pest_disease": "Earth up 30 days after planting. Blanch cauliflower heads by covering curds with leaves 4-5 days before harvest.",
+        "harvest": "Harvest firm, compact heads/curds before they become loose or discolored."
+      },
+      "economics_aau": {
+        "yield_bigha_avg": 35.0,
+        "yield_unit": "Quintals",
+        "yield_range": [
+          28.0,
+          42.0
+        ],
+        "price_per_unit_inr": 1500,
+        "price_unit": "₹/Quintal",
+        "cost_cultivation_bigha_inr": 14500,
+        "gross_revenue_bigha_inr": 52500,
+        "net_profit_bigha_inr": 38000,
+        "bc_ratio": 3.62
+      },
+      "ipm_aau": {
+        "major_pests": [
+          {
+            "name": "Diamondback Moth - DBM (Plutella xylostella)",
+            "symptoms": "Larvae feed on under surface of leaves leaving parchment-like transparent windows; severe defoliation.",
+            "biological": "Grow mustard trap crop every 25 rows; spray Bacillus thuringiensis @ 2 g/L or Spinosad 45 SC @ 0.3 ml/L.",
+            "chemical": "Spray Chlorantraniliprole 18.5 SC @ 0.3 ml/L."
+          }
+        ],
+        "major_diseases": [
+          {
+            "name": "Black Rot (Xanthomonas campestris)",
+            "symptoms": "V-shaped chlorotic lesions with black veins starting from leaf margins.",
+            "management": "Hot water seed treatment at 50°C for 30 mins; spray Copper Oxychloride @ 2.5 g/L with Streptocycline @ 0.1 g/L."
+          }
+        ]
+      }
+    },
+    {
+      "id": "pointed_gourd",
+      "name_en": "Pointed Gourd / Parwal (Potal)",
+      "name_as": "পটল (চৰ-চাপৰি আৰু নদীকাষৰীয়া খেতি)",
+      "name_hi": "परवल (पटोल)",
+      "category": "Vegetables & Tubers",
+      "season_en": "Summer-Kharif: Oct-Nov planting, Feb-Oct fruiting",
+      "season_as": "কাতি-আঘোণত ৰোপণ, ফাগুন-আহিনত ফল চপোৱা",
+      "season_hi": "अक्टूबर-नवंबर रोपाई, फरवरी-अक्टूबर कटाई",
+      "sowing_months": [
+        10,
+        11
+      ],
+      "harvest_months": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "ph": [
+        6.0,
+        7.2
+      ],
+      "rain_mm": [
+        1200,
+        2200
+      ],
+      "temp_c": [
+        20,
+        35
+      ],
+      "clay_pct": [
+        12,
+        28
+      ],
+      "flood_tolerance": "low",
+      "recommended_varieties": [
+        "Swarna Alaukik",
+        "Swarna Rekha",
+        "Dandali",
+        "Local Char ecotypes"
+      ],
+      "fertilizer_aau": {
+        "n_kg_ha": 90,
+        "p_kg_ha": 50,
+        "k_kg_ha": 60,
+        "urea_kg_bigha": 26.0,
+        "ssp_kg_bigha": 41.8,
+        "mop_kg_bigha": 13.3,
+        "fym_ton_bigha": 2.0,
+        "split_schedule": "Apply all SSP, 50% MOP and 30% Urea as basal. Remaining Urea in 3 splits during active vegetative and fruiting periods.",
+        "biofertilizers": "Trichoderma enriched manure."
+      },
+      "necessary_steps": {
+        "land_prep": "Well-drained sandy loam or silt loam soils (ideal for river bank char lands). Make pits at 2x2 m.",
+        "seed_and_sowing": "Propagate vegetative root cuttings or vine cuttings. Maintain 1 male plant for every 9 female plants for pollination.",
+        "water_management": "Irrigate during dry months of Feb-April. Provide trellis or bamboo bower (chapor) for vines.",
+        "pest_disease": "Hand-pollination in early morning substantially increases fruit set and size.",
+        "harvest": "Harvest tender green fruits every 3-4 days before seeds harden."
+      },
+      "economics_aau": {
+        "yield_bigha_avg": 18.0,
+        "yield_unit": "Quintals",
+        "yield_range": [
+          14.0,
+          22.0
+        ],
+        "price_per_unit_inr": 2500,
+        "price_unit": "₹/Quintal",
+        "cost_cultivation_bigha_inr": 12500,
+        "gross_revenue_bigha_inr": 45000,
+        "net_profit_bigha_inr": 32500,
+        "bc_ratio": 3.6
+      },
+      "ipm_aau": {
+        "major_pests": [
+          {
+            "name": "Fruit Fly (Bactrocera cucurbitae)",
+            "symptoms": "Maggots feed inside fruits causing rot and premature fruit fall.",
+            "biological": "Install cue-lure pheromone traps @ 3/bigha; collect and bury damaged fruits.",
+            "chemical": "Bait spray with Malathion 50 EC @ 2 ml + 10g jaggery/L."
+          }
+        ],
+        "major_diseases": [
+          {
+            "name": "Downy Mildew & Root Rot",
+            "symptoms": "Angular yellow patches on upper leaf surface; water-soaked vine rot.",
+            "management": "Spray Metalaxyl + Mancozeb @ 2 g/L."
+          }
+        ]
       }
     }
   ]

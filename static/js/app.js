@@ -217,6 +217,44 @@ function bindEvents() {
     map.setView([26.1512, 91.7412], 12);
   });
 
+  // GeoJSON file upload
+  const fileInput = document.getElementById("fileGeoJson");
+  if (fileInput) {
+    fileInput.addEventListener("change", (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = (evt) => {
+        try {
+          const gj = JSON.parse(evt.target.result);
+          drawnItems.clearLayers();
+          const geoJsonLayer = L.geoJSON(gj, {
+            style: { color: "#16a34a", weight: 3, fillOpacity: 0.2 }
+          });
+          drawnItems.addLayer(geoJsonLayer);
+          map.fitBounds(geoJsonLayer.getBounds());
+
+          const center = geoJsonLayer.getBounds().getCenter();
+          setCoordinates(center.lat, center.lng);
+          currentMarker.setLatLng(center);
+
+          runAnalysis();
+        } catch (err) {
+          alert("Invalid GeoJSON file: " + err.message);
+        }
+      };
+      reader.readAsText(file);
+    });
+  }
+
+  // Export Advisory Card Button
+  const btnExport = document.getElementById("btnExportCard");
+  if (btnExport) {
+    btnExport.addEventListener("click", () => {
+      exportAdvisoryCard();
+    });
+  }
+
   // SHC Accordion Toggle
   const shcToggle = document.getElementById("shcToggle");
   const shcBody = document.getElementById("shcBody");
@@ -331,7 +369,8 @@ function renderDashboard(data) {
 
   // 1. Top Banner
   const loc = data.location;
-  document.getElementById("bannerDistrict").textContent = `${loc.district} District`;
+  const floodText = loc.flood_profile ? ` (${loc.flood_profile.risk_level} Flood Risk)` : "";
+  document.getElementById("bannerDistrict").textContent = `${loc.district} District${floodText}`;
   
   let zoneName = loc.zone_name;
   if (currentLang === "as" && loc.zone_name_as) zoneName = loc.zone_name_as;
@@ -339,7 +378,7 @@ function renderDashboard(data) {
 
   document.getElementById("bannerZone").textContent = `${zoneName} (${loc.zone_id})`;
   document.getElementById("bannerCoords").textContent = `${loc.lat}° N, ${loc.lon}° E`;
-  document.getElementById("statBighas").textContent = data.area.bighas;
+  document.getElementById("statBighas").textContent = data.area.formatted_local || `${data.area.bighas} Bighas`;
   document.getElementById("statHectares").textContent = data.area.hectares;
 
   // 2. Soil KPI
@@ -383,6 +422,9 @@ function renderDashboard(data) {
 
   // 7. Render Crops Grid
   renderCropsGrid(data.crop_rankings || []);
+
+  // 7.5 Render Economics & Profitability Tab
+  renderEconomicsTab(data.crop_rankings || [], data.area);
 
   // 8. Populate Fertilizer Dropdown and Display
   populateFertilizerDropdown(data.crop_rankings || []);
@@ -449,6 +491,12 @@ function renderCropsGrid(crops) {
           ${crop.issues && crop.issues.length > 0 
             ? `<div style="color:#b45309;">⚠️ ${crop.issues[0]}</div>` 
             : '<div style="color:#15803d;">✅ Soil & weather in optimal range</div>'}
+          ${crop.economics && crop.economics.total_net_profit_inr ? `
+            <div style="margin-top:0.35rem; padding-top:0.35rem; border-top:1px dashed #cbd5e1; font-size:0.8rem; display:flex; justify-content:space-between; align-items:center;">
+              <span><strong>💰 Est. Net Profit:</strong> <strong style="color:#15803d;">₹${crop.economics.total_net_profit_inr.toLocaleString()}</strong></span>
+              <span style="color:#64748b; font-size:0.75rem;">B:C: ${crop.economics.bc_ratio}</span>
+            </div>
+          ` : ''}
         </div>
       </div>
 
@@ -724,6 +772,51 @@ function openCropModal(cropId) {
       <strong>Application Timing:</strong> ${fert.application_schedule || ""}
     </p>
 
+    <!-- Economics Summary for Field -->
+    ${crop.economics ? `
+      <h3 style="font-size:1.1rem; font-weight:700; margin:1rem 0 0.5rem 0;">💰 AAU Production Economics (${crop.economics.total_expected_yield} ${crop.economics.yield_unit}):</h3>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(130px, 1fr)); gap:0.5rem; margin-bottom:1rem;">
+        <div style="background:#f0fdf4; padding:0.65rem; border-radius:6px; text-align:center; border:1px solid #bbf7d0;">
+          <div style="font-size:0.75rem; color:#15803d;">Est. Net Profit</div>
+          <div style="font-size:1.1rem; font-weight:800; color:#166534;">₹${(crop.economics.total_net_profit_inr || 0).toLocaleString()}</div>
+        </div>
+        <div style="background:#fef2f2; padding:0.65rem; border-radius:6px; text-align:center; border:1px solid #fecaca;">
+          <div style="font-size:0.75rem; color:#b91c1c;">Est. Cultivation Cost</div>
+          <div style="font-size:1.1rem; font-weight:700; color:#991b1b;">₹${(crop.economics.total_cost_inr || 0).toLocaleString()}</div>
+        </div>
+        <div style="background:#f8fafc; padding:0.65rem; border-radius:6px; text-align:center; border:1px solid #e2e8f0;">
+          <div style="font-size:0.75rem; color:#64748b;">Market / MSP Price</div>
+          <div style="font-size:1.0rem; font-weight:700; color:#0f172a;">${crop.economics.price_unit}</div>
+        </div>
+        <div style="background:#f8fafc; padding:0.65rem; border-radius:6px; text-align:center; border:1px solid #e2e8f0;">
+          <div style="font-size:0.75rem; color:#64748b;">Benefit-Cost (B:C)</div>
+          <div style="font-size:1.1rem; font-weight:700; color:#0284c7;">${crop.economics.bc_ratio || "-"}</div>
+        </div>
+      </div>
+    ` : ''}
+
+    <!-- IPM Integrated Pest & Disease Management -->
+    ${crop.ipm && ((crop.ipm.major_pests && crop.ipm.major_pests.length > 0) || (crop.ipm.major_diseases && crop.ipm.major_diseases.length > 0)) ? `
+      <h3 style="font-size:1.1rem; font-weight:700; margin:1rem 0 0.5rem 0;">🛡️ AAU Integrated Pest & Disease Protection:</h3>
+      <div style="background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:0.85rem; margin-bottom:1rem; font-size:0.85rem;">
+        ${(crop.ipm.major_pests || []).map(p => `
+          <div style="margin-bottom:0.6rem; padding-bottom:0.6rem; border-bottom:1px dashed #fcd34d;">
+            <strong style="color:#b45309;">🐛 ${p.name}</strong>
+            <div style="color:#475569; margin:2px 0;"><strong>Symptoms:</strong> ${p.symptoms}</div>
+            ${p.biological ? `<div style="color:#15803d;"><strong>Biological:</strong> ${p.biological}</div>` : ''}
+            ${p.chemical ? `<div style="color:#b91c1c;"><strong>Chemical:</strong> ${p.chemical}</div>` : ''}
+          </div>
+        `).join("")}
+        ${(crop.ipm.major_diseases || []).map(d => `
+          <div style="margin-bottom:0.4rem;">
+            <strong style="color:#9f1239;">🍄 ${d.name}</strong>
+            <div style="color:#475569; margin:2px 0;"><strong>Symptoms:</strong> ${d.symptoms}</div>
+            <div style="color:#15803d;"><strong>AAU Remedy:</strong> ${d.management}</div>
+          </div>
+        `).join("")}
+      </div>
+    ` : ''}
+
     <!-- Step by Step Agronomy -->
     <h3 style="font-size:1.1rem; font-weight:700; margin:1rem 0 0.5rem 0;">📋 Necessary Cultivation Steps:</h3>
     <div style="display:flex; flex-direction:column; gap:0.65rem; font-size:0.875rem;">
@@ -746,4 +839,101 @@ function openCropModal(cropId) {
   `;
 
   document.getElementById("cropModal").classList.add("open");
+}
+
+function renderEconomicsTab(crops, area) {
+  const tbody = document.getElementById("econTableBody");
+  if (!tbody) return;
+  tbody.innerHTML = "";
+
+  const sorted = [...crops].sort((a, b) => {
+    const netA = (a.economics && a.economics.total_net_profit_inr) || 0;
+    const netB = (b.economics && b.economics.total_net_profit_inr) || 0;
+    return netB - netA;
+  });
+
+  if (sorted.length > 0) {
+    const top = sorted[0];
+    let topName = top.name_en;
+    if (currentLang === "as" && top.name_as) topName = top.name_as;
+    const topProfit = (top.economics && top.economics.total_net_profit_inr) || 0;
+    const badge = document.getElementById("econTopProfitableBadge");
+    if (badge) {
+      badge.textContent = `⭐ Highest Profit: ${topName} (₹${topProfit.toLocaleString()})`;
+    }
+  }
+
+  sorted.forEach((c) => {
+    const econ = c.economics || {};
+    let cropName = c.name_en;
+    if (currentLang === "as" && c.name_as) cropName = c.name_as;
+    else if (currentLang === "hi" && c.name_hi) cropName = c.name_hi;
+
+    const tr = document.createElement("tr");
+    tr.style.borderBottom = "1px solid #e2e8f0";
+    tr.innerHTML = `
+      <td style="padding:10px 12px; font-weight:600;">
+        ${cropName}
+        <div style="font-size:0.75rem; color:#64748b; font-weight:normal;">${c.category}</div>
+      </td>
+      <td style="padding:10px 12px;">
+        <span style="display:inline-block; padding:2px 8px; border-radius:12px; font-weight:700; font-size:0.8rem; background:${c.badge_color}; color:white;">
+          ${c.score}%
+        </span>
+      </td>
+      <td style="padding:10px 12px; font-weight:600; color:#0f172a;">
+        ${(econ.total_expected_yield || 0).toLocaleString()} <span style="font-size:0.75rem; color:#64748b; font-weight:normal;">${econ.yield_unit || ""}</span>
+      </td>
+      <td style="padding:10px 12px; color:#475569;">
+        ${econ.price_unit || `₹${econ.price_per_unit_inr}`}
+      </td>
+      <td style="padding:10px 12px; color:#dc2626; font-weight:600;">
+        ₹${(econ.total_cost_inr || 0).toLocaleString()}
+      </td>
+      <td style="padding:10px 12px; color:#16a34a; font-weight:800; font-size:0.95rem;">
+        ₹${(econ.total_net_profit_inr || 0).toLocaleString()}
+      </td>
+      <td style="padding:10px 12px; font-weight:700; color:#0284c7;">
+        ${econ.bc_ratio || "-"}
+      </td>
+    `;
+    tbody.appendChild(tr);
+  });
+}
+
+async function exportAdvisoryCard() {
+  if (!lastAnalysisData) return;
+  const lat = parseFloat(document.getElementById("inputLat").value);
+  const lon = parseFloat(document.getElementById("inputLon").value);
+  const bighas = parseFloat(document.getElementById("inputBighas").value) || 3.0;
+
+  let geojson = null;
+  const layers = drawnItems.getLayers();
+  if (layers.length > 0) {
+    geojson = layers[0].toGeoJSON();
+  }
+
+  const payload = {
+    lat: lat,
+    lon: lon,
+    geojson: geojson,
+    area_bighas: bighas,
+    include_satellite: false
+  };
+
+  try {
+    const res = await fetch("/api/export-advisory-card", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    });
+    if (!res.ok) throw new Error("Could not generate advisory card");
+    const htmlText = await res.text();
+    const printWin = window.open("", "_blank");
+    printWin.document.open();
+    printWin.document.write(htmlText);
+    printWin.document.close();
+  } catch (err) {
+    alert("Error generating card: " + err.message);
+  }
 }

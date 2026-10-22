@@ -29,6 +29,9 @@
         <option value="as">অসমীয়া (Assamese)</option>
         <option value="hi">हिन्दी (Hindi)</option>
       </select>
+      <button id="btnExportCard" class="btn-print" style="background:#0284c7; color:white; border:none; margin-right:6px;">
+        📄 <span data-i18n="advisory_card_btn">Advisory Card</span>
+      </button>
       <button id="btnPrint" class="btn-print" onclick="window.print()">
         🖨️ <span data-i18n="print_report">Print Field Report</span>
       </button>
@@ -72,10 +75,14 @@
 
         <div class="map-tools">
           <button id="btnLoadSample" class="btn-secondary" type="button" data-i18n="load_sample">
-            📁 Load Sample Field
+            📁 Sample Field
           </button>
+          <label class="btn-secondary" style="cursor:pointer; display:inline-flex; align-items:center; justify-content:center; margin:0;" title="Upload custom GeoJSON polygon">
+            📂 <span data-i18n="upload_geojson">Upload GeoJSON</span>
+            <input type="file" id="fileGeoJson" accept=".geojson,.json" style="display:none;" />
+          </label>
           <button id="btnResetMap" class="btn-secondary" type="button" data-i18n="reset_map">
-            🔄 Reset Pin
+            🔄 Reset
           </button>
         </div>
 
@@ -212,6 +219,7 @@
       <!-- Tabs Navigation -->
       <div class="tabs-nav">
         <button class="tab-btn active" data-tab="tabCrops" data-i18n="tab_crops">🌾 Crop Suitability</button>
+        <button class="tab-btn" data-tab="tabEconomics" data-i18n="tab_economics">💰 Economics & Yield</button>
         <button class="tab-btn" data-tab="tabFertilizer" data-i18n="tab_fertilizer">⚖️ Fertilizer Calculator</button>
         <button class="tab-btn" data-tab="tabRoadmap" data-i18n="tab_roadmap">📋 Cultivation Steps</button>
         <button class="tab-btn" data-tab="tabTrends" data-i18n="tab_weather">🛰️ NDVI & 7-Day Weather</button>
@@ -227,6 +235,42 @@
           <button class="filter-btn" data-filter="Vegetables & Tubers" data-i18n="filter_horticulture">Vegetables & Spices</button>
         </div>
         <div class="crops-grid" id="cropsGrid"></div>
+      </div>
+
+      <!-- Tab 1.5: Farm Economics & ROI -->
+      <div class="tab-content" id="tabEconomics">
+        <div class="card">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; flex-wrap:wrap; gap:0.5rem;">
+            <div>
+              <h3 style="font-size:1.15rem; font-weight:700;">
+                💰 <span data-i18n="economics_title">Assam Agricultural University Crop Economics & Profitability</span>
+              </h3>
+              <p style="font-size:0.8rem; color:#64748b; margin-top:0.2rem;" id="econSubtitle">
+                Estimated yield, cost of cultivation, and net profit calculated for your field size.
+              </p>
+            </div>
+            <div style="background:#f0fdf4; border:1px solid #bbf7d0; padding:6px 14px; border-radius:20px; font-weight:700; color:#15803d; font-size:0.85rem;" id="econTopProfitableBadge">
+              Top Profit: --
+            </div>
+          </div>
+
+          <div style="overflow-x:auto;">
+            <table class="econ-table" style="width:100%; border-collapse:collapse; font-size:0.875rem;">
+              <thead>
+                <tr style="background:#f8fafc; border-bottom:2px solid #e2e8f0; text-align:left;">
+                  <th style="padding:10px 12px;">Crop Name</th>
+                  <th style="padding:10px 12px;">Suitability</th>
+                  <th style="padding:10px 12px;">Expected Field Yield</th>
+                  <th style="padding:10px 12px;">Market / MSP Price</th>
+                  <th style="padding:10px 12px;">Est. Cost (₹)</th>
+                  <th style="padding:10px 12px;">Est. Net Profit (₹)</th>
+                  <th style="padding:10px 12px;">B:C Ratio</th>
+                </tr>
+              </thead>
+              <tbody id="econTableBody"></tbody>
+            </table>
+          </div>
+        </div>
       </div>
 
       <!-- Tab 2: AAU Fertilizer Calculator -->

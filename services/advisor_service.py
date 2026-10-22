@@ -5,10 +5,11 @@ and step-by-step agronomy guidance.
 """
 import json
 import math
+import datetime
 from pathlib import Path
 from typing import Dict, Any, List, Optional
 
-from assam_data import HECTARE_TO_BIGHA
+from assam_data import HECTARE_TO_BIGHA, get_district_flood_profile
 
 HERE = Path(__file__).resolve().parent.parent
 CROPS_DB_PATH = HERE / "crops_assam_db.json"
@@ -203,6 +204,29 @@ def score_all_crops(
             oc_pct=soil_data.get("organic_carbon_pct")
         )
 
+        # AAU Economics tailored to field size
+        econ_raw = crop.get("economics_aau", {})
+        yield_bigha = econ_raw.get("yield_bigha_avg", 0.0)
+        cost_bigha = econ_raw.get("cost_cultivation_bigha_inr", 0)
+        gross_bigha = econ_raw.get("gross_revenue_bigha_inr", 0)
+        net_bigha = econ_raw.get("net_profit_bigha_inr", 0)
+
+        economics = {
+            "yield_bigha_avg": yield_bigha,
+            "yield_unit": econ_raw.get("yield_unit", "Quintals"),
+            "yield_range": econ_raw.get("yield_range", []),
+            "total_expected_yield": round(yield_bigha * area_bighas, 1),
+            "price_per_unit_inr": econ_raw.get("price_per_unit_inr", 0),
+            "price_unit": econ_raw.get("price_unit", "₹/Unit"),
+            "cost_cultivation_bigha_inr": cost_bigha,
+            "total_cost_inr": int(round(cost_bigha * area_bighas)),
+            "gross_revenue_bigha_inr": gross_bigha,
+            "total_gross_revenue_inr": int(round(gross_bigha * area_bighas)),
+            "net_profit_bigha_inr": net_bigha,
+            "total_net_profit_inr": int(round(net_bigha * area_bighas)),
+            "bc_ratio": econ_raw.get("bc_ratio", 2.0)
+        }
+
         results.append({
             "id": crop.get("id"),
             "name_en": crop.get("name_en", crop.get("name")),
@@ -222,6 +246,8 @@ def score_all_crops(
             "strengths": strengths,
             "issues": issues,
             "fertilizer": fert_calc,
+            "economics": economics,
+            "ipm": crop.get("ipm_aau", {}),
             "necessary_steps": crop.get("necessary_steps", {})
         })
 
@@ -232,12 +258,25 @@ def generate_farm_advisories(
     soil_data: Dict[str, Any],
     weather_data: Dict[str, Any],
     ndvi_series: List[Dict[str, Any]],
-    zone_info: Dict[str, Any]
+    zone_info: Dict[str, Any],
+    district_name: Optional[str] = None
 ) -> List[Dict[str, str]]:
     """Generate high-priority agro-advisories for the farm."""
     advisories = []
 
-    # 1. Soil acidity advice
+    # 1. Flood and drainage contingency
+    zone_id = zone_info.get("id", "LBVZ")
+    if district_name:
+        flood_profile = get_district_flood_profile(district_name, zone_id)
+        risk_lvl = flood_profile.get("risk_level", "Moderate")
+        is_high = "High" in risk_lvl or "Very High" in risk_lvl
+        advisories.append({
+            "type": "warning" if is_high else "info",
+            "title": f"Flood & Drainage Profile: {risk_lvl} Risk ({flood_profile.get('risk_level_as', '')})",
+            "text": f"{flood_profile.get('action_guidance', '')} Recommended flood-tolerant / contingency varieties: {', '.join(flood_profile.get('contingency_varieties', []))}."
+        })
+
+    # 2. Soil acidity advice
     ph = soil_data.get("ph")
     if ph is not None:
         if ph < 5.0:
@@ -253,7 +292,7 @@ def generate_farm_advisories(
                 "text": f"Soil pH is {ph}. Very suitable for Assam Sali Rice and Tea. For pulses or winter oilseeds, light liming (100-150 kg/bigha) is advantageous."
             })
 
-    # 2. Organic carbon
+    # 3. Organic carbon
     oc = soil_data.get("organic_carbon_g_per_kg")
     if oc is not None and oc < 7.0:
         advisories.append({
@@ -262,16 +301,34 @@ def generate_farm_advisories(
             "text": "Organic carbon is on the lower side. Incorporate 1.5 tonnes Farm Yard Manure (FYM) or 500 kg vermicompost per bigha to increase moisture holding capacity."
         })
 
-    # 3. Monsoon & Drainage
-    monsoon_rain = weather_data.get("monsoon_rain_mm", 0)
-    if monsoon_rain > 1200:
+    # 4. Seasonal Assam Farming Calendar
+    now_month = datetime.datetime.now().month
+    if now_month in [10, 11]:
         advisories.append({
             "type": "info",
-            "title": "Monsoon Waterlogging & Flood Vigilance",
-            "text": f"Monsoon rainfall averages {monsoon_rain:.0f} mm. For lowland plots, opt for flood-tolerant submergence rice varieties (Ranjit Sub-1, Bahadur Sub-1). For high land, ensure peripheral drainage ditches."
+            "title": "Rabi Sowing & Sali Harvest Window (আহিন-কাতি-আঘোণ)",
+            "text": "Peak sowing window for Toria/Mustard (TS-36, TS-38), Potato, Rabi Pulses, and Winter Cole crops. Drain standing water from Sali rice fields 7-10 days before harvesting."
+        })
+    elif now_month in [12, 1]:
+        advisories.append({
+            "type": "info",
+            "title": "Boro Rice Nursery & Rabi Care (পুহ-মাঘ)",
+            "text": "Raise protected Boro paddy nurseries against cold fog. Scout mustard for early aphid colonies and apply yellow sticky traps."
+        })
+    elif now_month in [2, 3]:
+        advisories.append({
+            "type": "info",
+            "title": "Pre-Kharif Preparation & Ahu Rice (ফাগুন-চ’ত)",
+            "text": "Transplant Boro rice; prepare land for direct seeded Ahu rice and summer vegetables on char lands."
+        })
+    elif now_month in [6, 7]:
+        advisories.append({
+            "type": "info",
+            "title": "Main Sali Rice Transplanting (আহাৰ-শাওণ)",
+            "text": "Transplant 25-30 day Sali seedlings. For flood-prone lowlands, ensure submergence-tolerant varieties (Ranjit Sub-1, Bahadur Sub-1)."
         })
 
-    # 4. NDVI interpretation
+    # 5. NDVI interpretation
     if ndvi_series:
         latest = ndvi_series[-1]
         val = latest.get("ndvi", 0.0)

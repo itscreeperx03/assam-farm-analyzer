@@ -11,7 +11,7 @@ import time
 from pathlib import Path
 from shapely.geometry import shape
 
-from assam_data import HECTARE_TO_BIGHA
+from assam_data import HECTARE_TO_BIGHA, format_land_area, get_district_flood_profile
 from services.geo_service import find_nearest_district, calculate_polygon_area
 from services.soil_service import get_soil_analysis
 from services.weather_service import get_historical_weather, get_forecast_weather
@@ -39,11 +39,15 @@ def main(path):
     geo = find_nearest_district(lat, lon)
     area = calculate_polygon_area(geom)
     bighas = area["bighas"]
+    land_info = format_land_area(bighas)
+    flood = get_district_flood_profile(geo["district"], geo["zone_id"])
+
     print(f"\n📍 LOCATION & LAND SIZE:")
     print(f"  Coordinates:    {lat:.4f}° N, {lon:.4f}° E")
     print(f"  Nearest Dist:   {geo['district']} ({geo['distance_km']} km away)")
     print(f"  Agro-Zone:      {geo['zone_name']} [{geo['zone_id']}]")
-    print(f"  Field Area:     {bighas:.2f} Bighas ({area['hectares']} Hectares / {area['acres']} Acres)")
+    print(f"  Field Area:     {land_info['formatted_local']} ({bighas:.2f} Bighas / {area['hectares']} Hectares)")
+    print(f"  Flood Risk:     {flood['risk_level']} ({flood['risk_level_as']}) - {flood['recurrence']}")
 
     # 2. Soil
     print(f"\n🧪 SOIL HEALTH & DIAGNOSTICS:")
@@ -84,31 +88,35 @@ def main(path):
     rankings = score_all_crops(soil, weather, geo["zone_id"], area_bighas=bighas)
     for r in rankings[:6]:
         fert = r["fertilizer"]["per_bigha"]
+        econ = r.get("economics", {})
         print(f"\n  [{r['score']:2d}%] {r['name_en']} ({r['name_as']}) - {r['verdict']}")
         print(f"       Season:     {r['season_en']}")
         if r["recommended_varieties"]:
             print(f"       Varieties:  {', '.join(r['recommended_varieties'][:2])}")
         print(f"       Fert/Bigha: Urea: {fert['urea_kg']} kg | SSP: {fert['ssp_kg']} kg | MOP: {fert['mop_kg']} kg | FYM: {fert['fym_ton']} t")
+        if econ.get("total_net_profit_inr"):
+            print(f"       Economics:  Est. Field Yield: {econ.get('total_expected_yield', 0):,} {econ.get('yield_unit')} | Est. Net Profit: ₹{econ.get('total_net_profit_inr', 0):,} (B:C Ratio: {econ.get('bc_ratio', 0)})")
         if r["issues"]:
             print(f"       Note:       {r['issues'][0]}")
 
     # 6. Farm Advisories
     print(f"\n💡 PRIORITY AGRONOMIC ADVISORIES:")
-    advisories = generate_farm_advisories(soil, weather, ndvi, geo["zone_details"])
+    advisories = generate_farm_advisories(soil, weather, ndvi, geo["zone_details"], district_name=geo["district"])
     for adv in advisories:
         print(f"  * {adv['title']}: {adv['text']}")
 
     # Save report.json
     full_report = {
         "location": geo,
-        "area": area,
+        "flood_profile": flood,
+        "area": {**area, **land_info},
         "soil": soil,
         "weather": weather,
         "ndvi_series": ndvi,
         "crop_rankings": rankings,
         "advisories": advisories
     }
-    (HERE / "report.json").write_text(json.dumps(full_report, indent=2), encoding="utf-8")
+    (HERE / "report.json").write_text(json.dumps(full_report, indent=2, ensure_ascii=False), encoding="utf-8")
     print(f"\n✅ Full analysis saved to: report.json")
     print(f"💡 To open the interactive Web App, run: python server.py (or visit http://127.0.0.1:8000)")
     print("=" * 65 + "\n")

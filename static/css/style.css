@@ -698,6 +698,18 @@ body {
   color: #64748b;
 }
 
+/* Economics Table Styling */
+.econ-table tbody tr:hover {
+  background-color: #f1f5f9;
+}
+.econ-table th {
+  color: #475569;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+}
+
 /* Print Styling */
 @media print {
   .app-header, .sidebar, .tabs-nav, .crop-filters, .btn-print, .map-tools, .modal-close {
