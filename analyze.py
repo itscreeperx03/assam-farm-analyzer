@@ -7,8 +7,23 @@ Usage:
 """
 import json
 import sys
+import subprocess
 import time
 from pathlib import Path
+
+# Auto-bootstrap virtual environment if running with system python without packages
+HERE = Path(__file__).resolve().parent
+_win_venv = HERE / "venv" / "Scripts" / "python.exe"
+_posix_venv = HERE / "venv" / "bin" / "python"
+VENV_PYTHON = _win_venv if _win_venv.exists() else (_posix_venv if _posix_venv.exists() else None)
+
+if VENV_PYTHON and sys.executable.lower() != str(VENV_PYTHON).lower():
+    try:
+        import shapely
+        import requests
+    except ModuleNotFoundError:
+        sys.exit(subprocess.call([str(VENV_PYTHON)] + sys.argv))
+
 from shapely.geometry import shape
 
 from assam_data import HECTARE_TO_BIGHA, format_land_area, get_district_flood_profile

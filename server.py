@@ -3,7 +3,23 @@ Assam Farm Analyzer - FastAPI Server.
 Full-stack agricultural advisory API and web dashboard.
 """
 import os
+import sys
+import subprocess
 from pathlib import Path
+
+# Auto-bootstrap virtual environment if running with system python without packages
+HERE = Path(__file__).resolve().parent
+_win_venv = HERE / "venv" / "Scripts" / "python.exe"
+_posix_venv = HERE / "venv" / "bin" / "python"
+VENV_PYTHON = _win_venv if _win_venv.exists() else (_posix_venv if _posix_venv.exists() else None)
+
+if VENV_PYTHON and sys.executable.lower() != str(VENV_PYTHON).lower():
+    try:
+        import fastapi
+        import uvicorn
+    except ModuleNotFoundError:
+        sys.exit(subprocess.call([str(VENV_PYTHON)] + sys.argv))
+
 from typing import Dict, Any, Optional, List
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
@@ -338,3 +354,12 @@ def export_advisory_card(req: AnalysisRequest):
 
 # Mount static folder for web app UI
 app.mount("/", StaticFiles(directory=str(STATIC_DIR), html=True), name="static")
+
+if __name__ == "__main__":
+    import uvicorn
+    print("\n" + "=" * 65)
+    print("🌾 ASSAM FARM ANALYZER - INTERACTIVE WEB DASHBOARD")
+    print("🚀 Server running at: http://127.0.0.1:8000")
+    print("💡 Aligned with Assam Agricultural University (AAU) Packages")
+    print("=" * 65 + "\n")
+    uvicorn.run(app, host="127.0.0.1", port=8000)
